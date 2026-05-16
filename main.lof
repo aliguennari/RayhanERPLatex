@@ -1,0 +1,55 @@
+\babel@toc {nil}{}\relax 
+\thispagestyle {MyStyle}
+\thispagestyle {MyStyle}
+\addvspace {10\p@ }
+\contentsline {xchapter}{Présentation Générale}{2}{chapter.1}%
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Logo Entreprise Rayhan}}{3}{figure.caption.7}%
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Organigramme}}{4}{figure.caption.8}%
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Architecture 2-tiers}}{9}{figure.caption.10}%
+\contentsline {figure}{\numberline {1.4}{\ignorespaces Modèle de cycle de vie en V}}{11}{figure.caption.11}%
+\addvspace {10\p@ }
+\contentsline {xchapter}{Analyse et spécification des besoins}{12}{chapter.2}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Logo de l’application "RayhanERP"}}{14}{figure.caption.12}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Les Acteurs de l’application}}{17}{figure.caption.13}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Diagramme de cas d’utilisation global de RayhanERP}}{18}{figure.caption.14}%
+\addvspace {10\p@ }
+\contentsline {xchapter}{CONCEPTION}{20}{chapter.3}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Diagramme du cas d’utilisation «S’authentifier»}}{22}{figure.caption.15}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Diagramme du cas d’utilisation «S’inscrire»}}{23}{figure.caption.17}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Diagramme du cas d’utilisation «Rechercher des véhicules}}{24}{figure.caption.19}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Diagramme du cas d’utilisation « Consulter des annonces »}}{25}{figure.caption.21}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Diagramme du cas d’utilisation « Ajouter aux favoris »}}{26}{figure.caption.23}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Diagramme du cas d’utilisation « Contacter Vendeur »}}{27}{figure.caption.25}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Diagramme du cas d’utilisation « Gérer Annonce »}}{28}{figure.caption.27}%
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Diagramme du cas d’utilisation « Gérer les utilisateurs »}}{29}{figure.caption.29}%
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Diagramme du cas d’utilisation « Valider les annonces »}}{30}{figure.caption.31}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Diagramme du cas d’utilisation « Supprimer une annonce signalée »}}{32}{figure.caption.33}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Diagramme du cas d’utilisation « Consulter Statistiques »}}{33}{figure.caption.35}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Diagramme de classe de AutoSmart}}{34}{figure.caption.37}%
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Diagramme de séquence « Authentification »}}{36}{figure.caption.38}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Diagramme de séquence « Inscription »}}{37}{figure.caption.39}%
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Diagramme de séquence « Ajouter annonce »}}{38}{figure.caption.40}%
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Diagramme de séquence « Modifier annonce »}}{39}{figure.caption.41}%
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Diagramme de séquence « Contacter Vendeur »}}{40}{figure.caption.42}%
+\contentsline {figure}{\numberline {3.18}{\ignorespaces Diagramme de séquence « Ajouter aux favoris »}}{41}{figure.caption.43}%
+\contentsline {figure}{\numberline {3.19}{\ignorespaces Diagramme d’activité «Authentification»}}{42}{figure.caption.44}%
+\contentsline {figure}{\numberline {3.20}{\ignorespaces Diagramme d’activité «Ajouter annonce»}}{43}{figure.caption.45}%
+\addvspace {10\p@ }
+\contentsline {xchapter}{Réalisation}{44}{chapter.4}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Logo Android Studio}}{46}{figure.caption.46}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Logo Lucidchart}}{46}{figure.caption.47}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Logo de Visual Studio Code}}{47}{figure.caption.48}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Logo de Overleaf}}{47}{figure.caption.49}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Logo de Git}}{48}{figure.caption.50}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Logo de Canva}}{48}{figure.caption.51}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Logo GitHub}}{49}{figure.caption.52}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Logo de Dart}}{49}{figure.caption.53}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Logo Flutter}}{50}{figure.caption.54}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Logo Firebase}}{50}{figure.caption.55}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Page de démarrage}}{51}{figure.caption.56}%
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Interface d’accueil}}{51}{figure.caption.56}%
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Menu}}{52}{figure.caption.57}%
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Interface login AutoSmart}}{53}{figure.caption.58}%
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Initialiser mot de passe}}{53}{figure.caption.58}%
+\contentsline {figure}{\numberline {4.16}{\ignorespaces Interface d’inscription AutoSmart}}{54}{figure.caption.59}%
+\contentsline {figure}{\numberline {4.17}{\ignorespaces Interface Ajouter Annonce}}{55}{figure.caption.60}%
