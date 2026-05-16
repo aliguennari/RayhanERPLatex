@@ -1,0 +1,76 @@
+% @Author: SARAH OUERGHEMMI
+% @Date:   12.07.2023
+%Credit to: Nizar TENZEKHTI for the original French version as a base of this version.
+
+
+
+\documentclass[12pt, oneside, a4paper]{Isetta-PFE-Report-dissertation}
+\include{Commands}
+\graphicspath{{images/}}
+
+
+\hypersetup{
+  pdftitle={\reportTitle~-~\reportSubject},%
+  pdfauthor={\reportAuthor},%
+  pdfsubject={\reportSubject},%
+  pdfkeywords={Report} {Internship} {PFE} {ISETTA}{Higher Institute}{Tunisia} {Memory} {Dissertation}
+}
+\dominitoc
+\begin{document}
+    \input{chapitres/00-Page_de_garde}
+    \doublespacing{}% Double spacing between lines
+    \pagenumbering{roman}% i ii iii iv ...
+    
+    \input{chapitres/01-DEDICACE}
+
+    \input{chapitres/02-REMERCIEMENT}
+   
+    \addtocontents{toc}{\protect\thispagestyle{MyStyle}}
+    \renewcommand*\contentsname{TABLE DE MATIERE}
+    \begin{spacing}{1}
+    \tableofcontents
+    \end{spacing}
+
+    \addtocontents{lof}{\protect\thispagestyle{MyStyle}}
+    \renewcommand{\listfigurename}{LISTE DE FIGURES}
+    \begin{spacing}{1}
+    \listoffigures
+    \end{spacing}
+    \addcontentsline{toc}{chapter}{\listfigurename}
+    \adjustmtc
+    
+    \addtocontents{lof}{\protect\thispagestyle{MyStyle}}
+\renewcommand{\listtablename}{LISTE DE TABLES}
+\begin{spacing}{1}
+    \listoftables
+\end{spacing}
+ \addcontentsline{toc}{chapter}{\listtablename}
+    \adjustmtc
+    \doublespacing{}% Double spacing between lines
+
+    
+
+    
+    \input{chapitres/03-INTRODUCTIONGENERALE}
+
+    \pagenumbering{arabic}% 1 2 3 4 5
+    \doublespacing{}% Double spacing between lines
+    %\addtocontents{toc}{\protect\setcounter{tocdepth}{2}}
+    
+    \input{chapitres/04-Chapitre1}
+
+    \input{chapitres/05-Chapitre2}
+
+    \input{chapitres/06-Chapitre3}
+
+    \input{chapitres/07-Chapitre4}
+    
+    \input{chapitres/08-ConclusionGenerale}
+
+    \input{chapitres/09-NETOGRAPHIE}
+
+    
+    \input{chapitres/10-Verso_du_rapport}
+    
+
+\end{document}

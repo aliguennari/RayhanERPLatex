@@ -1,0 +1,30 @@
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.1}Introduction}{\reset@font\mtcSfont 21}{section.3.1}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.2}Choix de la méthodologie d’analyse}{\reset@font\mtcSfont 21}{section.3.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.2.1}Présentation UML}{\reset@font\mtcSSfont 21}{subsection.3.2.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.2.2}Schémas de quelques diagrammes de cas d’utilisation}{\reset@font\mtcSSfont 21}{subsection.3.2.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.2.1}Cas d’utilisation : S’authentifier}{\reset@font\mtcSSSfont 22}{subsubsection.3.2.2.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.2.2}Cas d’utilisation : S’inscrire}{\reset@font\mtcSSSfont 23}{subsubsection.3.2.2.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.2.3}Cas d’utilisation : Rechercher des véhicules }{\reset@font\mtcSSSfont 24}{subsubsection.3.2.2.3}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.2.4}Cas d’utilisation : Consulter des annonces}{\reset@font\mtcSSSfont 25}{subsubsection.3.2.2.4}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.2.5}Cas d’utilisation : Ajouter aux favoris}{\reset@font\mtcSSSfont 26}{subsubsection.3.2.2.5}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.2.6}Cas d’utilisation : Contacter Vendeur}{\reset@font\mtcSSSfont 27}{subsubsection.3.2.2.6}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.2.7}Cas d’utilisation : Gérer Annonce}{\reset@font\mtcSSSfont 28}{subsubsection.3.2.2.7}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.2.8}Cas d’utilisation : Gérer les utilisateurs}{\reset@font\mtcSSSfont 29}{subsubsection.3.2.2.8}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.2.9}Cas d’utilisation : Valider les annonces}{\reset@font\mtcSSSfont 30}{subsubsection.3.2.2.9}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.2.10}Cas d’utilisation : Supprimer une annonce signalée}{\reset@font\mtcSSSfont 31}{subsubsection.3.2.2.10}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.2.11}Cas d’utilisation : Consulter Statistiques}{\reset@font\mtcSSSfont 32}{subsubsection.3.2.2.11}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.2.3}Diagramme de classe :}{\reset@font\mtcSSfont 34}{subsection.3.2.3}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.3.1}Présentation :}{\reset@font\mtcSSSfont 34}{subsubsection.3.2.3.1}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.2.4}Diagramme de séquence :}{\reset@font\mtcSSfont 35}{subsection.3.2.4}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.4.1}Présentation :}{\reset@font\mtcSSSfont 35}{subsubsection.3.2.4.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.4.2}Diagrammes de séquence « Authentification »:}{\reset@font\mtcSSSfont 35}{subsubsection.3.2.4.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.4.3}Diagrammes de séquence « Inscription »:}{\reset@font\mtcSSSfont 36}{subsubsection.3.2.4.3}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.4.4}Diagrammes de séquence «Ajouter annonce»: }{\reset@font\mtcSSSfont 37}{subsubsection.3.2.4.4}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.4.5}Diagrammes de séquence «Modifier annonce»: }{\reset@font\mtcSSSfont 38}{subsubsection.3.2.4.5}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.4.6}Diagrammes de séquence «Contacter Vendeur»: }{\reset@font\mtcSSSfont 39}{subsubsection.3.2.4.6}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.4.7}Diagrammes de séquence «Ajouter aux favoris»: }{\reset@font\mtcSSSfont 40}{subsubsection.3.2.4.7}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.2.5}Diagramme d'activité :}{\reset@font\mtcSSfont 41}{subsection.3.2.5}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.5.1}Présentation :}{\reset@font\mtcSSSfont 41}{subsubsection.3.2.5.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.5.2}Diagramme d’activité «Authentification» :}{\reset@font\mtcSSSfont 42}{subsubsection.3.2.5.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.5.3}Diagramme d’activité «Ajouter annonce» :}{\reset@font\mtcSSSfont 42}{subsubsection.3.2.5.3}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.3}Conclusion}{\reset@font\mtcSfont 43}{section.3.3}}

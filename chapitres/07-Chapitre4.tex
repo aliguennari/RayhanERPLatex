@@ -1,0 +1,258 @@
+\chapter{Réalisation}
+\begin{spacing}{1.2}
+\minitoc
+\thispagestyle{MyStyle}
+\end{spacing}
+\newpage
+
+\section{Introduction}
+Après avoir détaillé la conception adaptée à mon application dans le chapitre précédent,
+nous avons consacré le dernier chapitre de ce rapport à la partie réalisation. Pour cela
+nous allons présenter dans un premier lieu l’environnement matériel et logiciel de
+développement par la suite, nous décrirons la phase d’implémentation on se basant
+sur quelques imprimes écrans des interfaces de l’application.
+\section{Environnement de développement :}
+\subsection{Environnement matériel :}
+Lors de la phase de développement nous avons disposé un seul ordinateur portable hp qui possède les caractéristiques suivantes :
+\begin{itemize}
+    \item Marque : hp
+    \item Modèle : Zbook G7
+    \item Processeur : 10th Gen Intel(R) Core(TM) i7-10750H @ 2.60GHz
+    \item Mémoire RAM : 8 Go
+    \item Système d’exploitation : Windows 11 Pro.
+    \item Type de système d’exploitation : 64 bits, processeur x64
+\end{itemize}
+\subsection{Environnement logiciel :}
+\textbf{Android Studio :} est un environnement de développement pour développer des
+applications mobiles Android. Il est basé sur IntelliJ IDEA et utilise le moteur de
+production Gradle. Il peut être téléchargé sous les systèmes d’exploitation Windows,
+macOS, Chrome OS et Linux.
+En ce qui concerne les outils de création Flutter de premier ordre, Android Studio est
+à l’honneur. Il est largement reconnu comme un environnement de développement
+intégré (IDE) incontournable pour la création d’applications Android.
+\begin{figure}[H]%
+    \center%
+    \setlength{\fboxsep}{0pt}%
+    \setlength{\fboxrule}{0.0pt}%
+    \fbox{
+    \includegraphics[width=13 cm,height=4cm]{logo}%
+    }
+    \caption{Logo Android Studio}%
+\end{figure}
+\textbf{Lucidchart UML :} est une plateforme de collaboration en ligne, basée sur le cloud, permettant\par la création de diagrammes et la visualisation de données, et autres schémas
+conceptuels.
+\begin{figure}[H]%
+    \center%
+    \setlength{\fboxsep}{0pt}%
+    \setlength{\fboxrule}{0.0pt}%
+    \fbox{
+    \includegraphics[width=13 cm,height=4cm]{logo}%
+    }
+    \caption{Logo Lucidchart}%
+\end{figure}
+\textbf{Visual Studio Code :} Visual Studio Code est un éditeur de code source léger et
+extensible\par développé par Microsoft pour Windows, Linux et macOS.
+Il s’exécute sur différents systèmes\par d’exploitation, cet éditeur de code supporte la
+majorité des langages de programmations\par existant, et il peut aussi exécuter du code
+grâce aux extensions crées par la communauté, \par ce qui lui permet de devenir un IDE
+complet. En plus de la capacité d’installer des extensions\par il embarque de base
+une puissante fonction permettant d’analyser et d’auto compiler le code \par appelée
+IntelliSense.
+\begin{figure}[H]%
+    \center%
+    \setlength{\fboxsep}{0pt}%
+    \setlength{\fboxrule}{0.0pt}%
+    \fbox{
+    \includegraphics[width=6cm,height=6cm]{images/vscode.png}%
+    }
+    \caption{Logo de Visual Studio Code}%
+\end{figure}
+\textbf{OverLeaf :} est une plateforme en ligne gratuite permettant d’éditer du texte enLATEX(Latex
+est un langage et un système de composition de documents permet de rédiger des documents dont
+la mise en page est réalisée automatiquement) sans aucun téléchargement d’application. En outre,
+elle offre la possibilité de rédiger des documents de manière collaborative
+\begin{figure}[H]%
+    \center%
+    \setlength{\fboxsep}{0pt}%
+    \setlength{\fboxrule}{0.0pt}%
+    \fbox{
+    \includegraphics[width=4.5cm,height=5cm]{images/overleaf_logo.png}%
+    }
+    \caption{Logo de Overleaf}%
+\end{figure}
+
+\textbf{Git :} c’est un système de contrôle de version gratuit et open source, créé à l’origine
+par Linus Torvalds en 2005. Contrairement aux anciens systèmes de contrôle de
+version centralisés tels que SVN et CVS, Git est distribué : chaque développeur
+dispose localement de l’historique complet de son dépôt de code. Cela rend le
+clonage initial du dépôt plus lent, mais les opérations ultérieures telles que “commit”,
+“blame”, “diff”, “merge” et "log" sont beaucoup plus rapides.
+Git offre également un excellent support pour le branchement, la fusion et la réécriture
+de l’historique du dépôt, ce qui a conduit à de nombreux outils et flux de travail
+innovants et puissants. Git est le système de contrôle de version le plus largement
+utilisé dans le monde aujourd’hui et est considéré comme la norme moderne pour le
+développement de logiciels.
+\begin{figure}[H]%
+    \center%
+    \setlength{\fboxsep}{0pt}%
+    \setlength{\fboxrule}{0.0pt}%
+    \fbox{
+    \includegraphics[width=6cm,height=4cm]{images/git.png}%
+    }
+    \caption{Logo de Git}%
+\end{figure}
+\textbf{Canva :} Canva est un outil de design graphique en ligne gratuit. Utilisez-le pour créer
+vos publications sur les réseaux sociaux, vos présentations, vos affiches, ..
+\begin{figure}[H]%
+    \center%
+    \setlength{\fboxsep}{0pt}%
+    \setlength{\fboxrule}{0.0pt}%
+    \fbox{
+    \includegraphics[width=6cm,height=6cm]{logo}%
+    }
+    \caption{Logo de Canva}%
+\end{figure}
+\textbf{GitHub :} est une plateforme de développement qui permet aux développeurs de
+créer, stocker, gérer et partager leur code. Il utilise le logiciel Git, il est couramment
+utilisé pour héberger des projets de développement de logiciels open source.
+Le site assure également un contrôle d’accès et des fonctionnalités destinées à la
+collaboration comme le suivi des bugs, les demandes de fonctionnalités, la gestion
+de tâches et un wiki pour chaque projet. Le site est devenu le plus important dépôt
+de code au monde, utilisé comme dépôt public de projets libres ou dépôt privé
+d’entreprises.
+\begin{figure}[H]%
+    \center%
+    \setlength{\fboxsep}{0pt}%
+    \setlength{\fboxrule}{0.0pt}%
+    \fbox{
+    \includegraphics[width=12 cm,height=4cm]{logo}%
+    }
+    \caption{Logo GitHub}%
+\end{figure}
+\subsection{Environnement technologie :}
+\textbf{Dart :}  est un langage de programmation optimisé pour les applications sur plusieurs
+plateformes. Il est développé par Google et est utilisé pour créer des applications
+mobiles, de bureau, de serveur et web. Dart est un langage orienté objet, il est
+productif, rapide et portable, conçu pour être familier et donc accessible à de nombreux
+développeurs existants, grâce à ses aspects orientés objet et sa syntaxe qui (selon ses
+utilisateurs) permet à tout développeur C++, C, Objective-C ou Java d’être productif
+en quelques jours.
+Dart peut aussi être utilisé pour la programmation côté serveur, ainsi que le développement
+d’applications mobiles (via l’API Flutter).
+
+\begin{figure}[H]%
+    \center%
+    \setlength{\fboxsep}{0pt}%
+    \setlength{\fboxrule}{0.0pt}%
+    \fbox{
+    \includegraphics[width=7cm,height=3cm]{dart.jpg}%
+    }
+    \caption{Logo de Dart}%
+\end{figure}
+\textbf{Flutter :} est un kit de développement de logiciels d’interface utilisateur open source
+créé par Google . Il peut être utilisé pour développer des applications multiplateformes
+à partir d’une seule base de code pour le Web , Fuchsia , Android , iOS , Linux ,
+macOS et Windows.
+Flutter est la boîte à outils de l’interface utilisateur de Google permettant de créer de
+superbes applications nativement compilées pour mobile , Web et de bureau à partir
+d’une base de code unique.
+\begin{figure}[H]%
+    \center%
+    \setlength{\fboxsep}{0pt}%
+    \setlength{\fboxrule}{0.0pt}%
+    \fbox{
+    \includegraphics[width=13 cm,height=4cm]{images/flutter.png}%
+    }
+    \caption{Logo Flutter}%
+\end{figure}
+\subsection{Gestion de base de données :}
+\textbf{Firebase} : est un ensemble de services d’hébergement pour n’importe quel type d’application (Android, iOS, ...). Il propose d’héberger en · NoSQL :Not only Structured Query Language et en
+temps réel des bases de donnes, du contenu, de L’authentification sociale (Google, Facebook, Twitter et GitHub), et des notifications, ou encore des services, tel que par exemple un serveur de
+communication temps réel. Firebase a été lancé en 2011 sous le nom d’Envolve, par Andrew Lee
+et par James Templin.
+\begin{figure}[H]%
+    \center%
+    \setlength{\fboxsep}{0pt}%
+    \setlength{\fboxrule}{0.0pt}%
+    \fbox{
+    \includegraphics[width=12 cm,height=6cm]{logo}%
+    }
+    \caption{Logo Firebase}%
+\end{figure}
+\section{Implémentation du projet :} 
+Les interfaces doivent respecter les heuristiques d’utilité pour permettre à l’utilisateur
+un accès facile à ces interfaces afin de garantir une bonne compréhension des fonctionnalités
+de l’application. Nous présentons ici les interfaces les plus significatives de l’application.
+\subsection{Interface d’accueil de l’application :}
+Les deux figures suivantes représentent la page de démarrage et l’interface d’accueil de \\ l’application :
+\begin{figure}[H]
+    \centering
+    \begin{minipage}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{logo}
+        \caption{Page de démarrage}
+        \label{fig:signup}
+    \end{minipage}
+    \hspace{0.05\textwidth}
+    \begin{minipage}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{logo}
+        \caption{Interface d’accueil}
+        \label{fig:signup-google}
+    \end{minipage}
+\end{figure}
+\begin{figure}[H]%
+\centering
+    \setlength{\fboxsep}{0pt}%
+    \setlength{\fboxrule}{0.0pt}%
+    \fbox{
+    \includegraphics[width=7 cm,height=15cm]{logo}%
+    }
+    \caption{Menu}%
+\end{figure}
+\subsection{Interface Login :}
+La figure ci-dessous présente l’interface d’authentification dans laquelle on doit
+entrer l’adresse e-mail et le mot de passe pour commencer à utiliser notre application.
+Des messages appropriés sont affichés pour informer l’utilisateur en cas d’erreur
+d’authentification ou de succès de connexion. S’il n’a pas de compte, l’utilisateur
+clique sur s’inscrire pour passer à l’étape de création de compte.
+\begin{figure}[H]
+    \centering
+    \begin{minipage}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{logo}
+        \caption{Interface login AutoSmart}
+        \label{fig:signup}
+    \end{minipage}
+    \hspace{0.05\textwidth}
+    \begin{minipage}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{logo}
+        \caption{Initialiser mot de passe}
+        \label{fig:signup-google}
+    \end{minipage}
+\end{figure}
+\subsection{Interface Inscription :}
+La figure 4.15 présente l’interface d’inscription où l’utilisateur soit qu’il est client ou
+transporteur doit remplir un formulaire pour avoir un compte dans l’application lui
+permettant de gérer toute les fonctionnalités.
+\begin{figure}[H]%
+\centering
+    \setlength{\fboxsep}{0pt}%
+    \setlength{\fboxrule}{0.0pt}%
+    \fbox{
+    \includegraphics[width=7 cm,height=15cm]{logo}%
+    }
+    \caption{Interface d’inscription AutoSmart}%
+\end{figure}
+\subsection{Interface Ajouter Annonce :}
+La figure ci-dessous présente l’interface Ajouter Annonce :
+\begin{figure}[H]%
+\centering
+    \setlength{\fboxsep}{0pt}%
+    \setlength{\fboxrule}{0.0pt}%
+    \fbox{
+    \includegraphics[width=7 cm,height=16cm]{logo}%
+    }
+    \caption{Interface Ajouter Annonce}%
+\end{figure}

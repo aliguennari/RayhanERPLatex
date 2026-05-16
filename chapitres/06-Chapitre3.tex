@@ -1,0 +1,666 @@
+\chapter{CONCEPTION}
+\begin{spacing}{1.2}
+\minitoc
+\thispagestyle{MyStyle}
+\end{spacing}
+\newpage
+
+\section{Introduction}
+Ce chapitre-ci est destiné à la conception qui est une étape primordiale dans le cycle
+de vie d’une application, elle a pour objectif d’élaborer à partir du modèle du système
+obtenu lors de l’étape d’analyse de besoin, des modèles détaillés de l’architecture du
+système. Le chapitre sera présenté comme suit : nous commençons par le choix de
+la méthode et les outils de modélisation. Ensuite nous détaillons les cas d’utilisation
+par diagrammes et description, puis nous présentons par ordre les diagrammes de
+séquence, les diagrammes de classe et finir par les diagrammes d’activité.
+\section{Choix de la méthodologie d’analyse}
+Pour élaborer cette application nous devons établir une conception pour atteindre
+le but final de notre projet. Pour cela nous avons choisi un langage de conception
+adapté avec nos besoins.
+\subsection{Présentation UML}
+UML (Unifed Modeling Language), se définit comme un langage de modélisation
+graphique et textuel destiné à comprendre et à définir des besoins, spécifier et documenter
+des systèmes, esquisser des architectures logicielles, concevoir des solutions et communiquer
+des points de vue. UML modélise l’ensemble des données et des traitements en
+élaborant des différents diagrammes.
+\subsection{Schémas de quelques diagrammes de cas d’utilisation}
+Les cas d’utilisation représentent non seulement les interactions avec les acteurs,
+mais également les prés et post conditions ainsi que les enchaînements alternatifs.
+Dans cette section nous décrirons les cas d’utilisation des différents acteurs.
+\subsubsection{Cas d’utilisation : S’authentifier}
+Chaque utilisateur pour accéder à son compte et avoir ses fonctionnalités doit s’authentifier
+d’avance. La figure ci-dessous décrit ces relations :
+\begin{figure}[H]%
+    \center%
+    \setlength{\fboxsep}{0pt}%
+    \setlength{\fboxrule}{0.0pt}%
+    \fbox{
+    \includegraphics[width=13 cm,height=12cm]{logo}
+    }
+    \caption{Diagramme du cas d’utilisation «S’authentifier»}%
+\end{figure}
+\vfill
+\textbf{Tableau descriptif :}Dans le tableau ci-dessous, nous allons décrire les détails du cas d’utilisation «S’authentifier» :
+\begin{table}[h!]
+\renewcommand{\arraystretch}{1.8}
+\setlength{\tabcolsep}{16pt}
+\centering
+\begin{tabular}{|l|p{11cm}|}
+
+\hline
+Titre & S'authentifier \\
+\hline
+Objectif & Vérifier l’identité de l’utilisateur afin de lui accorder l’accès à ses fonctionnalités selon son rôle. \\
+\hline
+Acteur & Visiteur, Client, Vendeur, Administrateur \\
+\hline
+Pré-condition & L’utilisateur possède un compte \\
+\hline
+Post-condition & L’utilisateur est authentifié et accède aux fonctionnalités qui lui sont dédiées  \\
+\hline
+Scénario nominal &  Saisir l’email et le mot de passe :\par
+-Le système vérifie les données saisies.\par
+-Le système envoi une requête de sélection à la base de données.\par
+-La base de données envoi les données au système\par
+-Le système vérifie la conformité de l’email et du mot de passe.
+\\
+\hline
+Scénario alternatif & Mot de passe ou email incorrecte : un message d’erreur apparait sous le
+champs correspondant. \\
+\hline
+\end{tabular}
+\textbf{\caption{Tableau descriptif du cas d’utilisation « S’authentifier »}}
+\label{table:descriptif}
+\end{table}
+\subsubsection{Cas d’utilisation : S’inscrire}
+La figure ce-dessous représente le cas d’utilisation « S’inscrire ».
+
+\begin{figure}[H]%
+    \center%
+    \setlength{\fboxsep}{0pt}%
+    \setlength{\fboxrule}{0.0pt}%
+    \fbox{
+    \includegraphics[width=13 cm,height=8cm]{logo}%
+    }
+    \caption{Diagramme du cas d’utilisation «S’inscrire»}%
+    \end{figure}
+    \vfill
+\textbf{Tableau descriptif :}Dans le tableau ci-dessous, nous allons décrire les détails du cas d’utilisation «S’inscrire» :
+\begin{table}[h!]
+\renewcommand{\arraystretch}{1.8}
+\setlength{\tabcolsep}{16pt}
+\centering
+\begin{tabular}{|l|p{12cm}|}
+
+\hline
+Titre & S'inscrire \\
+\hline
+Objectif & Permettre au visiteur de créer un compte. \\
+\hline
+Acteur & Visiteur \\
+\hline
+Pré-condition & L'utilisateur est un visiteur non connecté \\
+\hline
+Post-condition & Un nouveau compte est créé et le visiteur devient un client authentifié  \\
+\hline
+Scénario nominal &-Le visiteur accède au formulaire d'inscription\par
+-Il saisit ses informations (nom, email, mot de passe, etc.)\par
+-Il valide le formulaire\par
+-Le système crée un nouveau compte utilisateur.\par
+-Un message de confirmation s'affiche
+\\
+\hline
+Scénario alternatif & Un email déjà utilisé, des données invalides : un message d’erreur apparait sous le
+champs correspondant. \\
+\hline
+\end{tabular}
+\textbf{\caption{Tableau descriptif du cas d’utilisation « S’inscrire »}}
+\label{table:}
+\end{table}
+\subsubsection{Cas d’utilisation : Rechercher des véhicules }
+La figure ce-dessous représente le cas d’utilisation « Rechercher des véhicules ».
+
+ \begin{figure}[H]%
+    \center%
+    \setlength{\fboxsep}{0pt}%
+    \setlength{\fboxrule}{0.0pt}%
+    \fbox{
+    \includegraphics[width=13 cm,height=8cm]{logo}%
+    }
+    \caption{Diagramme du cas d’utilisation «Rechercher des véhicules}%
+\end{figure}
+\textbf{Tableau descriptif :}Dans le tableau ci-dessous, nous allons décrire les détails du cas d’utilisation «Rechercher des véhicules» :
+\begin{table}[h!]
+\renewcommand{\arraystretch}{1.8}
+\setlength{\tabcolsep}{16pt}
+\centering
+\begin{tabular}{|l|p{12cm}|}
+
+\hline
+Titre & Rechercher des véhicules \\
+\hline
+Objectif & Permettre à l'utilisateur de rechercher des véhicules disponibles à la vente.
+ \\
+\hline
+Acteur & Visiteur, Client \\
+\hline
+Pré-condition & L’utilisateur est sur la page d’accueil ou interface de recherche. \\
+\hline
+Post-condition & Les résultats de la recherche sont affichés
+  \\
+\hline
+Scénario nominal &-L'utilisateur accède à l’interface de recherche de véhicules.\par
+-Le système affiche un formulaire de recherche avec différents critères.\par
+-L’utilisateur valide la recherche\par
+-Le système effectue une recherche dans la base de données selon les critères fournis.\par
+-Le système affiche les résultats\par
+-L’utilisateur applique des filtres supplémentaires.\\
+\hline
+Scénario alternatif & Aucun résultat ne correspond à la recherche : un message est affiché invitant à modifier les critères. \\
+\hline
+\end{tabular}
+\textbf{\caption{Tableau descriptif du cas d’utilisation « Rechercher des véhicules »}}
+\label{table:}
+\end{table}
+\subsubsection{Cas d’utilisation : Consulter des annonces}
+La figure ce-dessous représente le cas d’utilisation « Consulter des annonces ».
+\begin{figure}[H]%
+    \center%
+    \setlength{\fboxsep}{0pt}%
+    \setlength{\fboxrule}{0.0pt}%
+    \fbox{
+    \includegraphics[width=10 cm,height=6cm]{logo}%
+    }
+    \caption{Diagramme du cas d’utilisation « Consulter des annonces »}%
+    \end{figure}
+\textbf{Tableau descriptif :}Dans le tableau ci-dessous, nous allons décrire les détails du cas d’utilisation «Consulter des annonces» :
+\begin{table}[h!]
+\renewcommand{\arraystretch}{1.8}
+\setlength{\tabcolsep}{16pt}
+\centering
+\begin{tabular}{|l|p{12cm}|}
+
+\hline
+Titre & Consulter des annonces \\
+\hline
+Objectif & Permettre la consultation des annonces de véhicules publiées sur la plateforme.
+ \\
+\hline
+Acteur & Visiteur, Client\\
+\hline
+Pré-condition & La plateforme contient des annonces. \\
+\hline
+Post-condition & L'utilisateur a visualisé une ou plusieurs annonces.
+  \\
+\hline
+Scénario nominal &- L'utilisateur clique sur une annonce pour voir les détails.\par - Le système affiche l'annonce complète.\\
+\hline
+Scénario alternatif & Annonce indisponible : Message "Cette annonce n'est plus disponible" \\
+\hline
+\end{tabular}
+\textbf{\caption{Tableau descriptif du cas d’utilisation « Consulter des annonces »}}
+\label{table:}
+\end{table}
+\subsubsection{Cas d’utilisation : Ajouter aux favoris}
+La figure ce-dessous représente le cas d’utilisation « Ajouter aux favoris ».
+\begin{figure}[H]%
+    \center%
+    \setlength{\fboxsep}{0pt}%
+    \setlength{\fboxrule}{0.0pt}%
+    \fbox{
+    \includegraphics[width=12 cm,height=6cm]{logo}%
+    }
+    \caption{Diagramme du cas d’utilisation « Ajouter aux favoris »}%
+    \end{figure}
+    \vfill
+    \textbf{Tableau descriptif : } Dans le tableau ci-dessous, nous allons décrire les détails du cas d’utilisation
+«Ajouter aux favoris» :
+\begin{table}[h!]
+\renewcommand{\arraystretch}{1.8}
+\setlength{\tabcolsep}{16pt}
+\centering
+\begin{tabular}{|l|p{12cm}|}
+\hline
+Titre & Ajouter aux favoris \\
+\hline
+Objectif & Permettre au client d’ajouter une annonce à sa liste de favoris.
+ \\
+\hline
+Acteur & Client\\
+\hline
+Pré-condition & Le client doit être authentifié. \\
+\hline
+Post-condition & L’annonce est enregistrée dans la liste des favoris du client.
+  \\
+\hline
+Scénario nominal &- Le client sélectionne une annonce.\par - Il clique sur « Ajouter aux favoris ».\par - Le système vérifie l’authentification du client.\par - L’annonce est ajoutée aux favoris du client.\\
+\hline
+Scénario alternatif & - Si le client n’est pas authentifié, il est redirigé vers le formulaire de connexion.\par - Si une erreur survient, un message d’erreur est affiché. \\
+\hline
+\end{tabular}
+\textbf{\caption{Tableau descriptif du cas d’utilisation « Ajouter aux favoris »}}
+\label{table:}
+\end{table}
+\subsubsection{Cas d’utilisation : Contacter Vendeur}
+La figure ce-dessous représente le cas d’utilisation « Contacter Vendeur ».
+\begin{figure}[H]%
+    \center%
+    \setlength{\fboxsep}{0pt}%
+    \setlength{\fboxrule}{0.0pt}%
+    \fbox{
+    \includegraphics[width=12 cm,height=6cm]{logo}%
+    }
+    \caption{Diagramme du cas d’utilisation « Contacter Vendeur »}%
+    \end{figure}
+    \vspace{3cm}
+\textbf{Tableau descriptif :}Dans le tableau ci-dessous, nous allons décrire les détails du cas d’utilisation «Contacter Vendeur» :
+\begin{table}[h!]
+\renewcommand{\arraystretch}{1.8}
+\setlength{\tabcolsep}{16pt}
+\centering
+\begin{tabular}{|l|p{12cm}|}
+
+\hline
+Titre & Contacter Vendeur \\
+\hline
+Objectif & Permettre au client d’envoyer un message ou une demande au vendeur.
+ \\
+\hline
+Acteur & Client \\
+\hline
+Pré-condition & Le client doit être authentifié.
+\\
+\hline
+Post-condition & Le message est transmis au vendeur concerné.
+  \\
+\hline
+Scénario nominal &- Le client consulte une annonce.\par
+- Il clique sur « Contacter le vendeur ».\par
+- Le système vérifie l’authentification du client.\par - Le client rédige son message.\par - Le système envoie le message au vendeur.\\
+\hline
+Scénario alternatif & - Si le client n’est pas authentifié, le système déclenche le cas d’utilisation « S’authentifier ».\par
+- En cas d’échec d’envoi, un message d’erreur est affiché.\\
+\hline
+\end{tabular}
+\textbf{\caption{Tableau descriptif du cas d’utilisation « Contacter Vendeur >>}}
+\label{table:}
+\end{table}
+\subsubsection{Cas d’utilisation : Gérer Annonce}
+La figure ce-dessous représente le cas d’utilisation « Gérer Annonce ».
+\begin{figure}[H]%
+    \center%
+    \setlength{\fboxsep}{0pt}%
+    \setlength{\fboxrule}{0.0pt}%
+    \fbox{
+    \includegraphics[width=12 cm,height=6cm]{logo}%
+    }
+    \caption{Diagramme du cas d’utilisation « Gérer Annonce »}%
+    \end{figure}
+    \vfill
+    \textbf{Tableau descriptif :}Dans le tableau ci-dessous, nous allons décrire les détails du cas d’utilisation «Gérer Annonce» :
+\begin{table}[h!]
+\renewcommand{\arraystretch}{1.8}
+\setlength{\tabcolsep}{16pt}
+\centering
+\begin{tabular}{|l|p{12cm}|}
+
+\hline
+Titre & Gérer Annonce \\
+\hline
+Objectif & Permet au vendeur d'ajouter, modifier ou supprimer ses annonces publiées sur la plateforme.
+ \\
+\hline
+Acteur & Vendeur \\
+\hline
+Pré-condition & -  Le vendeur est authentifié.\par - Le vendeur a au moins une annonce existante pour modifier ou supprimer.
+\\
+\hline
+Post-condition & La base de données est mise à jour selon l'action effectuée (ajout/modification/suppression).
+  \\
+\hline
+Scénario nominal &- Le vendeur choisit une action (ajouter/modifier/supprimer).\par
+- Le système valide et enregistre les modifications.\\
+\hline
+Scénario alternatif & - Ajout échoué : Champs obligatoires non remplis.\par
+- Modification échouée : Annonce verrouillée (en cours de modération).\par
+- Suppression échouée : Problème de connexion à la base de données.\\
+\hline
+\end{tabular}
+\textbf{\caption{Tableau descriptif du cas d’utilisation « Gérer Annonce >>}}
+\label{table:}
+\end{table}
+\subsubsection{Cas d’utilisation : Gérer les utilisateurs}
+La figure ce-dessous représente le cas d’utilisation « Gérer les utilisateurs ».
+\begin{figure}[H]%
+    \center%
+    \setlength{\fboxsep}{0pt}%
+    \setlength{\fboxrule}{0.0pt}%
+    \fbox{
+    \includegraphics[width=12 cm,height=6cm]{logo}%
+    }
+    \caption{Diagramme du cas d’utilisation « Gérer les utilisateurs »}%
+    \end{figure}
+\textbf{Tableau descriptif :}Dans le tableau ci-dessous, nous allons décrire les détails du cas d’utilisation «Gérer les utilisateurs» :
+\begin{table}[h!]
+\renewcommand{\arraystretch}{1.8}
+\setlength{\tabcolsep}{16pt}
+\centering
+\begin{tabular}{|l|p{12cm}|}
+
+\hline
+Titre & Gérer les utilisateurs \\
+\hline
+Objectif & Permettre à l'administrateur de gérer les comptes utilisateurs (création, modification, suppression, consultation).
+ \\
+\hline
+Acteur & Administrateur \\
+\hline
+Pré-condition & L'administrateur doit être authentifié dans le système.
+\\
+\hline
+Post-condition & Les modifications apportées aux utilisateurs sont enregistrées dans le système.
+  \\
+\hline
+Scénario nominal &- L'administrateur accède à l'interface de gestion des utilisateurs.\par
+- Le système affiche la liste des utilisateurs.\par - L'administrateur sélectionne une action (ajouter, modifier, supprimer, consulter).\par
+- Le système exécute l'action demandée et confirme son succès.\\
+\hline
+Scénario alternatif & - Si l'administrateur tente de supprimer un utilisateur inexistant, le système affiche un message d'erreur.\par
+- Si les données saisies pour un nouvel utilisateur sont invalides, le système demande de corriger les informations.\\
+\hline
+\end{tabular}
+\textbf{\caption{Tableau descriptif du cas d’utilisation « Gérer les utilisateurs >>}}
+\label{table:}
+\end{table}
+\subsubsection{Cas d’utilisation : Valider les annonces}
+La figure ce-dessous représente le cas d’utilisation « Valider les annonces ».
+\begin{figure}[H]%
+    \center%
+    \setlength{\fboxsep}{0pt}%
+    \setlength{\fboxrule}{0.0pt}%
+    \fbox{
+    \includegraphics[width=12 cm,height=6cm]{logo}%
+    }
+    \caption{Diagramme du cas d’utilisation « Valider les annonces »}%
+    \end{figure}
+     \textbf{Tableau descriptif :}Dans le tableau ci-dessous, nous allons décrire les détails du cas d’utilisation «Valider les annonces» :
+\begin{table}[h!]
+\renewcommand{\arraystretch}{1.8}
+\setlength{\tabcolsep}{16pt}
+\centering
+\begin{tabular}{|l|p{12cm}|}
+
+\hline
+Titre & Valider les annonces \\
+\hline
+Objectif & Permettre à l'administrateur de valider ou rejeter les annonces soumises par les utilisateurs avant leur publication.
+ \\
+\hline
+Acteur & Administrateur \\
+\hline
+Pré-condition & -  L'administrateur doit être authentifié.\par - Des annonces doivent être en attente de validation.
+\\
+\hline
+Post-condition & - Les annonces validées sont publiées.\par - Les annonces rejetées sont archivées ou supprimées.
+\\
+\hline
+Scénario nominal &- L'administrateur accède à l'interface de validation des annonces.\par
+- Le système affiche la liste des annonces en attente.\par - L'administrateur sélectionne une annonce et choisit de la valider ou de la rejeter.\par - Le système enregistre la décision et notifie l'utilisateur concerné si nécessaire.\\
+\hline
+Scénario alternatif & - Si l'administrateur rejette une annonce, il peut ajouter un commentaire expliquant la raison du rejet.\par
+- Si aucune annonce n'est en attente, le système affiche un message indiquant qu'aucune action n'est nécessaire.\\
+\hline
+\end{tabular}
+\textbf{\caption{Tableau descriptif du cas d’utilisation « Valider les annonces >>}}
+\label{table:}
+\end{table}
+\subsubsection{Cas d’utilisation : Supprimer une annonce signalée}
+La figure ce-dessous représente le cas d’utilisation « Supprimer une annonce signalée ».
+\begin{figure}[H]%
+    \center%
+    \setlength{\fboxsep}{0pt}%
+    \setlength{\fboxrule}{0.0pt}%
+    \fbox{
+    \includegraphics[width=12 cm,height=6cm]{logo}%
+    }
+    \caption{Diagramme du cas d’utilisation « Supprimer une annonce signalée »}%
+    \end{figure}
+     \textbf{Tableau descriptif :}Dans le tableau ci-dessous, nous allons décrire les détails du cas d’utilisation «Supprimer une annonce signalée » :
+\begin{table}[h!]
+\renewcommand{\arraystretch}{1.8}
+\setlength{\tabcolsep}{16pt}
+\centering
+\begin{tabular}{|l|p{12cm}|}
+
+\hline
+Titre & Supprimer une annonce signalée
+ \\
+\hline
+Objectif & Permettre à l'administrateur de supprimer une annonce signalée comme inappropriée ou non conforme.
+ \\
+\hline
+Acteur & Administrateur \\
+\hline
+Pré-condition & -  L'administrateur doit être authentifié.\par - Une annonce doit avoir été signalée par un utilisateur ou le système.
+\\
+\hline
+Post-condition & - L'annonce signalée est supprimée du système.
+\\
+\hline
+Scénario nominal &- L'administrateur accède à la liste des annonces signalées.\par
+- Le système affiche les détails de l'annonce signalée.\par - L'administrateur confirme la suppression.\par - Le système supprime l'annonce et met à jour la base de données.\\
+\hline
+Scénario alternatif & -  Si l'administrateur décide de ne pas supprimer l'annonce, il peut la marquer comme "non problématique" et la conserver.\par
+- Si l'annonce a déjà été supprimée ou n'existe pas, le système affiche un message d'erreur.\\
+\hline
+\end{tabular}
+\textbf{\caption{Tableau descriptif du cas d’utilisation « Supprimer une annonce signalée  >>}}
+\label{table:}
+\end{table}
+\subsubsection{Cas d’utilisation : Consulter Statistiques}
+La figure ce-dessous représente le cas d’utilisation « Consulter Statistiques ».
+\begin{figure}[H]%
+    \center%
+    \setlength{\fboxsep}{0pt}%
+    \setlength{\fboxrule}{0.0pt}%
+    \fbox{
+    \includegraphics[width=12 cm,height=6cm]{logo}%
+    }
+    \caption{Diagramme du cas d’utilisation « Consulter Statistiques »}%
+    \end{figure}
+     \textbf{Tableau descriptif :}Dans le tableau ci-dessous, nous allons décrire les détails du cas d’utilisation «Consulter Statistiques » :
+\begin{table}[h!]
+\renewcommand{\arraystretch}{1.8}
+\setlength{\tabcolsep}{16pt}
+\centering
+\begin{tabular}{|l|p{12cm}|}
+
+\hline
+Titre & Consulter les statistiques
+ \\
+\hline
+Objectif & Permettre à l'administrateur d'accéder et d'analyser les données statistiques du système (ex : nombre d'utilisateurs, annonces publiées, signalements, etc.).
+ \\
+\hline
+Acteur & Administrateur \\
+\hline
+Pré-condition & -  L'administrateur doit être authentifié.\par - Les données statistiques doivent être disponibles et accessibles.
+\\
+\hline
+Post-condition & - L'administrateur visualise les statistiques demandées.\par
+- Les données restent inchangées (consultation seule).
+\\
+\hline
+Scénario nominal &- L'administrateur accède à l'interface des statistiques.\par
+- Le système affiche les options de filtrage (période, type de données, etc.).\par - L'administrateur sélectionne les critères et demande l'affichage.\par - Le système génère et présente les statistiques sous forme de graphiques ou de tableaux.\\
+\hline
+Scénario alternatif & Si aucune donnée n'est disponible pour les critères sélectionnés, le système affiche un message approprié.\\
+\hline
+\end{tabular}
+\textbf{\caption{Tableau descriptif du cas d’utilisation « Consulter Statistiques  >>}}
+\label{table:}
+\end{table}
+\subsection{Diagramme de classe :}
+\subsubsection{Présentation :}
+Le diagramme de classe est considéré le plus important de la modélisation orienté
+objet, il montre la structure interne du système et il permet de fournir une représentation
+abstraite des objets du système qui vont interagir ensemble pour réaliser les cas
+d’utilisation. Il s’agit d’une vue statique car on ne tient pas compte du facteur
+temporel dans le comportement du système. Les principaux éléments de cette vue
+statique sont les classes et leurs relations : Une classe est une description d’un
+groupe d’objets partageant un ensemble commun de propriétés(les attributs), de
+comportement(les opérations ou méthodes) et de relations avec d’autres objets(les
+associations et les agrégations). Ci-dessous, le diagramme de classe de notre système
+:
+\begin{figure}[H]%
+    \center%
+    \setlength{\fboxsep}{0pt}%
+    \setlength{\fboxrule}{0.0pt}%
+    \fbox{
+    \includegraphics[width=13 cm,height=14cm]{logo}%
+    }
+    \caption{Diagramme de classe de AutoSmart}%
+    \end{figure}
+\subsection{Diagramme de séquence :}
+\subsubsection{Présentation :}
+Les diagrammes de séquence, couramment utilisés par les développeurs, modélisent
+les interactions entre les objets dans un cas d’utilisation unique. Ils illustrent la
+manière dont les différentes parties d’un système interagissent entre elles pour exécuter
+une fonction, et l’ordre dans lequel les interactions se produisent lorsqu’un cas d’utilisation
+particulier est exécuté. En termes plus simples, un diagramme de séquence montre
+les différentes parties d’un système qui travaillent dans une “séquence” pour obtenir
+quelque chose.
+Les diagrammes de séquence sont une solution populaire de modélisation dynamique
+en langage UML, car ils se concentrent plus précisément sur les lignes de vie, les
+processus et les objets qui vivent simultanément, et les messages qu’ils échangent
+entre eux pour exercer une fonction avant la fin de la ligne de vie.
+Les diagrammes de séquence sont centrés sur le temps et ils montrent visuellement
+l’ordre de l’interaction en utilisant l’axe vertical du diagramme pour représenter le
+temps, quels messages sont envoyés et quand.
+\subsubsection{Diagrammes de séquence « Authentification »:}
+Pour s’authentifier, l’utilisateur accède vers l’interface d’authentification où il saisit
+son adresse e-mail et son mot de passe. Si l’un des champs est vide, l’utilisateur
+devra saisir à nouveau ces derniers. Le contrôleur vérifiera si les informations sont
+identiques, si la vérification aboutit l’utilisateur se voit autoriser l’accès et sera redirigé
+vers le page d’accueil, dans le cas contraire un message d’erreur sera affiché. La
+figure suivante le montre :
+\begin{figure}[H]%
+    \center%
+    \setlength{\fboxsep}{0pt}%
+    \setlength{\fboxrule}{0.0pt}%
+    \fbox{
+    \includegraphics[width=15 cm,height=16cm]{logo}%
+    }
+    \caption{Diagramme de séquence « Authentification »}%
+\end{figure}
+\subsubsection{Diagrammes de séquence « Inscription »:}
+Au premier contact avec l’application l’utilisateur doit créer un compte en remplissant
+un formulaire d’inscription.Le diagramme de séquence relatif au cas d’utilisation
+"Inscription" est illustré par la figure suivante :
+\begin{figure}[H]%
+    \center%
+    \setlength{\fboxsep}{0pt}%
+    \setlength{\fboxrule}{0.0pt}%
+    \fbox{
+    \includegraphics[width=15 cm,height=12cm]{logo}%
+    }
+    \caption{Diagramme de séquence « Inscription »}%
+\end{figure}
+\subsubsection{Diagrammes de séquence «Ajouter annonce»:
+}
+Le diagramme de séquence relatif au cas d’utilisation "Ajouter annonce" est illustré
+par la figure suivante :
+\begin{figure}[H]%
+    \center%
+    \setlength{\fboxsep}{0pt}%
+    \setlength{\fboxrule}{0.0pt}%
+    \fbox{
+    \includegraphics[width=15 cm,height=10cm]{logo}%
+    }
+    \caption{Diagramme de séquence « Ajouter annonce »}%
+\end{figure}
+\subsubsection{Diagrammes de séquence «Modifier annonce»:
+}
+Le diagramme de séquence relatif au cas d’utilisation "Modifier annonce" est illustré
+par la figure suivante :
+\begin{figure}[H]%
+    \center%
+    \setlength{\fboxsep}{0pt}%
+    \setlength{\fboxrule}{0.0pt}%
+    \fbox{
+    \includegraphics[width=15 cm,height=10cm]{logo}%
+    }
+    \caption{Diagramme de séquence « Modifier annonce »}%
+\end{figure}
+\subsubsection{Diagrammes de séquence «Contacter Vendeur»:
+}
+Le diagramme de séquence relatif au cas d’utilisation "Contacter Vendeur" est illustré
+par la figure suivante :
+\begin{figure}[H]%
+    \center%
+    \setlength{\fboxsep}{0pt}%
+    \setlength{\fboxrule}{0.0pt}%
+    \fbox{
+    \includegraphics[width=15 cm,height=10cm]{logo}%
+    }
+    \caption{Diagramme de séquence « Contacter Vendeur »}%
+\end{figure}
+\subsubsection{Diagrammes de séquence «Ajouter aux favoris»:
+}
+Le diagramme de séquence relatif au cas d’utilisation "Ajouter aux favoris" est illustré
+par la figure suivante :
+\begin{figure}[H]%
+    \center%
+    \setlength{\fboxsep}{0pt}%
+    \setlength{\fboxrule}{0.0pt}%
+    \fbox{
+    \includegraphics[width=15 cm,height=10cm]{logo}%
+    }
+    \caption{Diagramme de séquence « Ajouter aux favoris »}%
+\end{figure}
+\subsection{Diagramme d'activité :}
+\subsubsection{Présentation :}
+Le diagramme d’activité (Activity Diagram) fait partie des diagrammes comportementaux.
+Il est utilisé pour modéliser les aspects dynamiques d’un système. Il s’agit de représenter
+les opérations d’un processus et leurs conséquences sur les objets (logiciels ou matériels).
+La modélisation peut être utilisée pour décrire le déroulement d’un cas d’utilisation
+ou d’une méthode. Les diagrammes d’activité affichent le flux de travail d’un point
+de départ à un point d’arrivée en détaillant les nombreux chemins de décision existant
+dans la progression des événements contenus dans l’activité. Ils peuvent être utilisés
+pour détailler des situations dans lesquelles un traitement parallèle peut avoir lieu lors
+de l’exécution de certaines activités. Les diagrammes d’activités sont utiles pour la
+modélisation métier car ils sont utilisés pour détailler les processus impliqués dans
+les activités métier.
+\subsubsection{Diagramme d’activité «Authentification» :}
+Le diagramme d’activité relatif au cas d’utilisation "Authentification" est illustré
+par la figure suivante :
+\begin{figure}[H]%
+    \center%
+    \setlength{\fboxsep}{0pt}%
+    \setlength{\fboxrule}{0.0pt}%
+    \fbox{
+    \includegraphics[width=10 cm,height=13cm]{logo}%
+    }
+    \caption{Diagramme d’activité «Authentification»}%
+\end{figure}
+\subsubsection{Diagramme d’activité «Ajouter annonce» :}
+Le diagramme d’activité relatif au cas d’utilisation "Authentification" est illustré
+par la figure suivante :
+\begin{figure}[H]%
+    \center%
+    \setlength{\fboxsep}{0pt}%
+    \setlength{\fboxrule}{0.0pt}%
+    \fbox{
+    \includegraphics[width=10 cm,height=13cm]{logo}%
+    }
+    \caption{Diagramme d’activité «Ajouter annonce»}%
+\end{figure}
+
+
+\section{Conclusion}
+Au cours de ce chapitre nous avons en premier lieu modélisé les diagrammes de cas
+d’utilisation en détaillant leurs enchainements, ensuite les diagrammes de séquences
+qui nous ont donné une vue approfondie sur les interactions entre les objets et cela
+nous a permis de réaliser le diagramme de classe. Vers la fin, nous présentons les
+diagrammes d’activité. Dans le prochain chapitre nous allons passer à la réalisation
+de notre application.

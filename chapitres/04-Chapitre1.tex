@@ -1,0 +1,204 @@
+\chapter{Présentation Générale}
+\begin{spacing}{1.2}
+\minitoc
+\thispagestyle{MyStyle}
+\end{spacing}
+\newpage
+
+\section{Introduction}
+Dans une gestion classique d’une entreprise, chaque service est doté de son propre système d’information et ses propres applications (comptabilité, gestion de paie, gestion des stocks, gestion commerciale, gestion de production...). Pour faire le lien entre ces différents systèmes, l’entreprise faisait développer des interfaces informatiques entre ses différents SI. Ce mode de fonctionnement coûtait très cher à l’entreprise et il est devenu inappropriée. Pour améliorer cette situation, les entreprises ont décidé d’implémenter des systèmes intégrés connus par les progiciels de gestion intégré « PGI » ou en anglais Entreprise Ressource Planning « ERP »
+\section{Présentation de l’organisme d’accueil : Sociéte \reportEntreprise}
+Rayhan est une société Tunisienne   de plasturgie (Implanté à Tataouine) spécialisé dans la fabrication de Sac a Poubelle, Bretelles en plastique et autres solutions de Packaging. La société Assure des produits de haute qualité Adaptés aux besoins industriels et Domestique  
+\\
+\begin{figure}[H]%
+    \center%
+    \setlength{\fboxsep}{0pt}%
+    \setlength{\fboxrule}{0.0pt}%
+    \fbox{
+    \includegraphics[width=5cm,height=5cm]{logoEntreprise.jpeg}%
+    }
+    \\
+    \caption{Logo Entreprise \reportEntreprise}%
+    
+\end{figure}
+
+\subsection{Description de la société \reportEntreprise}
+\begin{itemize}
+\item Nom de la société : SUARL Rayhan Industrie du packaging plastique.
+\item Nom du propriétaire : Fekih Ahmed
+\item Structure : Mono-site (un seul site de production).
+\item Effectif : 7 employés (tous utilisateurs du système ERP).
+\item Type de production : Une seule chaîne de production.
+\item Adresse : cité ABBES	Tataouine Nord Tataouine 3200 Tataouine.
+\item MF : 195135Q/A/C/0000
+
+\end{itemize}
+
+\subsection{Organigramme \reportEntreprise}
+
+\begin{figure}[H]%
+	\center%
+	\setlength{\fboxsep}{0pt}%
+	\setlength{\fboxrule}{0.0pt}%
+	\fbox{
+		\includegraphics[width=5cm,height=5cm]{organigramme.png}%
+	}
+	\\
+	\caption{Organigramme}%
+	
+\end{figure}
+
+\section{Objectif du projet}
+
+Mettre en place une solution ERP intégrée pour gérer l’ensemble des processus de
+L’entreprise : achats, ventes, stock, production, facturation, paie et gestion du
+Personnel.\\
+Un ERP (Progiciel de Gestion Intégré) vise à centraliser les données dans une base unique pour automatiser les processus, améliorer la productivité et fiabiliser le pilotage stratégique en temps réel.
+Il standardise les opérations (ventes, RH, finance, production) pour accroître l'efficacité globale et la conformité.
+\subsection{Objectifs du système ERP }
+L'implantation d'un ERP (Progiciel de Gestion Intégré) dans une société industrielle comme Rayhan vise à unifier la gestion de la production (GPAO), des stocks et des ventes pour optimiser les performances.
+Ce processus nécessite une analyse des besoins, la configuration des modules, la reprise des données, la formation et un déploiement, souvent progressif, pour limiter les risques opérationnels
+\subsection{Objectifs Fonctionnels (Ce que le système fait)}
+\begin{itemize}
+\item Centralisation des données : Regrouper toutes les informations dans une base unique, éliminant les silos.
+\item Automatisation des processus : Automatiser les tâches répétitives (facturation, gestion des stocks, saisie de commandes).
+\item Intégration métier : Lier les départements (ventes, production, comptabilité, …) pour une collaboration fluide.
+\item Reporting et Business Intelligence : Générer des tableaux de bord et des indicateurs (KPI) pour la prise de décision.
+ \end{itemize}
+
+
+\subsection{ Objectifs Non Fonctionnels (Comment le système le fait)}
+
+\begin{itemize}
+\item Performance et Temps réel : Mettre à jour les informations instantanément.
+\item Sécurité : Renforcer la protection des données sensibles et la conformité réglementaire.
+\item Scalabilité (Évolutivité) : S'adapter à la croissance de l'entreprise et intégrer de nouvelles fonctionnalités.
+\item Ergonomie et Utilisabilité : Standardiser les interfaces pour faciliter l'adoption par les utilisateurs.
+\item Disponibilité et Fiabilité : Garantir un système robuste et accessible. 
+Ces objectifs combinés permettent d'améliorer la rentabilité et de réduire les erreurs humaines. ,à améliorer l'efficacité, à fournir une visibilité sur les opérations et à permettre une prise de décision en temps réel. Les systèmes ERP offrent un large éventail de fonctionnalités, mais il est essentiel, pour réussir, de savoir quelles sont les fonctionnalités à rechercher et de comprendre comment mettre en œuvre un système ERP adapté aux besoins de Notre Entreprise «  Rayhan » 
+\end{itemize}
+
+\section{Les ERP}
+\subsection{Définition}
+Le concept d’ERP part d’un constat relativement simple selon lequel (la somme des optima est parfois inferieure `a l’optimum de la somme).En d’autres termes, l’apport d’un ERP est toujours bien supérieur `a la somme des apports de chacun des modules qui le composent. Cela pourrait se résumer par l’expression simple et bien connue
+La Définition Le terme ERP vient de l’anglais « Enterprise Ressource Planning ». ERP a été traduit en français par l’acronyme PGI (Progiciel de Gestion Intégré) et se définit comme un groupe de modules relié à une base de données unique. L’ERP est un progiciel qui permet de gérer l’ensemble des processus opérationnels d’une entreprise en intégrant plusieurs fonctions de gestion dans un système : solution de gestion des commandes, solution de gestion des stocks, solution de gestion de la paie,solution de gestion de la comptabilité, solution de gestion d’e-commerce, solution de gestion de commerce B to B ou B to C .... Autrement dit, l’ERP représente la « colonne vertébrale » d’une entreprise. 
+
+
+
+\subsection{Architecture technique}
+L'architecture d'un ERP se compose principalement d'un serveur ERP sur lequel est hébergée une base de données unique et disponible pour tous les utilisateurs. Elle implique l'utilisation de différents réseaux : 
+\begin{itemize}
+\item Multi sites. 
+\item Intranet, extranet.
+\item Serveur ERP à distance. 
+\end{itemize}
+C'est la mise en réseau des données qui permettra leur gestion décentralisée, de plus, les ERP sont compatibles en packs Office. Enfin, les ERP sont aussi compatibles avec des outils de reporting
+\subsection{Les principaux éditeurs Le marché de l'ERP}
+Représente une vraie manne pour les prestataires de services informatiques. Il est considéré aujourd'hui, le marché le plus porteur de l'informatique. On distingue deux catégories d'ERP Les ERP Propriétaires et les ERP Open Source :
+\subsubsection{Les ERP Propriétaires }
+Aujourd’hui, de nombreux ERP propriétaires existent sur le marché. Nous évoquerons dans ce qui suit, quelques grands éditeurs : 
+\begin{itemize}
+\item SAP (Business One) SAP/ est le leader mondial des ERP, est une application client- serveur. Ses modules couvrent l'ensemble des fonctions de gestion de l'entreprise et chaque module couvre des besoins complets de gestion. Ce progiciel a remporté rapidement un succès important auprès des grandes entreprises en proposant un progiciel multilingue et multidevise
+\item Oracle (JD Edwards) : Est un progiciel de gestion intégrée. Anciennement appelé People Enterprise One ou One World XE ou ERP 8, et vendu par J.D. Edwards puis par Peoplesoft. J.D. Edwards a été racheté par People Soft puis par Oracle. Le produit est depuis renommé "Oracle JDEdwards Enterprise One". Il est composé de plusieurs modules plus ou moins indépendants.
+\item ERP SAGE : SAGE Est un progiciel de gestion intégrée (ERP/PGI), conçu pour les structures de 20 à 500 employés, sociétés autonomes et filiales de groupes, des secteurs de l’industrie, du négoce et des services
+\end{itemize}
+\subsubsection{Les ERP Open Source }
+Ils sont relayés par des partenaires (SSII, Cabinets de Conseil) pour le support. L’implémentation d’un progiciel Open Source revient moins chère, puisqu’il n’y a pas de coût de licence. En revanche il faut inclure, dans le calcul du coût d'acquisition total, les frais de maintenance et de l'assistance technique. Voici la liste des principaux progiciels Open Source : 
+\begin{itemize}
+\item Aria : Est le cœur de la gamme de produits Aria 4 XP, il couvre tous les domaines fonctionnels internes nécessaires pour gérer une entreprise. Il a été développé à base d’un ERP open source appelé Nola, et son environnement est PHPMYSQL 
+\item Compiere : Est un progiciel de gestion intégré (PGI) et gestion de la relation client (GRC) à source ouverte, open source pour les Petites et moyennes entreprises (PME) dans la distribution et le service. L'application est fournie sous double licence GPL et propriétaire. Les sources peuvent être adaptées aux besoins du client. Le support technique et la documentation sont payants. Son origine est JorgJank 
+\item ERP : Est un progiciel de gestion intégrée (ERP) libre, son origine est Nexedi. Son intégration avec NuxeoCPS, lui a permis d’être un système de gestion de contenu. L’environnement dans lequel il évolue est composé du Python et Zope
+\item Fisterra : Est un PGI sous licence PGL, le premier client pour cet ERP était la société espagnole Auto Arte, son origine est Igalia, et son environnement est GNOME2 développement platform PostgreSQL 
+\item Odoo :  Anciennement OpenERP ou encore TinyERP, est un progiciel libre de gestion intégrée comprenant des modules de gestion des ventes, des relations clients, des projets, des entrepôts, de production, de comptabilité et de ressources humaines. Son environnement est constitué principalement du PostgreSQL et XML 
+
+\end{itemize}
+
+\textbf{Tableau Comparatif : ERP Propriétaire vs Open Source}
+\begin{table}[h!]
+\renewcommand{\arraystretch}{1.8}
+\setlength{\tabcolsep}{16pt}
+\centering
+\begin{tabular}{|l|p{11cm}|}
+
+\hline
+Caractéristique  & Propriétaire ERP & ERP Open Source \\
+\hline
+Coût initial & Élevé (licences, mise en place) & Faible à nul (pas de licence) \\
+\hline
+Coût à long terme & Élevé (entretien, permis) & Modéré (hébergement, accompagnement) \\
+\hline
+Personnalisation & Limitée, souvent par l'éditeur & Élevée, code source modifiable \\
+\hline
+Dépendance & Forte (fournisseur de verrouillage) & Faible (indépendance)  \\
+
+\hline
+\end{tabular}
+\textbf{\caption{Tableau descriptif du cas d’utilisation « S’authentifier »}}
+\label{table:descriptif}
+\end{table}
+
+
+
+
+
+
+\begin{figure}[H]%
+    \center%
+    \setlength{\fboxsep}{0pt}%
+    \setlength{\fboxrule}{0.0pt}%
+    \fbox{
+    \includegraphics[width=8cm,height=7cm]{images/arch_2tier.png}%
+    }
+    \\
+    \caption{Architecture 2-tiers}%
+    
+\end{figure}
+Bien que ce schéma puisse paraître simpliste, une analyse détaillée des éléments de cette architecture
+et de leurs fonctions attachées met en évidence certains points essentiels sur lesquels on attire
+l’attention :\par
+1. La fonction de présentation est à la charge du client exclusivement.\par
+2. Le calcul (processing) est réparti entre le client et le serveur.\par
+3. Le logiciel client est généralement spécifique au serveur.\par
+4. Les données sont stockées ou accessibles via le serveur.\par Dans le cadre d’une topologie d’accès
+à une base de données, le serveur traitera les requêtes en provenance du client qui se feront
+en général en langage SQL.
+C’est parce que le client assume des tâches de présentation et de processing, et donc de fait
+communique avec le serveur sans intervention d’un autre processus que le client est dit "lourd"
+par opposition à l’architecture 3-tiers où le client est constitué d’un simple navigateur internet et
+communique avec le serveur via un frontal.
+\subsection{Cycle de vie}
+Les applications mobiles ne sont pas des produits statiques qui peuvent être développés
+une fois puis oubliés. Ils nécessitent des mises à jour, des améliorations et une
+maintenance constantes pour suivre l’évolution des besoins et des attentes des utilisateurs
+et du marché. C’est là qu’intervient le concept de cycle de vie d’une application
+mobile. Le cycle de vie d’un logiciel désigne toutes les étapes du développement
+d’un logiciel, de sa conception à sa disparition. L’objectif d’un tel découpage est de
+permettre de définir des jalons intermédiaires permettant la validation du développement
+logiciel, c’est-à-dire la conformité du logiciel avec les besoins exprimés, et la vérification
+du processus de développement, c’est-à-dire l’adéquation des méthodes mises en
+œuvre.
+Pour le développement de notre application, nous avons choisis le modèle de cycle
+de vie en V comme l’indique la figure suivante :
+\begin{figure}[H]%
+    \center%
+    \setlength{\fboxsep}{0pt}%
+    \setlength{\fboxrule}{0.0pt}%
+    \fbox{
+    \includegraphics[width=15cm,height=10cm]{images/cycle_en_v.png}%
+    }
+    \\
+    \caption{Modèle de cycle de vie en V}%
+    
+\end{figure}
+La méthode du cycle en V repose sur une idée simple. Les étapes de développement
+logiciel et de tests unitaires se répondent les unes aux autres. En clair, cela signifie
+que chaque phase de développement logiciel doit se conclure par une phase de
+tests unitaires. De plus, la mise en œuvre de cette méthode est simple. Une fois
+les spécifications fonctionnelles et les étapes de développement définies, chaque
+membre de l’équipe peut ainsi identifier ses tâches et voir où en est le produit.
+De même, le cycle en V ne nécessite pas de réunion quotidienne, seules quelques
+réunions de pilotage sont nécessaires lors du passage d’une phase à une autre.
+\section{Conclusion}
+Après avoir mettre le projet dans son cadre et définir ses objectifs, on a fait recours
+sur l’aspect organisationnel en spécifiant la méthodologie choisie pour le travail.
+Dans le prochain chapitre nous allons passer à la spécification et l’analyse des besoins. 
