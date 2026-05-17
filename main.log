@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.5.16)  16 MAY 2026 21:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.5.16)  17 MAY 2026 23:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -954,8 +954,7 @@ File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 ) (C:\Users\Guenneri\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2026-02-18 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count422
-)
-No file main.aux.
+) (main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
@@ -976,6 +975,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 19.
 LaTeX Font Info:    ... okay on input line 19.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 19.
 LaTeX Font Info:    ... okay on input line 19.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1866,10 +1866,10 @@ Package rerunfilecheck Info: Checksums for `main.out':
 (rerunfilecheck)             After:  D4DD28DEEF1571664C560E5C54D11E25;17183.
  ) 
 Here is how much of TeX's memory you used:
- 41214 strings out of 467691
- 879594 string characters out of 5413535
+ 41217 strings out of 467691
+ 879672 string characters out of 5413535
  1407139 words of memory out of 5000000
- 69387 multiletter control sequences out of 15000+600000
+ 69388 multiletter control sequences out of 15000+600000
  714297 words of font info for 115 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  113i,14n,122p,1341b,1259s stack positions out of 10000i,1000n,20000p,200000b,200000s
