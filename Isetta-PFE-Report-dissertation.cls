@@ -4,6 +4,7 @@
 \usepackage{booktabs}
 \usepackage{longtable}
 \usepackage{float}
+\usepackage{capt-of}
 \AddToHook{cmd/TABULAR@eval/before}{\let\par\endgraf}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Packages to use

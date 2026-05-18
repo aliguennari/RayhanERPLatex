@@ -1,30 +1,50 @@
 {\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.1}Introduction}{\reset@font\mtcSfont 21}{section.3.1}}
 {\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.2}Choix de la méthodologie d’analyse}{\reset@font\mtcSfont 21}{section.3.2}}
 {\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.2.1}Présentation UML}{\reset@font\mtcSSfont 21}{subsection.3.2.1}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.2.2}Schémas de quelques diagrammes de cas d’utilisation}{\reset@font\mtcSSfont 21}{subsection.3.2.2}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.2.1}Cas d’utilisation : S’authentifier}{\reset@font\mtcSSSfont 22}{subsubsection.3.2.2.1}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.2.2}Cas d’utilisation : S’inscrire}{\reset@font\mtcSSSfont 23}{subsubsection.3.2.2.2}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.2.3}Cas d’utilisation : Rechercher des véhicules }{\reset@font\mtcSSSfont 24}{subsubsection.3.2.2.3}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.2.4}Cas d’utilisation : Consulter des annonces}{\reset@font\mtcSSSfont 25}{subsubsection.3.2.2.4}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.2.5}Cas d’utilisation : Ajouter aux favoris}{\reset@font\mtcSSSfont 26}{subsubsection.3.2.2.5}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.2.6}Cas d’utilisation : Contacter Vendeur}{\reset@font\mtcSSSfont 27}{subsubsection.3.2.2.6}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.2.7}Cas d’utilisation : Gérer Annonce}{\reset@font\mtcSSSfont 28}{subsubsection.3.2.2.7}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.2.8}Cas d’utilisation : Gérer les utilisateurs}{\reset@font\mtcSSSfont 29}{subsubsection.3.2.2.8}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.2.9}Cas d’utilisation : Valider les annonces}{\reset@font\mtcSSSfont 30}{subsubsection.3.2.2.9}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.2.10}Cas d’utilisation : Supprimer une annonce signalée}{\reset@font\mtcSSSfont 31}{subsubsection.3.2.2.10}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.2.11}Cas d’utilisation : Consulter Statistiques}{\reset@font\mtcSSSfont 32}{subsubsection.3.2.2.11}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.2.3}Diagramme de classe :}{\reset@font\mtcSSfont 34}{subsection.3.2.3}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.3.1}Présentation :}{\reset@font\mtcSSSfont 34}{subsubsection.3.2.3.1}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.2.4}Diagramme de séquence :}{\reset@font\mtcSSfont 35}{subsection.3.2.4}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.4.1}Présentation :}{\reset@font\mtcSSSfont 35}{subsubsection.3.2.4.1}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.4.2}Diagrammes de séquence « Authentification »:}{\reset@font\mtcSSSfont 35}{subsubsection.3.2.4.2}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.4.3}Diagrammes de séquence « Inscription »:}{\reset@font\mtcSSSfont 36}{subsubsection.3.2.4.3}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.4.4}Diagrammes de séquence «Ajouter annonce»: }{\reset@font\mtcSSSfont 37}{subsubsection.3.2.4.4}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.4.5}Diagrammes de séquence «Modifier annonce»: }{\reset@font\mtcSSSfont 38}{subsubsection.3.2.4.5}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.4.6}Diagrammes de séquence «Contacter Vendeur»: }{\reset@font\mtcSSSfont 39}{subsubsection.3.2.4.6}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.4.7}Diagrammes de séquence «Ajouter aux favoris»: }{\reset@font\mtcSSSfont 40}{subsubsection.3.2.4.7}}
-{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.2.5}Diagramme d'activité :}{\reset@font\mtcSSfont 41}{subsection.3.2.5}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.5.1}Présentation :}{\reset@font\mtcSSSfont 41}{subsubsection.3.2.5.1}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.5.2}Diagramme d’activité «Authentification» :}{\reset@font\mtcSSSfont 42}{subsubsection.3.2.5.2}}
-{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.5.3}Diagramme d’activité «Ajouter annonce» :}{\reset@font\mtcSSSfont 42}{subsubsection.3.2.5.3}}
-{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.3}Conclusion}{\reset@font\mtcSfont 43}{section.3.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.2.2}Diagramme des cas d’utilisation}{\reset@font\mtcSSfont 22}{subsection.3.2.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.2.1}Identification des Acteurs :}{\reset@font\mtcSSSfont 22}{subsubsection.3.2.2.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.2.2}Identification des cas d’utilisation principaux :}{\reset@font\mtcSSSfont 22}{subsubsection.3.2.2.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.2.3}Diagramme de cas d’utilisation Globale :}{\reset@font\mtcSSfont 27}{subsection.3.2.3}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.2.4}Diagrammes des cas d’utilisation spécifiques : }{\reset@font\mtcSSfont 27}{subsection.3.2.4}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.4.1}Diagramme de cas d’utilisation « s’authentifier » :}{\reset@font\mtcSSSfont 27}{subsubsection.3.2.4.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.4.2}Diagramme de cas d’utilisation « lancer les ordres des Achats » :}{\reset@font\mtcSSSfont 29}{subsubsection.3.2.4.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.4.3}Diagramme de cas d’utilisation « Suivre l’état du stock » : }{\reset@font\mtcSSSfont 32}{subsubsection.3.2.4.3}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.4.4}Diagramme de cas d’utilisation « Gérer la production » :}{\reset@font\mtcSSSfont 34}{subsubsection.3.2.4.4}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.4.5}Diagramme de cas d’utilisation « Gérer des commandes d’achat client » :}{\reset@font\mtcSSSfont 36}{subsubsection.3.2.4.5}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.4.6}Diagramme de cas d’utilisation « Gérer les Fournisseurs » :}{\reset@font\mtcSSSfont 38}{subsubsection.3.2.4.6}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.4.7}Diagramme de cas d’utilisation « Gérer les comptes utilisateurs » :}{\reset@font\mtcSSSfont 40}{subsubsection.3.2.4.7}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.4.8}Diagramme de cas d’utilisation « Réceptionner livraison de matière première » :}{\reset@font\mtcSSSfont 42}{subsubsection.3.2.4.8}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.4.9}Diagramme de cas d’utilisation « Gérer les produits et la Nomenclature » :}{\reset@font\mtcSSSfont 44}{subsubsection.3.2.4.9}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.4.10}Diagramme de cas d’utilisation « Gérer les comptes Utilisateurs » :}{\reset@font\mtcSSSfont 46}{subsubsection.3.2.4.10}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.4.11}Diagramme de cas d’utilisation « Visualiser le Dashboard » :}{\reset@font\mtcSSSfont 47}{subsubsection.3.2.4.11}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.2.5}Diagramme de classe}{\reset@font\mtcSSfont 48}{subsection.3.2.5}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.5.1}Présentation :}{\reset@font\mtcSSSfont 48}{subsubsection.3.2.5.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.5.2}Description :}{\reset@font\mtcSSSfont 50}{subsubsection.3.2.5.2}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.2.6}Diagramme de séquence}{\reset@font\mtcSSfont 51}{subsection.3.2.6}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.6.1}Présentation :}{\reset@font\mtcSSSfont 51}{subsubsection.3.2.6.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.6.2}Description :}{\reset@font\mtcSSSfont 52}{subsubsection.3.2.6.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.6.3}Diagramme de séquence « Créer commande Achat » :}{\reset@font\mtcSSSfont 52}{subsubsection.3.2.6.3}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.6.4}Diagramme de séquence : « Gérer Fournisseurs » :}{\reset@font\mtcSSSfont 54}{subsubsection.3.2.6.4}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.6.5}Diagramme de séquence : « lancer Ordre d’achat » :}{\reset@font\mtcSSSfont 55}{subsubsection.3.2.6.5}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.6.6}Diagramme de séquence : « Suivre l’état de stock » : }{\reset@font\mtcSSSfont 55}{subsubsection.3.2.6.6}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.6.7}Diagramme de séquence : « Gérer la Production » : }{\reset@font\mtcSSSfont 56}{subsubsection.3.2.6.7}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.6.8}Diagramme de séquence : « Gérer Produit » : }{\reset@font\mtcSSSfont 57}{subsubsection.3.2.6.8}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.6.9}Diagramme de séquence : « Gérer les comptes utilisateurs » : }{\reset@font\mtcSSSfont 59}{subsubsection.3.2.6.9}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.6.10}Diagramme de séquence : « Réception des Livraisons MP » : }{\reset@font\mtcSSSfont 60}{subsubsection.3.2.6.10}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.6.11}Diagramme de séquence : « s’authentifier » : }{\reset@font\mtcSSSfont 61}{subsubsection.3.2.6.11}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.6.12}Diagramme de séquence : « Visualiser Dashboard » : }{\reset@font\mtcSSSfont 62}{subsubsection.3.2.6.12}}
+{\reset@font\mtcSSfont\mtc@string\contentsline{subsection}{\noexpand \leavevmode \numberline {3.2.7}Diagramme d'activité}{\reset@font\mtcSSfont 63}{subsection.3.2.7}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.7.1}Présentation :}{\reset@font\mtcSSSfont 63}{subsubsection.3.2.7.1}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.7.2}Diagramme d’activité : « Créer Commande d’achat » :}{\reset@font\mtcSSSfont 63}{subsubsection.3.2.7.2}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.7.3}Diagramme d’activité : « Créer Ordre d’achat » :}{\reset@font\mtcSSSfont 64}{subsubsection.3.2.7.3}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.7.4}Diagramme d’activité : « Gérer Fournisseur » :}{\reset@font\mtcSSSfont 65}{subsubsection.3.2.7.4}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.7.5}Diagramme d’activité : « Gérer Production » :}{\reset@font\mtcSSSfont 66}{subsubsection.3.2.7.5}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.7.6}Diagramme d’activité : « Gestion des produits et nomenclatures BOM » :}{\reset@font\mtcSSSfont 67}{subsubsection.3.2.7.6}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.7.7}Diagramme d’activité : « Gestion de réception livraison » :}{\reset@font\mtcSSSfont 69}{subsubsection.3.2.7.7}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.7.8}Diagramme d’activité : « s’authentifier » :}{\reset@font\mtcSSSfont 70}{subsubsection.3.2.7.8}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.7.9}Diagramme d’activité : « Créer Ordre d’achat » :}{\reset@font\mtcSSSfont 71}{subsubsection.3.2.7.9}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.7.10}Diagramme d’activité : « Créer Commande d’achat » :}{\reset@font\mtcSSSfont 72}{subsubsection.3.2.7.10}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.7.11}Diagramme d’activité : « Créer Ordre d’achat » :}{\reset@font\mtcSSSfont 73}{subsubsection.3.2.7.11}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.7.12}Diagramme d’activité : « Créer Commande d’achat » :}{\reset@font\mtcSSSfont 74}{subsubsection.3.2.7.12}}
+{\reset@font\mtcSSSfont\mtc@string\contentsline{subsubsection}{\noexpand \leavevmode \numberline {3.2.7.13}Diagramme d’activité : « Créer Ordre d’achat » :}{\reset@font\mtcSSSfont 75}{subsubsection.3.2.7.13}}
+{\reset@font\mtcSfont\mtc@string\contentsline{section}{\noexpand \leavevmode \numberline {3.3}Conclusion}{\reset@font\mtcSfont 76}{section.3.3}}
