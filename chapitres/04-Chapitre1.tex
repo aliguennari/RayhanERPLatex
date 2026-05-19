@@ -21,7 +21,7 @@ Rayhan est une société Tunisienne   de plasturgie (Implanté à Tataouine) sp�
     \caption{Logo Entreprise \reportEntreprise}%
     
 \end{figure}
-
+\vfill
 \subsection{Description de la société \reportEntreprise}
 \begin{itemize}
 \item Nom de la société : SUARL Rayhan Industrie du packaging plastique.
@@ -41,7 +41,7 @@ Rayhan est une société Tunisienne   de plasturgie (Implanté à Tataouine) sp�
 	\setlength{\fboxsep}{0pt}%
 	\setlength{\fboxrule}{0.0pt}%
 	\fbox{
-		\includegraphics[width=5cm,height=5cm]{organigramme.png}%
+		\includegraphics[width=9cm,height=5cm]{organigramme.png}%
 	}
 	\\
 	\caption{Organigramme}%
@@ -118,7 +118,7 @@ Ils sont relayés par des partenaires (SSII, Cabinets de Conseil) pour le suppor
 \renewcommand{\arraystretch}{1.8}
 \setlength{\tabcolsep}{16pt}
 \centering
-\begin{tabular}{|l|p{5cm}|p{5cm}}
+\begin{tabular}{l|>{\raggedright\arraybackslash}p{5cm}|>{\raggedright\arraybackslash}p{5cm}}
 
 \hline
 Caractéristique  & Propriétaire ERP & ERP Open Source \\
@@ -130,6 +130,7 @@ Coût à long terme & Élevé (entretien, permis) & Modéré (hébergement, acco
 Personnalisation & Limitée, souvent par l'éditeur & Élevée,, code source modifiable \\
 \hline
 Dépendance & Forte (fournisseur de verrouillage) & Faible (indépendance)  \\
+\hline
 Mises à jour & Automatiques, gérées par l'éditeur & Manuelles, obligatoires des compétences\\
 \hline
 Soutien & Professionnel (SLA) & Communautaire (ou payant via intégrateur) \\
@@ -142,69 +143,32 @@ Idéal pour  & PME chercher du clé en main & Entreprises avec besoins spécifiq
 \textbf{\caption{Tableau comparatif des solutions ERP existantes}}
 \label{table:comparatif des ERPs}
 \end{table}
-
-
-
-
-
+\vfill
+L'implémentation d'un ERP open source offre une grande flexibilité et l'absence de coûts de licence initiaux, mais elle présente des inconvénients majeurs liés à la complexité technique et aux coûts cachés.\\
+ L'implémentation d'un ERP propriétaire (licence fermée) entraîne des coûts élevés (licences, maintenance, formation) et une forte dépendance envers le fournisseur (verrouillage technologique). Les entreprises font face à des personnalisations coûteuses, des déploiements longs et une flexibilité limitée par rapport à l'open source.\\
+L’étude de l'existant pour une société de plastique (injection, extrusion, soufflage) vise à cartographier les processus actuels pour sélectionner un ERP capable de gérer la complexité du secteur : matières premières (granulés), gestion des moules, rebuts, et traçabilité. Elle identifie les goulots d'étranglement (stocks, planification) pour optimiser la production et la rentabilité\par
+L’implantation d’un ERP au sein d’une entreprise présente un investissement très important en termes de ressources matérielles, humaines, financières, mais aussi informationnelles et de temps. L’implantation d’un tel progiciel requiert parfois un changement quasi-radical en termes d’organisation, impliquant un besoin d’engagement très important de la part des différentes parties prenantes. Ce niveau d’importance a suscité l’intérêt de professionnels et industriels de différents niveaux hiérarchiques, mais aussi des chercheurs et bureaux de conseils.\par
+Durant notre étude et dans le but d’adapter l’ERP en question aux besoins spécifiques (principalement opérationnels) de l’entreprise. Les processus opérationnels concernés de l’entreprise sont analysés, afin d’en faire ressortir quatre types qui sont relativement évolutifs, à savoir :\par
+\begin{itemize}
+\item Les processus actuels qui ont toujours été utilisés par l’entreprise.
+\item Les processus prospectifs qui intègre l’ensemble des processus que l’entreprise veut intégrer.
+\item Les processus possibles qui présentent l’ensemble des processus intégrés dans l’ERP à implanter.
+\item Les processus qui seront implantés effectivement, et qui présente une jonction entre les processus prospectifs et les processus possibles pris en charge par l’ERP.
+\end{itemize}
+\subsubsection{Composition de système ERP}
 
 \begin{figure}[H]%
     \center%
     \setlength{\fboxsep}{0pt}%
     \setlength{\fboxrule}{0.0pt}%
     \fbox{
-    \includegraphics[width=8cm,height=7cm]{images/arch_2tier.png}%
+    \includegraphics[width=8cm,height=8cm]{erp.png}%
     }
     \\
-    \caption{Architecture 2-tiers}%
+    \caption{Composition de système ERP}%
     
 \end{figure}
-Bien que ce schéma puisse paraître simpliste, une analyse détaillée des éléments de cette architecture
-et de leurs fonctions attachées met en évidence certains points essentiels sur lesquels on attire
-l’attention :\par
-1. La fonction de présentation est à la charge du client exclusivement.\par
-2. Le calcul (processing) est réparti entre le client et le serveur.\par
-3. Le logiciel client est généralement spécifique au serveur.\par
-4. Les données sont stockées ou accessibles via le serveur.\par Dans le cadre d’une topologie d’accès
-à une base de données, le serveur traitera les requêtes en provenance du client qui se feront
-en général en langage SQL.
-C’est parce que le client assume des tâches de présentation et de processing, et donc de fait
-communique avec le serveur sans intervention d’un autre processus que le client est dit "lourd"
-par opposition à l’architecture 3-tiers où le client est constitué d’un simple navigateur internet et
-communique avec le serveur via un frontal.
-\subsection{Cycle de vie}
-Les applications mobiles ne sont pas des produits statiques qui peuvent être développés
-une fois puis oubliés. Ils nécessitent des mises à jour, des améliorations et une
-maintenance constantes pour suivre l’évolution des besoins et des attentes des utilisateurs
-et du marché. C’est là qu’intervient le concept de cycle de vie d’une application
-mobile. Le cycle de vie d’un logiciel désigne toutes les étapes du développement
-d’un logiciel, de sa conception à sa disparition. L’objectif d’un tel découpage est de
-permettre de définir des jalons intermédiaires permettant la validation du développement
-logiciel, c’est-à-dire la conformité du logiciel avec les besoins exprimés, et la vérification
-du processus de développement, c’est-à-dire l’adéquation des méthodes mises en
-œuvre.
-Pour le développement de notre application, nous avons choisis le modèle de cycle
-de vie en V comme l’indique la figure suivante :
-\begin{figure}[H]%
-    \center%
-    \setlength{\fboxsep}{0pt}%
-    \setlength{\fboxrule}{0.0pt}%
-    \fbox{
-    \includegraphics[width=15cm,height=10cm]{images/cycle_en_v.png}%
-    }
-    \\
-    \caption{Modèle de cycle de vie en V}%
-    
-\end{figure}
-La méthode du cycle en V repose sur une idée simple. Les étapes de développement
-logiciel et de tests unitaires se répondent les unes aux autres. En clair, cela signifie
-que chaque phase de développement logiciel doit se conclure par une phase de
-tests unitaires. De plus, la mise en œuvre de cette méthode est simple. Une fois
-les spécifications fonctionnelles et les étapes de développement définies, chaque
-membre de l’équipe peut ainsi identifier ses tâches et voir où en est le produit.
-De même, le cycle en V ne nécessite pas de réunion quotidienne, seules quelques
-réunions de pilotage sont nécessaires lors du passage d’une phase à une autre.
 \section{Conclusion}
-Après avoir mettre le projet dans son cadre et définir ses objectifs, on a fait recours
-sur l’aspect organisationnel en spécifiant la méthodologie choisie pour le travail.
-Dans le prochain chapitre nous allons passer à la spécification et l’analyse des besoins. 
+ Un progiciel de gestion intégré ou ERP (Enterprise Ressource Plan) permet de piloter une entreprise. Il s’appuie sur une base de données commune à tous les services de l’entreprise et gère l’ensemble de ses processus. Il est donc intéressant de remplacer tous les logiciels de gestion de l’entreprise par un seul logiciel intégré offrant toutes les fonctionnalités, au lieu de le faire manuellement ou engager des corrections des programmes existants, ou encore en embauchant des personnes spécialisées pour analyser un système opérationnel.\par
+ En conclusion, les systèmes ERP sont essentiels pour que notre entreprise reste compétitive.
+ Il faut tout d’abord connaître les fonctionnalités dont les dirigeants de l'entreprise ont en besoin et comprendre le coût du système ERP comme des étapes clés pour sélectionner le meilleur système à intégrer.

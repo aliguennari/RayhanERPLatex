@@ -6,199 +6,225 @@
 \newpage
 
 \section{Introduction}
-Après avoir détaillé la conception adaptée à mon application dans le chapitre précédent,
-nous avons consacré le dernier chapitre de ce rapport à la partie réalisation. Pour cela
-nous allons présenter dans un premier lieu l’environnement matériel et logiciel de
-développement par la suite, nous décrirons la phase d’implémentation on se basant
-sur quelques imprimes écrans des interfaces de l’application.
-\section{Environnement de développement :}
+Après avoir établi le plan directeur de l’application Rayhan ERP au chapitre précédent, nous abordons la mise en œuvre technique du projet. Ce chapitre constitue le pont entre la théorie et la pratique, concrétisant les spécifications en composants logiciels fonctionnels. Nous présentons ici l’écosystème technologique (matériel, Framework et base de données), en explicitant la pertinence de chaque choix pour garantir la performance du système. Pour conclure, une présentation des interfaces graphiques permettra d’illustrer la matérialisation des besoins métiers et l'ergonomie de la solution finale. \par
+\section{Environnement de développement}
+Cette partie expose l'environnement de développement de Rayhan ERP. Nous y justifions les choix technologiques et les outils qui ont été indispensables à la conception, au codage et au pilotage de la solution.
 \subsection{Environnement matériel :}
-Lors de la phase de développement nous avons disposé un seul ordinateur portable hp qui possède les caractéristiques suivantes :
+Pour la réalisation de ce projet nous avons utilisé un ordinateur portable ayant les caractéristiques suivantes :
 \begin{itemize}
-    \item Marque : hp
-    \item Modèle : Zbook G7
-    \item Processeur : 10th Gen Intel(R) Core(TM) i7-10750H @ 2.60GHz
-    \item Mémoire RAM : 8 Go
-    \item Système d’exploitation : Windows 11 Pro.
-    \item Type de système d’exploitation : 64 bits, processeur x64
+    \item Type d’ordinateur : Lenovo Laptop.
+    \item Système d’exploitation : CachyOS (Archlinux Based). 
+    \item Type de système d’exploitation 64 bits.
+    \item  Processeur :  14th Gen Intel(R)Core(TM)i7. 
+    \item Mémoire RAM 24 GB et Disque dur 1 TB.
 \end{itemize}
 \subsection{Environnement logiciel :}
-\textbf{Android Studio :} est un environnement de développement pour développer des
-applications mobiles Android. Il est basé sur IntelliJ IDEA et utilise le moteur de
-production Gradle. Il peut être téléchargé sous les systèmes d’exploitation Windows,
-macOS, Chrome OS et Linux.
-En ce qui concerne les outils de création Flutter de premier ordre, Android Studio est
-à l’honneur. Il est largement reconnu comme un environnement de développement
-intégré (IDE) incontournable pour la création d’applications Android.
+Pour garantir la pérennité et la flexibilité de notre projet, nous avons opté pour un environnement logiciel capable de supporter toutes les étapes du développement ou cycle Vie logiciel. 
+\textbf{Visuel Studio Code (VS Code) : } En tant qu’éditeur de code source Principal, Nous avons privilégié VS Code pour concilier performance et extensibilité. Sa fluidité, alliée à un support complet pour le developpement Flutter , SpringBoot et Git en fait l'outil central de notre environnement de développement.\par
+
 \begin{figure}[H]%
     \center%
     \setlength{\fboxsep}{0pt}%
     \setlength{\fboxrule}{0.0pt}%
     \fbox{
-    \includegraphics[width=13 cm,height=4cm]{logo}%
+    \includegraphics[width=13 cm,height=4cm]{vscode.png}%
     }
-    \caption{Logo Android Studio}%
+    \caption{Logo VSCode}%
 \end{figure}
-\textbf{Lucidchart UML :} est une plateforme de collaboration en ligne, basée sur le cloud, permettant\par la création de diagrammes et la visualisation de données, et autres schémas
-conceptuels.
+\textbf{GITHUB :} GitHub s’impose aujourd’hui comme la plateforme de référence mondiale pour le développement collaboratif. S’appuyant sur la puissance du logiciel de visionnage Git, elle offre aux développeurs un espace sécurisé pour concevoir, héberger et administrer leurs bases de code. Si elle est le pilier incontournable de l’écosystème Open Source, elle accompagne également les entreprises via des dépôts privés hautement protégés.\par
+Au-delà du simple stockage, GitHub est un véritable outil de gestion de projet agile. La plateforme intègre des fonctionnalités avancées pour fluidifier le travail d'équipe : un système de suivi des erreurs (bug tracking), la gestion des suggestions d'amélioration, des tableaux de bord pour l'organisation des tâches, ainsi qu'un Wiki dédié pour documenter chaque projet. En devenant le plus grand réservoir de code au monde, GitHub est désormais l'épicentre où convergent l'innovation logicielle et la collaboration technique internationale.\par
 \begin{figure}[H]%
     \center%
     \setlength{\fboxsep}{0pt}%
     \setlength{\fboxrule}{0.0pt}%
     \fbox{
-    \includegraphics[width=13 cm,height=4cm]{logo}%
+    \includegraphics[width=13 cm,height=4cm]{github.png}%
     }
-    \caption{Logo Lucidchart}%
+    \caption{Logo Github}%
 \end{figure}
-\textbf{Visual Studio Code :} Visual Studio Code est un éditeur de code source léger et
-extensible\par développé par Microsoft pour Windows, Linux et macOS.
-Il s’exécute sur différents systèmes\par d’exploitation, cet éditeur de code supporte la
-majorité des langages de programmations\par existant, et il peut aussi exécuter du code
-grâce aux extensions crées par la communauté, \par ce qui lui permet de devenir un IDE
-complet. En plus de la capacité d’installer des extensions\par il embarque de base
-une puissante fonction permettant d’analyser et d’auto compiler le code \par appelée
-IntelliSense.
+\textbf{Swagger :}Est un langage de description d’interface permettant de décrire des API exprimées à l'aide de JSON, Il est utilisé avec toute une série d'outils logiciels open source pour concevoir, créer, documenter et utiliser des Services Web Et qui inclut des outils de documentation automatisée, de génération de code.\par
+Swagger s'impose comme une suite de référence de logiciels open source dédiée à l'écosystème du développement web. Plus qu'un simple outil de documentation, il s'inscrit au cœur du cycle de vie des applications en permettant de concevoir, bâtir et consommer des services de manière collaborative. En s'appuyant sur la spécification OpenAPI , Swagger offre une description standardisée et universelle des API REST , garantissant une parfaite interopérabilité entre les machines tout en restant intuitive pour les développeurs. Sa nature open source favorise ainsi une innovation transparente et un enrichissement constant par la communauté, simplifiant l'adoption de normes de qualité industrielle. \par
+
 \begin{figure}[H]%
     \center%
     \setlength{\fboxsep}{0pt}%
     \setlength{\fboxrule}{0.0pt}%
     \fbox{
-    \includegraphics[width=6cm,height=6cm]{images/vscode.png}%
+    \includegraphics[width=6cm,height=6cm]{swagger.png}%
     }
-    \caption{Logo de Visual Studio Code}%
+    \caption{Logo Swagger}%
 \end{figure}
-\textbf{OverLeaf :} est une plateforme en ligne gratuite permettant d’éditer du texte enLATEX(Latex
-est un langage et un système de composition de documents permet de rédiger des documents dont
-la mise en page est réalisée automatiquement) sans aucun téléchargement d’application. En outre,
-elle offre la possibilité de rédiger des documents de manière collaborative
+\textbf{GIT :}Git est un système de contrôle de version distribuée (DVCS) devenu le standard de l'industrie. Il permet un suivi méticuleux de chaque modification du code source grâce à un historique complet et immuable. Véritable pilier de la collaboration, Git facilite le travail simultané de plusieurs développeurs via un système de branches performant, entraînant ainsi les conflits majeurs. En gérant efficacement les différentes versions d'un projet, il garantit l'intégrité des données et offre une flexibilité totale, permettant de naviguer instantanément entre les versions ou de restaurer le projet à un état antérieur en cas d'erreur. \par
+
 \begin{figure}[H]%
     \center%
     \setlength{\fboxsep}{0pt}%
     \setlength{\fboxrule}{0.0pt}%
     \fbox{
-    \includegraphics[width=4.5cm,height=5cm]{images/overleaf_logo.png}%
+    \includegraphics[width=4.5cm,height=5cm]{git.png}%
     }
-    \caption{Logo de Overleaf}%
+    \caption{Logo Git}%
 \end{figure}
 
-\textbf{Git :} c’est un système de contrôle de version gratuit et open source, créé à l’origine
-par Linus Torvalds en 2005. Contrairement aux anciens systèmes de contrôle de
-version centralisés tels que SVN et CVS, Git est distribué : chaque développeur
-dispose localement de l’historique complet de son dépôt de code. Cela rend le
-clonage initial du dépôt plus lent, mais les opérations ultérieures telles que “commit”,
-“blame”, “diff”, “merge” et "log" sont beaucoup plus rapides.
-Git offre également un excellent support pour le branchement, la fusion et la réécriture
-de l’historique du dépôt, ce qui a conduit à de nombreux outils et flux de travail
-innovants et puissants. Git est le système de contrôle de version le plus largement
-utilisé dans le monde aujourd’hui et est considéré comme la norme moderne pour le
-développement de logiciels.
+\textbf{Overleaf :} Overleaf s’impose comme une solution incontournable de rédaction Latex en ligne, offrant un accès gratuit et simplifié à la puissance de LaTeX. Véritable alternative aux traitements de texte classiques, cette plateforme permet de concevoir des documents à la typographie irréprochable grâce à un système de composition automatisé, le tout sans aucune contrainte d'installation locale. Au-delà de sa simplicité technique, Overleaf se distingue par sa dimension interactive, facilitant la co-rédaction et le partage de projets entre plusieurs utilisateurs au sein d'un environnement de travail synchronisé.\par
+
 \begin{figure}[H]%
     \center%
     \setlength{\fboxsep}{0pt}%
     \setlength{\fboxrule}{0.0pt}%
     \fbox{
-    \includegraphics[width=6cm,height=4cm]{images/git.png}%
+    \includegraphics[width=6cm,height=4cm]{overleaf_logo.png}%
     }
-    \caption{Logo de Git}%
+    \caption{Logo Overleaf}%
 \end{figure}
-\textbf{Canva :} Canva est un outil de design graphique en ligne gratuit. Utilisez-le pour créer
-vos publications sur les réseaux sociaux, vos présentations, vos affiches, ..
+\textbf{Android Studio :}Android Studio est l'environnement de développement intégré (IDE) officiel pour créer des applications mobiles Android. Basé sur IntelliJ IDEA et utilisant Gradle, il est multiplateforme (Windows, macOS, Linux, Chrome OS). Il s'impose comme l'outil de référence, notamment pour le développement avec Flutter.\par
+
 \begin{figure}[H]%
     \center%
     \setlength{\fboxsep}{0pt}%
     \setlength{\fboxrule}{0.0pt}%
     \fbox{
-    \includegraphics[width=6cm,height=6cm]{logo}%
+    \includegraphics[width=6cm,height=6cm]{studio.png}%
     }
     \caption{Logo de Canva}%
 \end{figure}
-\textbf{GitHub :} est une plateforme de développement qui permet aux développeurs de
-créer, stocker, gérer et partager leur code. Il utilise le logiciel Git, il est couramment
-utilisé pour héberger des projets de développement de logiciels open source.
-Le site assure également un contrôle d’accès et des fonctionnalités destinées à la
-collaboration comme le suivi des bugs, les demandes de fonctionnalités, la gestion
-de tâches et un wiki pour chaque projet. Le site est devenu le plus important dépôt
-de code au monde, utilisé comme dépôt public de projets libres ou dépôt privé
-d’entreprises.
-\begin{figure}[H]%
-    \center%
-    \setlength{\fboxsep}{0pt}%
-    \setlength{\fboxrule}{0.0pt}%
-    \fbox{
-    \includegraphics[width=12 cm,height=4cm]{logo}%
-    }
-    \caption{Logo GitHub}%
-\end{figure}
-\subsection{Environnement technologie :}
-\textbf{Dart :}  est un langage de programmation optimisé pour les applications sur plusieurs
-plateformes. Il est développé par Google et est utilisé pour créer des applications
-mobiles, de bureau, de serveur et web. Dart est un langage orienté objet, il est
-productif, rapide et portable, conçu pour être familier et donc accessible à de nombreux
-développeurs existants, grâce à ses aspects orientés objet et sa syntaxe qui (selon ses
-utilisateurs) permet à tout développeur C++, C, Objective-C ou Java d’être productif
-en quelques jours.
-Dart peut aussi être utilisé pour la programmation côté serveur, ainsi que le développement
-d’applications mobiles (via l’API Flutter).
+\textbf{Draw.io :} Draw.io est une plateforme de création de diagrammes gratuite et open-source accessible en ligne ou en tant qu'application desktop. C'est un outil polyvalent pour créer diverses formes de visualisations professionnelles, il offre des fonctionnalités complètes pour la modélisation UML.\par
 
 \begin{figure}[H]%
     \center%
     \setlength{\fboxsep}{0pt}%
     \setlength{\fboxrule}{0.0pt}%
     \fbox{
-    \includegraphics[width=7cm,height=3cm]{dart.jpg}%
+    \includegraphics[width=12 cm,height=4cm]{drawio.png}%
     }
-    \caption{Logo de Dart}%
+    \caption{Logo Draw.io}%
 \end{figure}
-\textbf{Flutter :} est un kit de développement de logiciels d’interface utilisateur open source
-créé par Google . Il peut être utilisé pour développer des applications multiplateformes
-à partir d’une seule base de code pour le Web , Fuchsia , Android , iOS , Linux ,
-macOS et Windows.
-Flutter est la boîte à outils de l’interface utilisateur de Google permettant de créer de
-superbes applications nativement compilées pour mobile , Web et de bureau à partir
-d’une base de code unique.
+\subsection{Environnement Technologique :}
+\textbf{Flutter :} Flutter est un kit de développement logiciel open source pour interfaces utilisateur créé par Google. Il permet de développer des applications multiplateformes à partir d'une seule base de code pour le web, Android, iOS, Linux, macOS et Windows.\par
 \begin{figure}[H]%
     \center%
     \setlength{\fboxsep}{0pt}%
     \setlength{\fboxrule}{0.0pt}%
     \fbox{
-    \includegraphics[width=13 cm,height=4cm]{images/flutter.png}%
+    \includegraphics[width=7cm,height=3cm]{flutter.png}%
     }
     \caption{Logo Flutter}%
 \end{figure}
-\subsection{Gestion de base de données :}
-\textbf{Firebase} : est un ensemble de services d’hébergement pour n’importe quel type d’application (Android, iOS, ...). Il propose d’héberger en · NoSQL :Not only Structured Query Language et en
-temps réel des bases de donnes, du contenu, de L’authentification sociale (Google, Facebook, Twitter et GitHub), et des notifications, ou encore des services, tel que par exemple un serveur de
-communication temps réel. Firebase a été lancé en 2011 sous le nom d’Envolve, par Andrew Lee
-et par James Templin.
+\textbf{Dart :} Dart est un langage de programmation moderne, orienté objet et à usage général, initialement développé par Google. Il est principalement conçu pour créer des interfaces utilisateur performantes sur de multiples plateformes (mobile, web, bureau) à partir d'une base de code unique.\par
 \begin{figure}[H]%
     \center%
     \setlength{\fboxsep}{0pt}%
     \setlength{\fboxrule}{0.0pt}%
     \fbox{
-    \includegraphics[width=12 cm,height=6cm]{logo}%
+    \includegraphics[width=13 cm,height=4cm]{dart.jpg}%
     }
-    \caption{Logo Firebase}%
+    \caption{Logo Dart}%
+\end{figure}
+\textbf{JAVA :}Java est un langage de programmation de haut niveau, orienté objet et multiplateforme, créé par Sun Microsystems en 1995. Il est aujourd'hui l'un des langages les plus utilisés au monde pour le développement d'applications mobiles, web et d'entreprise.\par
+\begin{figure}[H]%
+    \center%
+    \setlength{\fboxsep}{0pt}%
+    \setlength{\fboxrule}{0.0pt}%
+    \fbox{
+    \includegraphics[width=12 cm,height=6cm]{java.png}%
+    }
+    \caption{Logo Java}%
+\end{figure}
+\textbf{Spring Framework et Spring Boot :} Spring Boot est un framework Java open source utilisé pour programmer des applications Spring autonomes de qualité professionnelle, avec un ensemble de bibliothèques qui facilitent le démarrage et la gestion des projets.\par
+
+\begin{figure}[H]%
+    \center%
+    \setlength{\fboxsep}{0pt}%
+    \setlength{\fboxrule}{0.0pt}%
+    \fbox{
+    \includegraphics[width=12 cm,height=6cm]{spring.png}%
+    }
+    \caption{Logo Spring}%
+\end{figure}
+\textbf{Docker :} Docker est un ensemble de produits qui utilise la virtualisation au niveau du système d'exploitation pour distribuer des logiciels dans des paquets appelés conteneurs.\par
+\begin{figure}[H]%
+    \center%
+    \setlength{\fboxsep}{0pt}%
+    \setlength{\fboxrule}{0.0pt}%
+    \fbox{
+    \includegraphics[width=12 cm,height=6cm]{docker.png}%
+    }
+    \caption{Logo Docker}%
+\end{figure}
+\textbf{Spring Security :} Spring Security est un Plugin pour Spring Framework qui fournit des fonctionnalités d'authentification, d'autorisation, de gestion des rôles et d'autres fonctionnalités de sécurité pour les applications d'entreprise.
+\begin{figure}[H]%
+    \center%
+    \setlength{\fboxsep}{0pt}%
+    \setlength{\fboxrule}{0.0pt}%
+    \fbox{
+    \includegraphics[width=12 cm,height=6cm]{springsecurity.png}%
+    }
+    \caption{Logo SpringSecurity}%
+\end{figure}
+\textbf{JWT :} JSON Web Token , c’est un conteneur JSON renvoyant un certain nombre d'affirmations de données utilisé pour prouver l'identité d'un utilisateur. Comme il est signé numériquement, le destinataire peut vérifier l'authenticité des informations JSON qu'il contient sans avoir à interroger une base de données à chaque fois. \par
+
+\begin{figure}[H]%
+    \center%
+    \setlength{\fboxsep}{0pt}%
+    \setlength{\fboxrule}{0.0pt}%
+    \fbox{
+    \includegraphics[width=12 cm,height=6cm]{jwt.png}%
+    }
+    \caption{Logo JWT}%
+\end{figure}
+\textbf{RESTful API :} Restful API : REST est un style d'architecture logicielle créé pour décrire la conception et guider le développement de l'architecture du World Wide Web.\par
+
+\begin{figure}[H]%
+    \center%
+    \setlength{\fboxsep}{0pt}%
+    \setlength{\fboxrule}{0.0pt}%
+    \fbox{
+    \includegraphics[width=12 cm,height=6cm]{restful.png}%
+    }
+    \caption{Logo Restful}%
+\end{figure}
+\textbf{Apache Tomcat :} Apache Tomcat est une implémentation libre et open source des technologies Jakarta EE Servlet, Pages, Expression Language, WebSocket, Annotations et Authentication. Il fournit un environnement serveur web HTTP « purement Java » permettant l'exécution de code Java, ici, il est intégré au framework Spring.
+\begin{figure}[H]%
+    \center%
+    \setlength{\fboxsep}{0pt}%
+    \setlength{\fboxrule}{0.0pt}%
+    \fbox{
+    \includegraphics[width=12 cm,height=6cm]{tomcat2.png}%
+    }
+    \caption{Logo Apache Tomcat}%
+\end{figure}
+\subsection{Gestion de base de données :}
+Dans le cycle de développement logiciel, MySQL s'impose comme un véritable « bac à sable » stratégique qui propulse le prototypage rapide et les tests locaux. Sa force réside dans une mise en œuvre quasi instantanée, offrant une expérience de développement sans configuration complexe grâce à des environnements préconfigurés (comme XAMPP ou Docker) qui permettent de lancer une base de données fonctionnelle en quelques secondes. En phase de création, il permet aux développeurs de modéliser et d'itérer sur la structure des données avec une agilité totale, facilitant l'injection de données de test et le débogage en temps réel sans risque pour les systèmes de production. Cette légèreté technique, alliée à une MySQL est un levier d'efficacité indispensable pour passer de l'idée au prototype fonctionnel avec un minimum de friction.\par
+
+\begin{figure}[H]%
+    \center%
+    \setlength{\fboxsep}{0pt}%
+    \setlength{\fboxrule}{0.0pt}%
+    \fbox{
+    \includegraphics[width=12 cm,height=6cm]{mysql.png}%
+    }
+    \caption{Logo Apache Tomcat}%
 \end{figure}
 \section{Implémentation du projet :} 
-Les interfaces doivent respecter les heuristiques d’utilité pour permettre à l’utilisateur
-un accès facile à ces interfaces afin de garantir une bonne compréhension des fonctionnalités
-de l’application. Nous présentons ici les interfaces les plus significatives de l’application.
-\subsection{Interface d’accueil de l’application :}
-Les deux figures suivantes représentent la page de démarrage et l’interface d’accueil de \\ l’application :
+La phase de réalisation concrétise la transition des spécifications techniques et des modèles de conception vers un code source fonctionnel, marquant ainsi la naissance opérationnelle de l'application ERP Rayhan . Cette section met en lumière les interfaces utilisateurs majeures, conçues comme les points de convergence essentiels entre l'expérience humaine et la logique du système.\par
+
+\subsection{Interface d’accueil :}
+La page d'accueil accueille le visiteur, mettant en avant le savoir-faire et la dimension humaine de l'entreprise. À travers un agencement clair, elle présente les services phares qui instaurent immédiatement un climat de confiance. Le ton est direct et bienveillant, facilitant la prise de contact grâce à des informations accessibles et un parcours de navigation intuitif conçu pour répondre aux besoins concrets de l'utilisateur.\par
+
 \begin{figure}[H]
     \centering
     \begin{minipage}[b]{0.45\textwidth}
         \centering
         \includegraphics[width=\textwidth]{logo}
-        \caption{Page de démarrage}
-        \label{fig:signup}
+        \caption{Page d'acceuil}
+        \label{fig:landing}
     \end{minipage}
     \hspace{0.05\textwidth}
     \begin{minipage}[b]{0.45\textwidth}
         \centering
         \includegraphics[width=\textwidth]{logo}
-        \caption{Interface d’accueil}
-        \label{fig:signup-google}
+        \caption{Page d’accueil}
+        \label{fig:landing2}
     \end{minipage}
 \end{figure}
 \begin{figure}[H]%
@@ -208,34 +234,38 @@ Les deux figures suivantes représentent la page de démarrage et l’interface 
     \fbox{
     \includegraphics[width=7 cm,height=15cm]{logo}%
     }
-    \caption{Menu}%
+    \caption{Page d'acceuil}%
 \end{figure}
 \subsection{Interface Login :}
-La figure ci-dessous présente l’interface d’authentification dans laquelle on doit
-entrer l’adresse e-mail et le mot de passe pour commencer à utiliser notre application.
-Des messages appropriés sont affichés pour informer l’utilisateur en cas d’erreur
-d’authentification ou de succès de connexion. S’il n’a pas de compte, l’utilisateur
-clique sur s’inscrire pour passer à l’étape de création de compte.
+L'interface de connexion constitue la clé de voûte de la sécurité logicielle, orchestrant le processus critique d’authentification pour valider l'identité des usagers avant tout accès. Son rôle principal est de sécuriser le périmètre applicatif tout en assurant une passerelle vers un environnement personnalisé, où chaque utilisateur retrouve ses privilèges spécifiques et ses fonctionnalités dédiées.\par
+\begin{itemize}
+\item Zones de saisie : identifiant et mot de passe.
+\item Bouton de connexion : validation de l'accès.
+\item Lien d'aide : récupération du mot de passe oublié.
+\item Alertes claires : messages précis en cas d'erreur ou de compte bloqué.
+\item Option de visibilité : icône « œil » pour afficher/masquer le texte.
+\item Menu Popup Flottante : design ergonomique et réactive.
+\end{itemize}
 \begin{figure}[H]
     \centering
     \begin{minipage}[b]{0.45\textwidth}
         \centering
         \includegraphics[width=\textwidth]{logo}
-        \caption{Interface login AutoSmart}
-        \label{fig:signup}
+        \caption{Interface Login}
+        \label{fig:login}
     \end{minipage}
     \hspace{0.05\textwidth}
     \begin{minipage}[b]{0.45\textwidth}
         \centering
         \includegraphics[width=\textwidth]{logo}
         \caption{Initialiser mot de passe}
-        \label{fig:signup-google}
+        \label{fig:login2}
     \end{minipage}
 \end{figure}
-\subsection{Interface Inscription :}
-La figure 4.15 présente l’interface d’inscription où l’utilisateur soit qu’il est client ou
-transporteur doit remplir un formulaire pour avoir un compte dans l’application lui
-permettant de gérer toute les fonctionnalités.
+\subsection{Les autres Interfaces de l’application RayhanERP :}
+Structurellement, l'application propose des modules dédiés au-delà de la simple connexion. Chaque rôle (magasinier, responsable production/achat/vente ou PDG) bénéficie d'une interface ergonomique pensée pour maximiser l'efficacité opérationnelle.\par
+\subsubsection{Interface gestion des achats :}
+Création/Modification des Fiches fournisseurs, demandes de prix, bons de commande, bons de réception, rapprochement facture/commande.
 \begin{figure}[H]%
 \centering
     \setlength{\fboxsep}{0pt}%
@@ -243,10 +273,10 @@ permettant de gérer toute les fonctionnalités.
     \fbox{
     \includegraphics[width=7 cm,height=15cm]{logo}%
     }
-    \caption{Interface d’inscription AutoSmart}%
+    \caption{Interfaces gestion des achats}%
 \end{figure}
-\subsection{Interface Ajouter Annonce :}
-La figure ci-dessous présente l’interface Ajouter Annonce :
+\subsubsection{Interface gestion des ventes :}
+Création/Modification de Fiches clients, devis, commandes clients, bons de livraison, facturation, rapports de ventes.
 \begin{figure}[H]%
 \centering
     \setlength{\fboxsep}{0pt}%
@@ -254,5 +284,40 @@ La figure ci-dessous présente l’interface Ajouter Annonce :
     \fbox{
     \includegraphics[width=7 cm,height=16cm]{logo}%
     }
-    \caption{Interface Ajouter Annonce}%
+    \caption{Interfaces gestion des ventes}%
 \end{figure}
+\subsubsection{Interface gestion de production :}
+la Gestion de Production Nomenclatures (BOM), ordres de fabrication (OF), planification des besoins (MRP), suivi des temps de production.
+\begin{figure}[H]%
+\centering
+    \setlength{\fboxsep}{0pt}%
+    \setlength{\fboxrule}{0.0pt}%
+    \fbox{
+    \includegraphics[width=7 cm,height=15cm]{logo}%
+    }
+    \caption{Interfaces gestion de production}%
+\end{figure}
+\subsubsection{Interface Dashboard :}
+Écriture/Validation/Administration des Tous les Modules rapports financiers (bilan, PL), tableaux de bord KPI, validation des budgets, gestion des utilisateurs.
+\begin{figure}[H]%
+\centering
+    \setlength{\fboxsep}{0pt}%
+    \setlength{\fboxrule}{0.0pt}%
+    \fbox{
+    \includegraphics[width=7 cm,height=15cm]{logo}%
+    }
+    \caption{Interface du Dashboard}%
+\end{figure}
+\subsubsection{Interface gestion du stock :}
+suivi des Mouvements de stock de MP, Semi- finis et des Marchandises destinées a la vente (entrées/sorties), suivi historique des mouvements, édition de bons de réception/livraison.
+\begin{figure}[H]%
+\centering
+    \setlength{\fboxsep}{0pt}%
+    \setlength{\fboxrule}{0.0pt}%
+    \fbox{
+    \includegraphics[width=7 cm,height=15cm]{logo}%
+    }
+    \caption{Interfaces gestion du stock}%
+\end{figure}
+\subsection{Conclusion}
+Ce quatrième chapitre concrétise la transition entre la conception et la réalisation de l’application "ERP Rayhan". Nous y détaillons un environnement de développement optimisé, allant du choix stratégique du matériel aux technologies logicielles modernes. Le front-end, conçu avec Flutter Web, assure une expérience moderne via un code unique. À l'instar du back-end, l'application est conteneurisée avec Docker et servie par Nginx. Enfin, l'utilisation de SQL garantit une base de données robuste, flexible et performante.\par

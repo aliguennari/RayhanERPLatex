@@ -6,137 +6,103 @@
 \newpage
 
 \section{Introduction}
-Un système ERP (Entreprise Resource Planning) est une solution informatique (logiciel/matériel) qui permet de gérer l'ensemble des processus d'une entreprise en intégrant l'ensemble de ses fonctions, dont la gestion des ressources humaines, la gestion comptable et financière, l'aide à la décision, la vente, la distribution, la relation client, la planification de la production et la gestion de la chaîne d'approvisionnement.
-C’est une suite des applications ou modules intégrés qu’une entreprise peut utiliser pour collecter, sauvegarder, gérer et interpréter l’ensemble des données venant des différentes activités de l’entreprise.
-Il s'agit de la gestion intégrée et centralisée des principaux processus et flux de travail (workflows) de l'entreprise, qui facilite la réalisation des objectifs commerciaux grâce à une vision courante et à jour des processus métier essentiels en fournissant une analyse en temps réel des opérations commerciales et des informations sur les indicateurs de performance globaux de l'entreprise, aidant ainsi l'organisation à planifier les étapes futures pour atteindre la croissance et le développement.
+L’élaboration d’une solution logicielle pertinente et efficace repose fondamentalement sur une compréhension approfondie du contexte existant, des problématiques à résoudre et des attentes des utilisateurs. Ce chapitre sera consacré à cette phase cruciale d’analyse.\\
+Cette étude s’est appuyée sur des entretiens conduit avec tous les chefs de départements de la société complété par une observation directe des processus en vigueur (Production, Stockage, Vente, …) ainsi qu’une analyse des documents existants et utilisées pour la gestion au sein de la société. Cette étude nous permettra de formuler une idée claire sur les besoins d’une telle solution au sein de la société et par suite le problématique à résoudre.
 \section{Etude et critique de l’existant}
-La plupart des solutions ERP existantes aujourd’hui cible les moyens à grands entreprises et les entreprises multinationaux, ce qui pose des difficultés pour les PME (Petites à Moyennes Entreprises). Principalement, on cite:
+L’étude de l'existant révèle une gestion artisanale et fragmentée au sein de la société Rayhan , caractérisée par une absence d'informatisation intégrée. Les stocks, commandes et factures sont gérés manuellement via des fichiers Excel, des documents Word et du papier, entraînant des risques d'erreurs, des ruptures de stock non détectées et une perte de temps dans le suivi client/fournisseur. Cette organisation cloisonnée, sans base de données centralisée, implique la traçabilité de la production et la prise de décision, justifiant la nécessité d'un ERP pour automatiser et centraliser les processus. 
+Points clés de l'existant :
 \begin{itemize}
-\item Coût élevé et ressources limitées: les coûts des licences, mise en œuvre et maintenance sont souvent importants, même en mode SaaS, la migration, la formation et le temps alloué peuvent dépasser le budget.
-\item Complexité et durée de mise en place: la plupart des PME n’ont pas d’équipe IT dédiée, ce qui rend la mise en place du système ERP longue, compliqué et demandant en temps et ressources.
-\item Adaptation difficile aux processus métiers: Certains ERP imposent leur logique de fonctionnement, parfois menant à l’inadéquation avec les processus internes de l’entreprise surtout lorsque celles-ci sont très spécifiques ou simples.
-\item Adoption utilisateurs difficile et nécessité de formation: Les équipes peuvent mal utiliser l’ERP sans accompagnement suffisant conduisant à l’abandon de système et le retour aux anciens outils (Excel, mails…).
+\item Ventes et Achats : Utilisation de supports volatils (Word, papier). Les factures sont saisies manuellement sans lien direct avec les bons de livraison.
+\item Production et Stocks : Suivi manuel, risque de non-conformité et inventaires complexes.
+\item Impact : Besoin crucial d'automatisation et de traçabilité.
+\item Données : Absence de base de données clients/fournisseurs structurée, perte de temps administratif. Les informations clients et fournisseurs sont éparpillées, rendant l'historique des échanges difficiles à tracer.
 \end{itemize}
 \vspace{2cm}
+\subsection{Impact sur la société}
+\begin{itemize}
+  \item Impact sur la Production (Efficacité Opérationnelle) : Inexactitude : Difficulté à calculer le coût de revient réel de chaque cycle de production (perte de matière, temps machine).
+  \item Impact sur le Chiffre d'Affaires (CA) : Retards dans l'émission des devis et la confirmation des commandes, ce qui peut pousser les clients vers la concurrence.
+  \item Pertes de Ventes : Manque de réactivité face aux demandes spécifiques par manque de visibilité sur les capacités de production.
+  \item Impact sur les Flux de Trésorerie : Les achats ne sont pas optimisés, ce qui mobilise inutilement de la trésorerie ou crée des urgences coûteuses.
+  \item Erreurs de Facturation : Le système manuel favorise les oublis de facturation ou les erreurs de prix, impactant directement la rentrée d'argent.
+  \item Impact sur les Facteurs de Succès Internes (FSI) : Les décisions de la direction reposent sur des données incertaines et non consolidées.
+  \item Charge de Travail : Les équipes perdent un temps précieux en double saisies et en recherche d'informations égarées.
 
+\end{itemize}
 \section{Problématique}
-TODO
+En Vue de l’étude et de critique de l’existant, la problématique centrale de ce projet vise à répondre aux questions suivants : 
+\begin{itemize}
+\item Gestion des Stocks et Production : Comment automatiser le suivi des flux de matières premières et de produits finis pour garantir une disponibilité constante sans sur-stockage ?
+\item Ventes et Relation Client : De quelle manière peut-nous centraliser les données clients pour accélérer le cycle "Devis-Commande-Facture" et éliminer les erreurs de saisie manuelle ?
+\item Achats et Approvisionnements : Comment structurer nos relations fournisseurs et nos processus d'achat pour optimiser les coûts et sécuriser la chaîne logistique ?
+\item FSI et Reporting : Comment transformer nos données éparpillées en tableaux de bord dynamiques et fiables pour permettre une prise de décision rapide et éclairée par la direction ?
+\item Collaboration Interne : Comment briser les silos informationnels entre les ateliers de production et les services administratifs grâce à une base de données unique ?
+\end{itemize}
 \section{Solution proposée}
-Nous voulons développer une solution ERP (application cross-platform) en faveur de l’entreprise \reportEntreprise répondant à ses besoins fonctionnels tout en veillant à la simplicité de l’usage et le mise en œuvre, des interfaces utilisateurs intuitives, facile à maintenir, compatible avec les workflows spécifiques et processus métier internes de l’entreprise, cout raisonnable et la possibilité d’expansion selon l’évolution du marché et les objectifs de l’entreprise.
-\begin{figure}[H]%
-    \center%
-    \setlength{\fboxsep}{0pt}%
-    \setlength{\fboxrule}{0.0pt}%
-    \fbox{
-    \includegraphics[width=5 cm,height=5cm]{images/logo.jpg}%
-    }
-    \caption{Logo de l’application "\reportAppName"}%
-\end{figure}
+La plupart des solutions ERP existantes aujourd’hui cible les Moyens à grands entreprises et les entreprises multinationaux, ce qui pose des difficultés pour les PME (Petites à Moyennes Entreprises). Principalement, on cite :
+\begin{itemize}
+\item Coût élevé et ressources limitées : les coûts des licences, mis en œuvre et maintenance sont souvent importants, même en mode SaaS, la migration, la formation et le temps alloué peuvent dépasser le budget.
+\item Complexité et durée de mise en place : la plupart des PME n’ont pas d’équipe IT dédiée, ce qui rend la mise en place du système ERP longue, compliqué et demandant en temps et ressources.
+\item Adaptation difficile aux processus métiers : Certains ERP imposent leur logique de fonctionnement, parfois menant à l’inadéquation avec les processus internes de l’entreprise sur tout lorsque celles-ci sont très spécifiques ou simples.
+\item Adoption utilisateurs difficile et nécessité de formation : Les équipes peuvent mal utiliser l’ERP sans accompagnement suffisant conduisant à l’abandon de système et le retour aux anciens outils (Excel, mails...).
+\end{itemize}
+C’est pour tous ces raisons, nous voulons développer une solution ERP (application cross-Platform) en faveur de l’entreprise Rayhan répondant à ses besoins fonctionnels tout en veillant à la simplicité de l’usage et le mise en œuvre, des interfaces utilisateurs intuitives, facile à maintenir, compatible avec les workflows spécifiques et processus métier internes de l’entreprise, cout raisonnable et la possibilité d’expansion selon l’évolution du marché et les objectifs de l’entreprise.\par
+
 \section{Identification des besoins}
-TODO
+Le développement de l’application \reportAppName vise à atteindre plusieurs Objectifs Stratégique et opérationnels générant une valeur ajouté pour l’entreprise , l'enjeu de ce projet dépasse la simple informatisation des tâches. Il s'agit d'une transition vitale vers un système intégré capable de fluidifier les processus métiers, de sécuriser le patrimoine informationnel de la société et d'assurer une croissance durable en alignant les ressources de l'entreprise sur ses objectifs commerciaux.\par
+
 \subsection{Analyse des besoins fonctionnels}
-Les besoins fonctionnels représentent les actions essentielles que le système doit exécuter pour être opérationnel et répondre aux attentes des utilisateurs. Le système à concevoir 
-devra satisfaire les besoins suivants :
-\subsubsection{TODO}
+\subsubsection{Gestion de la production}
 \begin{itemize}
-  \item TODO
-  \item Le Visiteur doit pouvoir rechercher des véhicules selon différents critères (marque, modèle, prix, kilométrage, etc.).
-  \item Le Visiteur peut consulter les annonces détaillées avec photos et description.
- 
+\item Ordres de Fabrication : Création, lancement et suivi en temps réel de la fabrication.
+\item Planification de production : Calendrier visuel pour optimiser l'utilisation des presses et des moules.
 \end{itemize}
-\subsubsection{Besoins liés au client}
+\subsubsection{Gestion des Stocks et entrepôts}
 \begin{itemize}
-  \item Le client doit pouvoir sauvegarder des annonces dans une liste de favoris.
-  \item Une messagerie intégrée doit permettre au client de discuter directement avec les vendeurs.
+\item Alertes de Stock Minimum : Notifications automatiques pour éviter les ruptures de granulés ou d'emballages.
+\item Traçabilité : Suivi par lots (essentiel pour la qualité dans le plastique) et gestion des emplacements.
+\item Inventaire permanent : Faciliter les comptages périodiques sans arrêter la production.
 \end{itemize}
-\subsubsection{Besoins liés au TODO}
+\subsubsection{Gestion des ventes}
 \begin{itemize}
-    \item TODO
-    \item TODO
-    \item TODO
-    \item TODO
+\item Cycle de vente complet et automatisé : Devis => Commande => Bon de Livraison => Facture.
 \end{itemize}
-\subsubsection{Besoins liés à TODO}
+\subsubsection{Gestion des Achats et Fournisseurs}
 \begin{itemize}
-    \item TODO
-    \item TODO
+\item Base de données Fournisseurs : Répertoire des fournisseurs de matières premières avec délais de livraison et prix.
+\item Demandes d'achat et des commandes : Génération de bons de commande professionnels (plus de Word manuel).
+\item Réception de marchandises : Contrôle de conformité entre la commande et la livraison pour mettre à jour le stock automatiquement.
 \end{itemize}
-\subsection{Analyse de besoins non fonctionnels}
+\subsubsection{Pilotage et Reporting (FSI)}
 \begin{itemize}
-  \item \textbf{Performance TODO} :
-  \begin{itemize}
-     \item TODO
-     \item TODO
-     \end{itemize}
-  \item \textbf{Disponibilité TODO} : TODO
-     \item \textbf{Fiabilité TODO}
-  \begin{itemize}
-     \item TODO
-     \item TODO
-     \end{itemize}
-     \item \textbf{Sécurité TODO}
-  \begin{itemize}
-     \item TODO
-     \item TODO
-     \end{itemize}
-     \item \textbf{Évolutivité TODO} : TODO
-     \item \textbf{Ergonomie TODO} : TODO
-     \item \textbf{Internationalisation TODO} : TODO
+\item États de stocks : Rapports sur l’etat des Produits.
 \end{itemize}
-\section{Diagramme de cas d’utilisation globale}
-L’étude de cas d’utilisation a pour objectif de déterminer les besoins des utilisateurs
-et les objectifs de l’application. La détermination des besoins est basée sur la représentation
-de l’interaction fonctionnelle entre l’acteur et le système. Ainsi, il permet de donner
-une vision globale sur les interfaces de future application.
-\subsection{Identification des acteurs}
+\subsubsection{Administration et Sécurité}
 \begin{itemize}
-  \item \textbf{Acteur} : un acteur est un utilisateur qui communique et interagit avec les cas
-d’utilisations du système.C’est une entité ayant un comportement comme une
-personne, système ou une entreprise. Nous citons ci-dessous les acteurs qui
-interagissent avec notre application :
-\begin{figure}[H]%
-    \center%
-    \setlength{\fboxsep}{5pt}%
-    \setlength{\fboxrule}{0.5pt}%
-    \fbox{
-    \includegraphics[width=12 cm,height=4cm]{images/Acteurs.png}%
-    }
-    \caption{ Les Acteurs de l’application}%
-\end{figure}
-  \item \textbf{TODO} : TODO
-  \item \textbf{TODO} : TODO
-  \item \textbf{TODO} : TODO
-  \item \textbf{TODO} : TODO
-
-
+\item Gestion des droits : Définir qui peut voir/modifier quoi (ex: l'atelier ne voit pas les prix d'achat).
+\item Sauvegardes automatiques : Sécuriser les données pour ne plus dépendre de fichiers Excel locaux qui peuvent être perdus.
 \end{itemize}
-\subsection{Identification des cas d’utilisation}
-Un cas d’utilisation représente un ensemble de séquences d’actions à réaliser par le
-système et produisant un résultat observable intéressant pour un acteur particulier.
-La liste ci-dessous représente les différents cas d’utilisation :
+\subsection{Analyse des besoins non fonctionnels}
 \begin{itemize}
-\item \textbf{Cas d’utilisation « TODO » :} TODO
-  \item \textbf{Cas d’utilisation « TODO » :} TODO
-  \item \textbf{Cas d’utilisation « TODO » :} TODO
-  \item \textbf{Cas d’utilisation « TODO » :} TODO
-\item ...TODO
+\item Sécurité et intégrité des données : Authentification : Accès sécurisé par identifiant et mot de passe robuste pour chaque collaborateur.
+\item Ergonomie et utilisabilité : Apprentissage rapide le système doit être intuitif au point qu'un nouvel employé puisse effectuer une tâche de base après une demi-journée de formation.
+\item Performance et disponibilité : Si la connexion internet flanche, certaines fonctions critiques (comme la saisie de production en atelier) doivent pouvoir continuer en local avant la synchronisation.
+\item Capacité : L'ERP doit pouvoir supporter l'augmentation du volume de données (historique des ventes, multiplication des références de produits plastiques) sur plusieurs années.
+\item Maintenance et Évolution : 
+        \begin{itemize}
+          \item Évolutivité (Scalabilité) : Capacité d'ajouter de nouveaux modules (ex : module RH ou Maintenance des machines) ou de nouveaux utilisateurs sans refaire tout le système.
+          \item Maintenance : Le système doit permettre des mises à jour régulières sans interruption majeure de l'activité.
+          \item Interopérabilité : Possibilité d'exporter les données sous formats standards (Excel, PDF, CSV) pour des analyses externes ou la comptabilité.
+        \end{itemize}
+\item Fiabilité :
+        \begin{itemize}
+          \item Zéro perte de données : Mécanisme de "rollback" (si une transaction échoue à mi-chemin, le système revient à l'état précédent sans corrompre les données).
+          \item Respect des standards métier : Gestion précise des décimales pour les poids de matières (ex : 0,001 kg pour les colorants) et génération de documents (factures, BL) conformes à la réglementation fiscale en vigueur.
+        \end{itemize}
 \end{itemize}
-\subsection{Diagramme de cas d’utilisation global}
-Tout système peut être décrit par un certain nombre de cas d’utilisation correspondant
-aux besoins exprimés par l’ensemble des utilisateurs. A chaque utilisateur, vu comme
-acteur, correspond un certain nombre de cas d’utilisation du système. L’ensemble de
-ces cas se représente sous forme du diagramme ci-dessous :
-\begin{figure}[H]%
-    \center%
-    \setlength{\fboxsep}{0pt}%
-    \setlength{\fboxrule}{0.0pt}%
-    \fbox{
-    \includegraphics[width=13 cm,height=15cm]{general_usecase.png}
-    }
-    \caption{Diagramme de cas d’utilisation global de \reportAppName}%
-\end{figure}
+\vfill
 \section{Conclusion}
-Ce chapitre nous a permis de couvrir les différents besoins fonctionnels et non fonctionnels des
-acteurs de notre système et de construire le diagramme de cas d’utilisation global. Nous essayerons
-dans le chapitre qui suit de décortiquer ce Diagramme et concevoir clairement l’architecture de
-notre système.
+L'analyse rigoureuse de l'existant au sein de la société Rayhan a permis de confirmer l'obsolescence des outils actuels face aux ambitions de croissance de l'entreprise. En identifiant précisément les points de friction, notamment l'absence de base de données centralisée et la fragmentation des processus de production et de stock.\par
+Nous avons pu définir un socle de besoins fonctionnels et non fonctionnels cohérents. Ce diagnostic constitue la feuille de route indispensable pour garantir que la solution future ne soit pas un simple logiciel de gestion, mais un véritable levier de performance industrielle.\par
+Une fois les besoins clairement spécifiés, il convient désormais de traduire ces exigences en une solution technique structurée. \\
+Le chapitre suivant sera consacré à la phase de conception. Nous y détaillerons le choix de la méthodologie adoptée pour structurer notre développement, avant de modéliser l'architecture logique du système. Cette étape s'appuiera sur la puissance du langage UML, notamment à travers l'élaboration des diagrammes de classes pour la structure des données et des diagrammes de séquences pour la dynamique des processus, garantissant ainsi un système robuste et évolutif\par
