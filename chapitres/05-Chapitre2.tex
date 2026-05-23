@@ -9,26 +9,74 @@
 L’élaboration d’une solution logicielle pertinente et efficace repose fondamentalement sur une compréhension approfondie du contexte existant, des problématiques à résoudre et des attentes des utilisateurs. Ce chapitre sera consacré à cette phase cruciale d’analyse.\\
 Cette étude s’est appuyée sur des entretiens conduit avec tous les chefs de départements de la société complété par une observation directe des processus en vigueur (Production, Stockage, Vente, …) ainsi qu’une analyse des documents existants et utilisées pour la gestion au sein de la société. Cette étude nous permettra de formuler une idée claire sur les besoins d’une telle solution au sein de la société et par suite le problématique à résoudre.
 \section{Etude et critique de l’existant}
-L’étude de l'existant révèle une gestion artisanale et fragmentée au sein de la société Rayhan , caractérisée par une absence d'informatisation intégrée. Les stocks, commandes et factures sont gérés manuellement via des fichiers Excel, des documents Word et du papier, entraînant des risques d'erreurs, des ruptures de stock non détectées et une perte de temps dans le suivi client/fournisseur. Cette organisation cloisonnée, sans base de données centralisée, implique la traçabilité de la production et la prise de décision, justifiant la nécessité d'un ERP pour automatiser et centraliser les processus. 
-Points clés de l'existant :
+
+
+
+
+\subsection{Les principaux éditeurs du marché de l'ERP}
+Représente une vraie manne pour les prestataires de services informatiques. Il est considéré aujourd'hui, le marché le plus porteur de l'informatique. On distingue deux catégories d'ERP Les ERP Propriétaires et les ERP Open Source :
+\subsubsection{Les ERP Propriétaires }
+Aujourd’hui, de nombreux ERP propriétaires existent sur le marché. Nous évoquerons dans ce qui suit, quelques grands éditeurs : 
 \begin{itemize}
-\item Ventes et Achats : Utilisation de supports volatils (Word, papier). Les factures sont saisies manuellement sans lien direct avec les bons de livraison.
-\item Production et Stocks : Suivi manuel, risque de non-conformité et inventaires complexes.
-\item Impact : Besoin crucial d'automatisation et de traçabilité.
-\item Données : Absence de base de données clients/fournisseurs structurée, perte de temps administratif. Les informations clients et fournisseurs sont éparpillées, rendant l'historique des échanges difficiles à tracer.
+\item SAP (Business One) SAP/ est le leader mondial des ERP, est une application client- serveur. Ses modules couvrent l'ensemble des fonctions de gestion de l'entreprise et chaque module couvre des besoins complets de gestion. Ce progiciel a remporté rapidement un succès important auprès des grandes entreprises en proposant un progiciel multilingue et multidevise
+\item Oracle (JD Edwards) : Est un progiciel de gestion intégrée. Anciennement appelé People Enterprise One ou One World XE ou ERP 8, et vendu par J.D. Edwards puis par Peoplesoft. J.D. Edwards a été racheté par People Soft puis par Oracle. Le produit est depuis renommé "Oracle JDEdwards Enterprise One". Il est composé de plusieurs modules plus ou moins indépendants.
+\item ERP SAGE : SAGE Est un progiciel de gestion intégrée (ERP/PGI), conçu pour les structures de 20 à 500 employés, sociétés autonomes et filiales de groupes, des secteurs de l’industrie, du négoce et des services
 \end{itemize}
-\vspace{2cm}
-\subsection{Impact sur la société}
+\subsubsection{Les ERP Open Source }
+Ils sont relayés par des partenaires (SSII, Cabinets de Conseil) pour le support. L’implémentation d’un progiciel Open Source revient moins chère, puisqu’il n’y a pas de coût de licence. En revanche il faut inclure, dans le calcul du coût d'acquisition total, les frais de maintenance et de l'assistance technique. Voici la liste des principaux progiciels Open Source : 
 \begin{itemize}
-  \item Impact sur la Production (Efficacité Opérationnelle) : Inexactitude : Difficulté à calculer le coût de revient réel de chaque cycle de production (perte de matière, temps machine).
-  \item Impact sur le Chiffre d'Affaires (CA) : Retards dans l'émission des devis et la confirmation des commandes, ce qui peut pousser les clients vers la concurrence.
-  \item Pertes de Ventes : Manque de réactivité face aux demandes spécifiques par manque de visibilité sur les capacités de production.
-  \item Impact sur les Flux de Trésorerie : Les achats ne sont pas optimisés, ce qui mobilise inutilement de la trésorerie ou crée des urgences coûteuses.
-  \item Erreurs de Facturation : Le système manuel favorise les oublis de facturation ou les erreurs de prix, impactant directement la rentrée d'argent.
-  \item Impact sur les Facteurs de Succès Internes (FSI) : Les décisions de la direction reposent sur des données incertaines et non consolidées.
-  \item Charge de Travail : Les équipes perdent un temps précieux en double saisies et en recherche d'informations égarées.
+\item Aria : Est le cœur de la gamme de produits Aria 4 XP, il couvre tous les domaines fonctionnels internes nécessaires pour gérer une entreprise. Il a été développé à base d’un ERP open source appelé Nola, et son environnement est PHPMYSQL 
+\item Compiere : Est un progiciel de gestion intégré (PGI) et gestion de la relation client (GRC) à source ouverte, open source pour les Petites et moyennes entreprises (PME) dans la distribution et le service. L'application est fournie sous double licence GPL et propriétaire. Les sources peuvent être adaptées aux besoins du client. Le support technique et la documentation sont payants. Son origine est JorgJank 
+\item ERP : Est un progiciel de gestion intégrée (ERP) libre, son origine est Nexedi. Son intégration avec NuxeoCPS, lui a permis d’être un système de gestion de contenu. L’environnement dans lequel il évolue est composé du Python et Zope
+\item Fisterra : Est un PGI sous licence PGL, le premier client pour cet ERP était la société espagnole Auto Arte, son origine est Igalia, et son environnement est GNOME2 développement platform PostgreSQL 
+\item Odoo :  Anciennement OpenERP ou encore TinyERP, est un progiciel libre de gestion intégrée comprenant des modules de gestion des ventes, des relations clients, des projets, des entrepôts, de production, de comptabilité et de ressources humaines. Son environnement est constitué principalement du PostgreSQL et XML 
 
 \end{itemize}
+
+\textbf{Tableau Comparatif : ERP Propriétaire vs Open Source}
+\begin{table}[h!]
+\renewcommand{\arraystretch}{1.8}
+\setlength{\tabcolsep}{16pt}
+\centering
+\begin{tabular}{l|>{\raggedright\arraybackslash}p{5cm}|>{\raggedright\arraybackslash}p{5cm}}
+
+\hline
+Caractéristique  & Propriétaire ERP & ERP Open Source \\
+\hline
+Coût initial & Élevé (licences, mise en place) & Faible à nul (pas de licence) \\
+\hline
+Coût à long terme & Élevé (entretien, permis) & Modéré (hébergement, accompagnement) \\
+\hline
+Personnalisation & Limitée, souvent par l'éditeur & Élevée,, code source modifiable \\
+\hline
+Dépendance & Forte (fournisseur de verrouillage) & Faible (indépendance)  \\
+\hline
+Mises à jour & Automatiques, gérées par l'éditeur & Manuelles, obligatoires des compétences\\
+\hline
+Soutien & Professionnel (SLA) & Communautaire (ou payant via intégrateur) \\
+\hline
+Sécurité & "Sécurité par l'obscurité" (opaque)  & Transparente (auditable, mais risque de failles) \\
+\hline
+Idéal pour  & PME chercher du clé en main & Entreprises avec besoins spécifiques \\
+\hline
+\end{tabular}
+\textbf{\caption{Tableau comparatif des solutions ERP existantes}}
+\label{table:comparatif des ERPs}
+\end{table}
+\vfill
+L'implémentation d'un ERP open source offre une grande flexibilité et l'absence de coûts de licence initiaux, mais elle présente des inconvénients majeurs liés à la complexité technique et aux coûts cachés.\\
+ L'implémentation d'un ERP propriétaire (licence fermée) entraîne des coûts élevés (licences, maintenance, formation) et une forte dépendance envers le fournisseur (verrouillage technologique). Les entreprises font face à des personnalisations coûteuses, des déploiements longs et une flexibilité limitée par rapport à l'open source.\\
+L’étude de l'existant pour une société de plastique (injection, extrusion, soufflage) vise à cartographier les processus actuels pour sélectionner un ERP capable de gérer la complexité du secteur : matières premières (granulés), gestion des moules, rebuts, et traçabilité. Elle identifie les goulots d'étranglement (stocks, planification) pour optimiser la production et la rentabilité\par
+L’implantation d’un ERP au sein d’une entreprise présente un investissement très important en termes de ressources matérielles, humaines, financières, mais aussi informationnelles et de temps. L’implantation d’un tel progiciel requiert parfois un changement quasi-radical en termes d’organisation, impliquant un besoin d’engagement très important de la part des différentes parties prenantes. Ce niveau d’importance a suscité l’intérêt de professionnels et industriels de différents niveaux hiérarchiques, mais aussi des chercheurs et bureaux de conseils.\par
+Durant notre étude et dans le but d’adapter l’ERP en question aux besoins spécifiques (principalement opérationnels) de l’entreprise. Les processus opérationnels concernés de l’entreprise sont analysés, afin d’en faire ressortir quatre types qui sont relativement évolutifs, à savoir :\par
+\begin{itemize}
+\item Les processus actuels qui ont toujours été utilisés par l’entreprise.
+\item Les processus prospectifs qui intègre l’ensemble des processus que l’entreprise veut intégrer.
+\item Les processus possibles qui présentent l’ensemble des processus intégrés dans l’ERP à implanter.
+\item Les processus qui seront implantés effectivement, et qui présente une jonction entre les processus prospectifs et les processus possibles pris en charge par l’ERP.
+\end{itemize}
+
+
 \section{Problématique}
 En Vue de l’étude et de critique de l’existant, la problématique centrale de ce projet vise à répondre aux questions suivants : 
 \begin{itemize}
@@ -101,6 +149,108 @@ Le développement de l’application \reportAppName vise à atteindre plusieurs 
         \end{itemize}
 \end{itemize}
 \vfill
+\section{Diagramme de cas d'utilisation}
+\subsection{Diagramme des cas d’utilisation}
+C’est qui permette de Modéliser les interactions entre les acteurs et le système et ce en décrivant les fonctionnalités offertes. 
+\subsubsection{Identification des Acteurs :}
+\begin{itemize}
+\item Visiteur : tous visiteurs du portail \reportAppName et potentiel clients.
+\item Client : visiteur ayant inscrit à \reportAppName.
+\item Responsable Ventes : crée et gère les commandes d'achat de produits finis.
+\item Magasinier : gère le stock des matières premières et des produits.
+\item Responsable Achats : gère les ordres d'achat de matières premières et le référentiel fournisseurs.
+\item Responsable Production : planifie, lance et suit les ordres de Production.
+\item PDG : consulte les tableaux de bord décisionnel.
+\end{itemize}
+Le figure ci-dessous illustre ces acteurs :
+\begin{figure}[H]%
+    \center%
+    \setlength{\fboxsep}{0pt}%
+    \setlength{\fboxrule}{0.0pt}%
+    \fbox{
+    \includegraphics[width=13 cm,height=3cm]{Acteurs.png}
+    }
+    \caption{Acteurs du système \reportAppName}%
+\end{figure}
+
+
+\subsubsection{Identification des cas d’utilisation principaux :}
+En se basant sur les besoins fonctionnels, voici les principaux cas d’utilisation :
+% \begin{table}[!htbp]
+\renewcommand{\arraystretch}{1.8}
+\setlength{\tabcolsep}{20pt}
+% \centering
+\begin{longtable}{>{\raggedright\arraybackslash}p{3cm}|>{\raggedright\arraybackslash}p{3cm}|>{\raggedright\arraybackslash}p{6cm}}
+
+\hline
+\textbf{Cas d'utilisation}  & \textbf{Description} & \textbf{Fonctionnalités clés} \\
+\hline
+\endhead
+ $\bullet$ S'authentifier & Permet à chaque collaborateur d'accéder à l'interface selon son rôle. & \begin{itemize}
+    \item Saisie d'un identifiant et d'un mot de passe unique.
+    \item Gestion des profils : Redirection automatique vers le tableau de bord spécifique (ex : l'opérateur voit la production, …).
+    \item Option "Mot de passe oublié" et déconnexion automatique après inactivité.
+\end{itemize}  \\
+\hline
+
+ $\bullet$ Créer des Fournisseurs (Référencement) & Centraliser toutes les coordonnées des partenaires (vendeurs de granulés, moulistes, transporteurs). & \begin{itemize}
+    \item Fiche détaillée : Nom, adresse, contacts, RIB, conditions de paiement (ex : 30 jours fin de mois).
+    \item Classification : Catégorisation par type de produit (Matières premières, Maintenance, Emballages).
+    \item Historique : Consultation immédiate de tous les achats passés avec ce fournisseur.
+\end{itemize} \\
+\hline
+ $\bullet$ Créer des Commandes d'Achat (Passation) & Générer un document officiel pour commander des ressources. & \begin{itemize}
+    \item Sélection du fournisseur et des articles à commander.
+    \item Calcul automatique : Application des prix négociés et calcul des taxes (TVA).
+\end{itemize} \\
+\hline
+
+ $\bullet$ Lancer des Ordres d'Achat (Réapprovisionnement automatique) & Système intelligent qui suggère des achats en fonction des besoins. & \begin{itemize}
+    \item Alerte stock critique : Le système propose de commander si le stock de granulés tombe sous un seuil défini.
+    \item Liaison avec la production : Génération d'un ordre d'achat si une commande client nécessite une matière que vous n'avez pas en stock.
+\end{itemize}  \\
+ $\bullet$ Consulter les Commandes en Cours (Suivi logistique) & Suivre l'avancement des approvisionnements pour éviter les arrêts de machines. & \begin{itemize}
+    \item États de suivi : En attente de validation, Envoyée, Réceptionnée partiellement, clôturée.
+    \item Relance : Identifier en un coup d'œil les commandes fournisseurs en retard de livraison.
+\end{itemize} \\
+
+\hline
+
+ $\bullet$ Suivi de l’État des Stocks (Inventaire réel) & Remplacer votre fichier Excel par une vision dynamique. & \begin{itemize}
+    \item Mise à jour automatique : Le stock diminue lors d'une vente et augmente lors d'une réception d'achat.
+    \item Valorisation : Connaître la valeur financière de votre stock en temps réel (méthode PMP ou FIFO).
+    \item Mouvements : Historique complet (qui a sorti 50kg de polypropylène et quand ?).
+\end{itemize} \\
+\hline
+ $\bullet$ Créer des Ordres de Production (Lancement atelier) & Transformer la matière première en produits finis selon un planning.  & \begin{itemize}
+    \item Lien avec la Nomenclature (BOM) : Calcul automatique des quantités de matières nécessaires (ex: pour 1000 bouteilles, il faut X kg de plastique).
+    \item Affectation : Choix de la machine (Presse 1, Presse 2) et de l'équipe.
+    \item Suivi des rebuts : Saisie des pertes de matière durant la production pour ajuster le stock réel.
+\end{itemize} \\
+\hline
+$\bullet$ Visualiser le Dashboard (Pilotage FSI)  & Un écran unique pour la direction avec les indicateurs clés (Reporting). & \begin{itemize}
+    \item Indicateurs Ventes : Évolution du CA par mois.
+    \item Indicateurs Production : Taux d'utilisation des machines et volume produit.
+    \item Indicateurs Stocks : Valeur totale du stock et alertes de rupture imminente.
+\end{itemize} \\
+\hline
+% \end{tabular}
+% \textbf{\caption{cas d’utilisation principaux}}
+% \label{table:cas d’utilisation principaux}
+\end{longtable}
+\captionof{table}{Cas d’utilisation principaux} \label{table:Cas d’utilisation principaux}
+\subsection{Diagramme de cas d’utilisation Globale :}
+
+
+\begin{figure}[H]%
+    \center%
+    \setlength{\fboxsep}{0pt}%
+    \setlength{\fboxrule}{0.0pt}%
+    \fbox{
+    \includegraphics[width=13 cm,height=12cm]{general_usecase.png}
+    }
+    \caption{Diagramme du cas d’utilisation globale}%
+\end{figure}
 \section{Conclusion}
 L'analyse rigoureuse de l'existant au sein de la société Rayhan a permis de confirmer l'obsolescence des outils actuels face aux ambitions de croissance de l'entreprise. En identifiant précisément les points de friction, notamment l'absence de base de données centralisée et la fragmentation des processus de production et de stock.\par
 Nous avons pu définir un socle de besoins fonctionnels et non fonctionnels cohérents. Ce diagnostic constitue la feuille de route indispensable pour garantir que la solution future ne soit pas un simple logiciel de gestion, mais un véritable levier de performance industrielle.\par

@@ -8,7 +8,7 @@
 \section{Introduction}
 Dans une gestion classique d’une entreprise, chaque service est doté de son propre système d’information et ses propres applications (comptabilité, gestion de paie, gestion des stocks, gestion commerciale, gestion de production...). Pour faire le lien entre ces différents systèmes, l’entreprise faisait développer des interfaces informatiques entre ses différents SI. Ce mode de fonctionnement coûtait très cher à l’entreprise et il est devenu inappropriée. Pour améliorer cette situation, les entreprises ont décidé d’implémenter des systèmes intégrés connus par les progiciels de gestion intégré « PGI » ou en anglais Entreprise Ressource Planning « ERP »
 \section{Présentation de l’organisme d’accueil : Sociéte \reportEntreprise}
-Rayhan est une société Tunisienne   de plasturgie (Implanté à Tataouine) spécialisé dans la fabrication de Sac a Poubelle, Bretelles en plastique et autres solutions de Packaging. La société Assure des produits de haute qualité Adaptés aux besoins industriels et Domestique  
+Rayhan est une société Tunisienne   de plasturgie implanté à Tataouine, spécialisé dans la fabrication de Sac a Poubelle, Bretelles en plastique et autres solutions de Packaging. La société Assure des produits de haute qualité Adaptés aux besoins industriels et Domestique  
 \\
 \begin{figure}[H]%
     \center%
@@ -34,129 +34,51 @@ Rayhan est une société Tunisienne   de plasturgie (Implanté à Tataouine) sp�
 
 \end{itemize}
 
-\subsection{Organigramme \reportEntreprise}
+\subsection{Organigramme de la société \reportEntreprise}
 
 \begin{figure}[H]%
 	\center%
 	\setlength{\fboxsep}{0pt}%
 	\setlength{\fboxrule}{0.0pt}%
 	\fbox{
-		\includegraphics[width=9cm,height=5cm]{organigramme.png}%
+		\includegraphics[width=14cm,height=7cm]{organigramme.png}%
 	}
 	\\
 	\caption{Organigramme}%
 	
 \end{figure}
 
-\section{Objectif du projet}
+\section{Présentation du projet}
 
-Mettre en place une solution ERP intégrée pour gérer l’ensemble des processus de
-L’entreprise : achats, ventes, stock, production, facturation, paie et gestion du
-Personnel.\\
+
+\subsection{Cadre du projet}
+L’étude de l'existant révèle une gestion artisanale et fragmentée au sein de la société Rayhan , caractérisée par une absence d'informatisation intégrée. Les stocks, commandes et factures sont gérés manuellement via des fichiers Excel, des documents Word et du papier, entraînant des risques d'erreurs, des ruptures de stock non détectées et une perte de temps dans le suivi client/fournisseur. Cette organisation cloisonnée, sans base de données centralisée, implique la traçabilité de la production et la prise de décision, justifiant la nécessité d'un ERP pour automatiser et centraliser les processus. \\
+Le process existant à l'entreprise actuellement est résumé comme suit :
+\begin{itemize}
+\item Ventes et Achats : Utilisation de supports volatils (Word, papier). Les factures sont saisies manuellement sans lien direct avec les bons de livraison.
+\item Production et Stocks : Suivi manuel, risque de non-conformité et inventaires complexes.
+\item Impact : Besoin crucial d'automatisation et de traçabilité.
+\item Données : Absence de base de données clients/fournisseurs structurée, perte de temps administratif. Les informations clients et fournisseurs sont éparpillées, rendant l'historique des échanges difficiles à tracer.
+\end{itemize}
+\vspace{2cm}
+Parmi les effets de ce process sur l'entreprise et sa productivité on cite :
+\begin{itemize}
+  \item Impact sur la Production (Efficacité Opérationnelle) : Inexactitude : Difficulté à calculer le coût de revient réel de chaque cycle de production (perte de matière, temps machine).
+  \item Impact sur le Chiffre d'Affaires (CA) : Retards dans l'émission des devis et la confirmation des commandes, ce qui peut pousser les clients vers la concurrence.
+  \item Pertes de Ventes : Manque de réactivité face aux demandes spécifiques par manque de visibilité sur les capacités de production.
+  \item Impact sur les Flux de Trésorerie : Les achats ne sont pas optimisés, ce qui mobilise inutilement de la trésorerie ou crée des urgences coûteuses.
+  \item Erreurs de Facturation : Le système manuel favorise les oublis de facturation ou les erreurs de prix, impactant directement la rentrée d'argent.
+  \item Impact sur les Facteurs de Succès Internes (FSI) : Les décisions de la direction reposent sur des données incertaines et non consolidées.
+  \item Charge de Travail : Les équipes perdent un temps précieux en double saisies et en recherche d'informations égarées.
+
+\end{itemize}
+
 Un ERP (Progiciel de Gestion Intégré) vise à centraliser les données dans une base unique pour automatiser les processus, améliorer la productivité et fiabiliser le pilotage stratégique en temps réel.
 Il standardise les opérations (ventes, RH, finance, production) pour accroître l'efficacité globale et la conformité.
-\subsection{Objectifs du système ERP }
-L'implantation d'un ERP (Progiciel de Gestion Intégré) dans une société industrielle comme Rayhan vise à unifier la gestion de la production (GPAO), des stocks et des ventes pour optimiser les performances.
-Ce processus nécessite une analyse des besoins, la configuration des modules, la reprise des données, la formation et un déploiement, souvent progressif, pour limiter les risques opérationnels
-\subsection{Objectifs Fonctionnels (Ce que le système fait)}
-\begin{itemize}
-\item Centralisation des données : Regrouper toutes les informations dans une base unique, éliminant les silos.
-\item Automatisation des processus : Automatiser les tâches répétitives (facturation, gestion des stocks, saisie de commandes).
-\item Intégration métier : Lier les départements (ventes, production, comptabilité, …) pour une collaboration fluide.
-\item Reporting et Business Intelligence : Générer des tableaux de bord et des indicateurs (KPI) pour la prise de décision.
- \end{itemize}
 
-
-\subsection{ Objectifs Non Fonctionnels (Comment le système le fait)}
-
-\begin{itemize}
-\item Performance et Temps réel : Mettre à jour les informations instantanément.
-\item Sécurité : Renforcer la protection des données sensibles et la conformité réglementaire.
-\item Scalabilité (Évolutivité) : S'adapter à la croissance de l'entreprise et intégrer de nouvelles fonctionnalités.
-\item Ergonomie et Utilisabilité : Standardiser les interfaces pour faciliter l'adoption par les utilisateurs.
-\item Disponibilité et Fiabilité : Garantir un système robuste et accessible. 
-Ces objectifs combinés permettent d'améliorer la rentabilité et de réduire les erreurs humaines. ,à améliorer l'efficacité, à fournir une visibilité sur les opérations et à permettre une prise de décision en temps réel. Les systèmes ERP offrent un large éventail de fonctionnalités, mais il est essentiel, pour réussir, de savoir quelles sont les fonctionnalités à rechercher et de comprendre comment mettre en œuvre un système ERP adapté aux besoins de Notre Entreprise «  Rayhan » 
-\end{itemize}
-
-\section{Les ERP}
-\subsection{Définition}
+\textbf{Définition du système ERP:}\\
 Le concept d’ERP part d’un constat relativement simple selon lequel (la somme des optima est parfois inferieure `a l’optimum de la somme).En d’autres termes, l’apport d’un ERP est toujours bien supérieur `a la somme des apports de chacun des modules qui le composent. Cela pourrait se résumer par l’expression simple et bien connue
-La Définition Le terme ERP vient de l’anglais « Enterprise Ressource Planning ». ERP a été traduit en français par l’acronyme PGI (Progiciel de Gestion Intégré) et se définit comme un groupe de modules relié à une base de données unique. L’ERP est un progiciel qui permet de gérer l’ensemble des processus opérationnels d’une entreprise en intégrant plusieurs fonctions de gestion dans un système : solution de gestion des commandes, solution de gestion des stocks, solution de gestion de la paie,solution de gestion de la comptabilité, solution de gestion d’e-commerce, solution de gestion de commerce B to B ou B to C .... Autrement dit, l’ERP représente la « colonne vertébrale » d’une entreprise. 
-
-
-
-\subsection{Architecture technique}
-L'architecture d'un ERP se compose principalement d'un serveur ERP sur lequel est hébergée une base de données unique et disponible pour tous les utilisateurs. Elle implique l'utilisation de différents réseaux : 
-\begin{itemize}
-\item Multi sites. 
-\item Intranet, extranet.
-\item Serveur ERP à distance. 
-\end{itemize}
-C'est la mise en réseau des données qui permettra leur gestion décentralisée, de plus, les ERP sont compatibles en packs Office. Enfin, les ERP sont aussi compatibles avec des outils de reporting
-\subsection{Les principaux éditeurs Le marché de l'ERP}
-Représente une vraie manne pour les prestataires de services informatiques. Il est considéré aujourd'hui, le marché le plus porteur de l'informatique. On distingue deux catégories d'ERP Les ERP Propriétaires et les ERP Open Source :
-\subsubsection{Les ERP Propriétaires }
-Aujourd’hui, de nombreux ERP propriétaires existent sur le marché. Nous évoquerons dans ce qui suit, quelques grands éditeurs : 
-\begin{itemize}
-\item SAP (Business One) SAP/ est le leader mondial des ERP, est une application client- serveur. Ses modules couvrent l'ensemble des fonctions de gestion de l'entreprise et chaque module couvre des besoins complets de gestion. Ce progiciel a remporté rapidement un succès important auprès des grandes entreprises en proposant un progiciel multilingue et multidevise
-\item Oracle (JD Edwards) : Est un progiciel de gestion intégrée. Anciennement appelé People Enterprise One ou One World XE ou ERP 8, et vendu par J.D. Edwards puis par Peoplesoft. J.D. Edwards a été racheté par People Soft puis par Oracle. Le produit est depuis renommé "Oracle JDEdwards Enterprise One". Il est composé de plusieurs modules plus ou moins indépendants.
-\item ERP SAGE : SAGE Est un progiciel de gestion intégrée (ERP/PGI), conçu pour les structures de 20 à 500 employés, sociétés autonomes et filiales de groupes, des secteurs de l’industrie, du négoce et des services
-\end{itemize}
-\subsubsection{Les ERP Open Source }
-Ils sont relayés par des partenaires (SSII, Cabinets de Conseil) pour le support. L’implémentation d’un progiciel Open Source revient moins chère, puisqu’il n’y a pas de coût de licence. En revanche il faut inclure, dans le calcul du coût d'acquisition total, les frais de maintenance et de l'assistance technique. Voici la liste des principaux progiciels Open Source : 
-\begin{itemize}
-\item Aria : Est le cœur de la gamme de produits Aria 4 XP, il couvre tous les domaines fonctionnels internes nécessaires pour gérer une entreprise. Il a été développé à base d’un ERP open source appelé Nola, et son environnement est PHPMYSQL 
-\item Compiere : Est un progiciel de gestion intégré (PGI) et gestion de la relation client (GRC) à source ouverte, open source pour les Petites et moyennes entreprises (PME) dans la distribution et le service. L'application est fournie sous double licence GPL et propriétaire. Les sources peuvent être adaptées aux besoins du client. Le support technique et la documentation sont payants. Son origine est JorgJank 
-\item ERP : Est un progiciel de gestion intégrée (ERP) libre, son origine est Nexedi. Son intégration avec NuxeoCPS, lui a permis d’être un système de gestion de contenu. L’environnement dans lequel il évolue est composé du Python et Zope
-\item Fisterra : Est un PGI sous licence PGL, le premier client pour cet ERP était la société espagnole Auto Arte, son origine est Igalia, et son environnement est GNOME2 développement platform PostgreSQL 
-\item Odoo :  Anciennement OpenERP ou encore TinyERP, est un progiciel libre de gestion intégrée comprenant des modules de gestion des ventes, des relations clients, des projets, des entrepôts, de production, de comptabilité et de ressources humaines. Son environnement est constitué principalement du PostgreSQL et XML 
-
-\end{itemize}
-
-\textbf{Tableau Comparatif : ERP Propriétaire vs Open Source}
-\begin{table}[h!]
-\renewcommand{\arraystretch}{1.8}
-\setlength{\tabcolsep}{16pt}
-\centering
-\begin{tabular}{l|>{\raggedright\arraybackslash}p{5cm}|>{\raggedright\arraybackslash}p{5cm}}
-
-\hline
-Caractéristique  & Propriétaire ERP & ERP Open Source \\
-\hline
-Coût initial & Élevé (licences, mise en place) & Faible à nul (pas de licence) \\
-\hline
-Coût à long terme & Élevé (entretien, permis) & Modéré (hébergement, accompagnement) \\
-\hline
-Personnalisation & Limitée, souvent par l'éditeur & Élevée,, code source modifiable \\
-\hline
-Dépendance & Forte (fournisseur de verrouillage) & Faible (indépendance)  \\
-\hline
-Mises à jour & Automatiques, gérées par l'éditeur & Manuelles, obligatoires des compétences\\
-\hline
-Soutien & Professionnel (SLA) & Communautaire (ou payant via intégrateur) \\
-\hline
-Sécurité & "Sécurité par l'obscurité" (opaque)  & Transparente (auditable, mais risque de failles) \\
-\hline
-Idéal pour  & PME chercher du clé en main & Entreprises avec besoins spécifiques \\
-\hline
-\end{tabular}
-\textbf{\caption{Tableau comparatif des solutions ERP existantes}}
-\label{table:comparatif des ERPs}
-\end{table}
-\vfill
-L'implémentation d'un ERP open source offre une grande flexibilité et l'absence de coûts de licence initiaux, mais elle présente des inconvénients majeurs liés à la complexité technique et aux coûts cachés.\\
- L'implémentation d'un ERP propriétaire (licence fermée) entraîne des coûts élevés (licences, maintenance, formation) et une forte dépendance envers le fournisseur (verrouillage technologique). Les entreprises font face à des personnalisations coûteuses, des déploiements longs et une flexibilité limitée par rapport à l'open source.\\
-L’étude de l'existant pour une société de plastique (injection, extrusion, soufflage) vise à cartographier les processus actuels pour sélectionner un ERP capable de gérer la complexité du secteur : matières premières (granulés), gestion des moules, rebuts, et traçabilité. Elle identifie les goulots d'étranglement (stocks, planification) pour optimiser la production et la rentabilité\par
-L’implantation d’un ERP au sein d’une entreprise présente un investissement très important en termes de ressources matérielles, humaines, financières, mais aussi informationnelles et de temps. L’implantation d’un tel progiciel requiert parfois un changement quasi-radical en termes d’organisation, impliquant un besoin d’engagement très important de la part des différentes parties prenantes. Ce niveau d’importance a suscité l’intérêt de professionnels et industriels de différents niveaux hiérarchiques, mais aussi des chercheurs et bureaux de conseils.\par
-Durant notre étude et dans le but d’adapter l’ERP en question aux besoins spécifiques (principalement opérationnels) de l’entreprise. Les processus opérationnels concernés de l’entreprise sont analysés, afin d’en faire ressortir quatre types qui sont relativement évolutifs, à savoir :\par
-\begin{itemize}
-\item Les processus actuels qui ont toujours été utilisés par l’entreprise.
-\item Les processus prospectifs qui intègre l’ensemble des processus que l’entreprise veut intégrer.
-\item Les processus possibles qui présentent l’ensemble des processus intégrés dans l’ERP à implanter.
-\item Les processus qui seront implantés effectivement, et qui présente une jonction entre les processus prospectifs et les processus possibles pris en charge par l’ERP.
-\end{itemize}
-\subsubsection{Composition de système ERP}
-
+La Définition Le terme ERP vient de l’anglais « Enterprise Ressource Planning ». ERP a été traduit en français par l’acronyme PGI (Progiciel de Gestion Intégré) et se définit comme un groupe de modules relié à une base de données unique. L’ERP est un progiciel qui permet de gérer l’ensemble des processus opérationnels d’une entreprise en intégrant plusieurs fonctions de gestion dans un système : solution de gestion des commandes, solution de gestion des stocks, solution de gestion de la paie,solution de gestion de la comptabilité, solution de gestion d’e-commerce, solution de gestion de commerce B2B ou B2C, autrement dit, l’ERP représente la « colonne vertébrale » d’une entreprise. 
 \begin{figure}[H]%
     \center%
     \setlength{\fboxsep}{0pt}%
@@ -168,7 +90,72 @@ Durant notre étude et dans le but d’adapter l’ERP en question aux besoins s
     \caption{Composition de système ERP}%
     
 \end{figure}
+
+\subsection{Objectifs du projet }
+L'implantation d'un ERP dans une société industrielle comme Rayhan vise à unifier la gestion de la production, des stocks et des ventes pour optimiser les performances.
+Ce processus nécessite une analyse des besoins, la configuration des modules, la reprise des données, la formation et un déploiement, souvent progressif, pour limiter les risques opérationnels.\\
+Objectifs Fonctionnels d'un ERP :
+\begin{itemize}
+\item Centralisation des données : Regrouper toutes les informations dans une base unique, éliminant les silos.
+\item Automatisation des processus : Automatiser les tâches répétitives (facturation, gestion des stocks, saisie de commandes).
+\item Intégration métier : Lier les départements (ventes, production, comptabilité, …) pour une collaboration fluide.
+\item Reporting et Business Intelligence : Générer des tableaux de bord et des indicateurs (KPI) pour la prise de décision.
+ \end{itemize}
+
+
+Objectifs Non Fonctionnels d'un ERP :
+
+\begin{itemize}
+\item Performance et Temps réel : Mettre à jour les informations instantanément.
+\item Sécurité : Renforcer la protection des données sensibles et la conformité réglementaire.
+\item Scalabilité (Évolutivité) : S'adapter à la croissance de l'entreprise et intégrer de nouvelles fonctionnalités.
+\item Ergonomie et Utilisabilité : Standardiser les interfaces pour faciliter l'adoption par les utilisateurs.
+\item Disponibilité et Fiabilité : Garantir un système robuste et accessible. 
+Ces objectifs combinés permettent d'améliorer la rentabilité et de réduire les erreurs humaines. ,à améliorer l'efficacité, à fournir une visibilité sur les opérations et à permettre une prise de décision en temps réel. Les systèmes ERP offrent un large éventail de fonctionnalités, mais il est essentiel, pour réussir, de savoir quelles sont les fonctionnalités à rechercher et de comprendre comment mettre en œuvre un système ERP adapté aux besoins de Notre Entreprise «  Rayhan » 
+\end{itemize}
+
+L'objectif de notre projet et de mettre en place une solution ERP intégrée pour gérer l’ensemble des processus de
+L’entreprise : achats, ventes, stock, production, facturation, paie et gestion du
+Personnel.\\
+
+\subsection{Cycle de vie de l'application}
+Le cycle de vie de l'application \reportAppName{} suit le modèle en V, une approche rigoureuse qui associe chaque phase de développement à une phase de test correspondante. Ce modèle a été choisi pour sa capacité à garantir la qualité et la fiabilité du système ERP, en permettant une validation précoce des spécifications et une détection rapide des anomalies.
+
+\begin{figure}[H]%
+    \center%
+    \setlength{\fboxsep}{0pt}%
+    \setlength{\fboxrule}{0.0pt}%
+    \fbox{%
+    \includegraphics[width=14cm]{cycle_en_v.png}%
+    }%
+    \caption{Cycle de vie de l'application — Modèle en V}%
+\end{figure}
+\section{Architecture de l'application}
+\subsection{Architecture logicielle}
+L'architecture logicielle de \reportAppName{} repose sur le patron de conception MVVM \\ (Model-View-ViewModel). La couche View, développée avec Flutter, est chargée de l'affichage des interfaces utilisateur et de la capture des interactions. Le ViewModel agit comme un médiateur entre la Vue et le Modèle en exposant des données observables et en gérant la logique de présentation via des patrons tels que BLoC ou Provider. Enfin, la couche Model encapsule les données métier et les services d'accès via des repositories qui communiquent avec l'API REST du back-end Spring Boot. Cette séparation des responsabilités facilite la maintenabilité, la testabilité et l'évolutivité de l'application.\par
+
+\begin{figure}[H]%
+    \center%
+    \setlength{\fboxsep}{0pt}%
+    \setlength{\fboxrule}{0.0pt}%
+    \fbox{%
+    \includegraphics[width=12cm]{mvvm_pattern.png}%
+    }%
+    \caption{Architecture logicielle — Pattern MVVM}%
+\end{figure}
+\subsection{Architecture physique}
+L'architecture physique de \reportAppName{} adopte un modèle client-serveur. Le client, développé en Flutter, est déployé sur les postes des utilisateurs sous forme d'application web accessible via un navigateur. Le serveur back-end repose sur Spring Boot, conteneurisé avec Docker pour assurer la portabilité et la facilité de déploiement. Les données sont stockées dans une base de données MySQL, également conteneurisée. Les communications entre le client et le serveur s'effectuent via des API RESTful sécurisées par JWT. Cette configuration garantit une séparation claire entre la présentation, la logique métier et le stockage des données.\par
+
+\begin{figure}[H]%
+    \center%
+    \setlength{\fboxsep}{0pt}%
+    \setlength{\fboxrule}{0.0pt}%
+    \fbox{%
+    \includegraphics[width=14cm]{architecture_3tiers.png}%
+    }%
+    \caption{Architecture physique — Modèle 3-tiers client-serveur}%
+\end{figure}
 \section{Conclusion}
- Un progiciel de gestion intégré ou ERP (Enterprise Ressource Plan) permet de piloter une entreprise. Il s’appuie sur une base de données commune à tous les services de l’entreprise et gère l’ensemble de ses processus. Il est donc intéressant de remplacer tous les logiciels de gestion de l’entreprise par un seul logiciel intégré offrant toutes les fonctionnalités, au lieu de le faire manuellement ou engager des corrections des programmes existants, ou encore en embauchant des personnes spécialisées pour analyser un système opérationnel.\par
+ Un progiciel de gestion intégré ou ERP permet de piloter une entreprise. Il s’appuie sur une base de données commune à tous les services de l’entreprise et gère l’ensemble de ses processus. Il est donc intéressant de remplacer tous les logiciels de gestion de l’entreprise par un seul logiciel intégré offrant toutes les fonctionnalités, au lieu de le faire manuellement ou engager des corrections des programmes existants, ou encore en embauchant des personnes spécialisées pour analyser un système opérationnel.\par
  En conclusion, les systèmes ERP sont essentiels pour que notre entreprise reste compétitive.
  Il faut tout d’abord connaître les fonctionnalités dont les dirigeants de l'entreprise ont en besoin et comprendre le coût du système ERP comme des étapes clés pour sélectionner le meilleur système à intégrer.
