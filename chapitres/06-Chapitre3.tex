@@ -1,4 +1,4 @@
-\chapter{CONCEPTION}
+\chapter{Conception}
 \begin{spacing}{1.2}
 \minitoc
 \thispagestyle{MyStyle}
@@ -6,29 +6,29 @@
 \newpage
 
 \section{Introduction}
-Faisant suite à la définition du cadre général et à l'analyse des besoins (fonctionnels et non fonctionnels) de \reportAppName, puis ce chapitre aborde la phase de conception. Pour traduire ces exigences en architecture structurée, nous utiliserons le langage de modélisation standardisé UML, garantissant une claire représentation et visualisation de l'architecture du système. 
-Notre démarche inclura la méthodologie retenue, suivie de l'élaboration des diagrammes dite « clés » :
- Cas d’utilisation (interactions utilisateurs), classes (structure statique), séquence (dynamique) et activité (workflows). Ces modélisations serviront de plans directeurs pour la phase d’implantation. 
+Faisant suite à la définition du cadre général et à l'analyse des besoins (fonctionnels et non fonctionnels) de \reportAppName{}, puis ce chapitre aborde la phase de conception. Pour traduire ces exigences en architecture structurée, nous utiliserons le langage de modélisation standardisé UML, garantissant une représentation claire et visualisation de l'architecture du système. 
+Notre démarche inclura la méthodologie retenue, suivie de l'élaboration des diagrammes dits « clés » :
+ cas d’utilisation (interactions utilisateurs), classes (structure statique), séquence (dynamique) et activité (workflows). Ces modélisations serviront de plans directeurs pour la phase d’implantation. 
 \section{Choix de la méthodologie d’analyse}
-  Afin de structurer efficacement notre Projet « ERP Rayhan », nous utilisons UML, un langage de modélisation orienté objet largement adopté. Il offre l'avantage de clarifier les différents aspects de l'application, offrant une panoplie de diagrammes (statiques et dynamiques) pour une représentation précise du système.
+ Afin de structurer efficacement notre Projet « 
+\reportAppName{} », nous utilisons UML, un langage de modélisation orienté objet largement adopté. Il offre l'avantage de clarifier les différents aspects de l'application, offrant une panoplie de diagrammes (statiques et dynamiques) pour une représentation précise du système.
 \subsection{Présentation UML}
-UML (Unified Modeling Language): C’est un langage de modélisation visuel qui fournit un ensemble standard de notions graphiques pour créer des modèles Abstraits de systèmes Logiciels.
-Le langage de modélisation unifié (UML) est une norme graphique standardisée, essentielle dans le logiciel de génie pour visualiser, instantanément, construire et documenter les systèmes orientés objet. Contrairement aux méthodes de développement, UML offre un ensemble de notations et de diagrammes (comme les cas d'utilisation ou les diagrammes de classe) permettant de modéliser aussi bien la structure statique que le comportement dynamique d'un logiciel. Il facilite la communication entre les parties prenantes d’un projet (Développeur, Analystes, clients) en offrant une présentation commune et compréhensible    qui permet de maîtriser la complexité des projets en proposant une représentation claire avant la phase de codage.
+UML (Unified Modeling Language) est un langage de modélisation visuel standardisé, essentiel en génie logiciel pour visualiser, construire et documenter les systèmes orientés objet. Il offre un ensemble de diagrammes (cas d'utilisation, classes, séquences, activités) permettant de modéliser la structure statique et le comportement dynamique d’un logiciel, facilitant la communication entre les parties prenantes du projet.
 
 \subsection{Diagrammes des cas d’utilisation spécifiques : }
- Ces diagrammes détaillent les fonctionnalités du système en se manifestant du côté des utilisateurs. Ils illustrent la manière dont les acteurs interagissent avec la solution traduisant les besoins fonctionnels en scénarios concrets pour atteindre des buts précis\par
-Nous allons détailler ici les principaux cas d’utilisation pour notre Application \reportAppName
+ ces diagrammes détaillent les fonctionnalités du système en se manifestant du côté des utilisateurs. Ils illustrent la manière dont les acteurs interagissent avec la solution traduisant les besoins fonctionnels en scénarios concrets pour atteindre des buts précis\par
+Nous allons détailler ici les principaux cas d’utilisation pour notre Application \reportAppName{}
 \subsubsection{Diagramme de cas d'utilisation « Consulter le site/app » :}
-Ce cas d'utilisation permet au Visiteur de consulter le site web ou l'application mobile de RayhanERP sans nécessiter d'authentification préalable. Il constitue la porte d'entrée publique du système, offrant une présentation des services et produits de l'entreprise Rayhan. Le Visiteur peut naviguer librement dans les sections publiques avant de décider de s'authentifier ou de passer une commande.\par
-Le figure ci-dessous décrit ces relations :
+Ce cas d'utilisation permet au Visiteur de consulter le site web ou l'application mobile de \reportAppName{} sans nécessiter d'authentification préalable. Il constitue la porte d'entrée publique du système, offrant une présentation des services et produits de l'entreprise \reportEntreprise. Le Visiteur peut naviguer librement dans les sections publiques avant de décider de s'authentifier ou de passer une commande.\par
+La figure ci-dessous décrit ces relations :
 \begin{figure}[H]%
-    \center%
-    \setlength{\fboxsep}{0pt}%
-    \setlength{\fboxrule}{0.0pt}%
-    \fbox{
-    \includegraphics[width=10 cm,height=6cm]{consulter_le_site.png}%
-    }
-    \caption{Diagramme de cas d'utilisation « Consulter le site/app »}%
+ \center%
+ \setlength{\fboxsep}{0pt}%
+ \setlength{\fboxrule}{0.0pt}%
+ \fbox{
+ \includegraphics[width=10 cm,height=6cm]{consulter_le_site.png}%
+ }
+ \caption{Diagramme de cas d'utilisation « Consulter le site/app »}%
 \end{figure}
 
 \textbf{Tableau descriptif :} Dans le tableau ci-dessous, nous allons décrire les détails du cas d'utilisation « Consulter le site/app » :
@@ -41,7 +41,7 @@ Le figure ci-dessous décrit ces relations :
 \hline
 \textbf{Titre} & \textbf{Consulter le site/app} \\
 \hline
-Objectif & Permettre au Visiteur de parcourir les informations publiques de l'application RayhanERP (présentation, produits, services) sans authentification. \\
+Objectif & Permettre au Visiteur de parcourir les informations publiques de l'application \reportAppName{} (présentation, produits, services) sans authentification. \\
 \hline
 Acteur(s) & Visiteur \\
 \hline
@@ -50,10 +50,10 @@ Pré-condition & Aucune — accès public sans authentification. \\
 Post-condition & Le Visiteur a consulté les informations disponibles et peut décider de s'authentifier ou de passer une commande. \\
 \hline
 Scénario nominal & \begin{itemize}
-    \item Le Visiteur accède à l'URL de l'application RayhanERP
-    \item Le système affiche la page d'accueil avec les informations publiques
-    \item Le Visiteur navigue entre les différentes sections publiques
-    \item Le Visiteur peut accéder à la page de connexion pour s'authentifier
+ \item Le Visiteur accède à l'URL de l'application \reportAppName{}
+ \item Le système affiche la page d'accueil avec les informations publiques
+ \item Le Visiteur navigue entre les différentes sections publiques
+ \item Le Visiteur peut accéder à la page de connexion pour s'authentifier
 \end{itemize}
 \\
 \hline
@@ -61,20 +61,21 @@ Scénario alternatif & Aucun — accès public sans restriction. \\
 \hline
 \end{tabular}
 \textbf{\caption{Tableau descriptif du cas d'utilisation « Consulter le site/app »}}
-\label{table:Tableau descriptif du cas d'utilisation « Consulter le site/app »}
+\label{table:tableau descriptif du cas d'utilisation « Consulter le site/app »}
 \end{table}
 \vfill
-\subsubsection{Diagramme de cas d'utilisation « S'authentifier » :}
-Ce diagramme de cas d'utilisation détaille le processus d'authentification, pilier central de la sécurité de l'ERP Rayhan. Il modélise le processus fondamental par lequel chaque utilisateur (Client, Responsable Ventes, Magasinier, Responsable Achats, Responsable Production, PDG) doit prouver son identité. Le cas d'utilisation principal « S'authentifier » est étendu par « Rediriger selon rôle » via une relation \textless{}\textless{}extend\textgreater{}\textgreater{}, permettant d'orienter chaque acteur vers son tableau de bord spécifique après validation de ses identifiants. Ce mécanisme constitue le premier rempart garantissant la confidentialité et l'intégrité des données, et le point de passage obligatoire pour une exploitation sécurisée du système.\par
-Le figure ci-dessous décrit ces relations :
+\subsubsection{Diagramme de cas d'utilisation « sauthentifier » :}
+Ce diagramme de cas d'utilisation détaille le processus d'authentification, pilier central de la sécurité de l'
+\reportAppName{}. Il modélise le processus fondamental par lequel chaque utilisateur (Client, Responsable Ventes, Magasinier, Responsable Achats, Responsable Production, PDG) doit prouver son identité. Le cas d'utilisation principal « S'authentifier » est étendu par « Rediriger selon rôle » via une relation \textless{}\textless{}extend\textgreater{}\textgreater{}, permettant d'orienter chaque acteur vers son tableau de bord spécifique après validation de ses identifiants. Ce mécanisme constitue le premier rempart garantissant la confidentialité et l'intégrité des données, et le point de passage obligatoire pour une exploitation sécurisée du système.\par
+La figure ci-dessous décrit ces relations :
 \begin{figure}[H]%
-    \center%
-    \setlength{\fboxsep}{0pt}%
-    \setlength{\fboxrule}{0.0pt}%
-    \fbox{
-    \includegraphics[width=13 cm,height=12cm]{sauthentifier.png}
-    }
-    \caption{Diagramme de cas d’utilisation « S'authentifier »}%
+ \center%
+ \setlength{\fboxsep}{0pt}%
+ \setlength{\fboxrule}{0.0pt}%
+ \fbox{
+ \includegraphics[width=13 cm,height=12cm]{sauthentifier.png}
+ }
+ \caption{Diagramme de cas d’utilisation « sauthentifier »}%
 \end{figure}
 
 \textbf{Tableau descriptif :} Dans le tableau ci-dessous, nous allons décrire les détails du cas d’utilisation « S'authentifier » :
@@ -87,7 +88,7 @@ Le figure ci-dessous décrit ces relations :
 \hline
 \textbf{Titre} & \textbf{S'authentifier} \\
 \hline
-Objectif & Permettre à tout utilisateur (Client, Responsable Ventes, Magasinier, Responsable Achats, Responsable Production, PDG) d'accéder au système de manière sécurisée en vérifiant son identité, puis le rediriger vers son tableau de bord selon son rôle.  \\
+Objectif & Permettre à tout utilisateur (Client, Responsable Ventes, Magasinier, Responsable Achats, Responsable Production, PDG) d'accéder au système de manière sécurisée en vérifiant son identité, puis le rediriger vers son tableau de bord selon son rôle. \\
 \hline
 Acteur(s) & Client, Responsable Ventes, Magasinier, Responsable Achats, Responsable Production, PDG \\
 \hline
@@ -95,42 +96,42 @@ Pré-condition & L'utilisateur possède un compte actif dans le système. La pag
 \hline
 Post-condition & L'utilisateur est authentifié et redirigé vers le tableau de bord correspondant à son rôle. \\
 \hline
-Scénario nominal &  \begin{itemize}
-    \item L'utilisateur accède à la page de connexion
-    \item L'utilisateur saisit ses identifiants (Login et Mot de passe)
-    \item Le système valide les informations
-    \item Le système redirige l'utilisateur vers le tableau de bord approprié selon son rôle (Rediriger selon rôle)
+Scénario nominal & \begin{itemize}
+ \item L'utilisateur accède à la page de connexion
+ \item L'utilisateur saisit ses identifiants (Login et Mot de passe)
+ \item Le système valide les informations
+ \item Le système redirige l'utilisateur vers le tableau de bord approprié selon son rôle (Rediriger selon rôle)
 \end{itemize}
 \\
 \hline
 Scénario alternatif & Identifiants invalides : \begin{itemize}
-    \item Le système affiche un message d'erreur « Login ou Mot de passe incorrect »
-    \item L'utilisateur peut réessayer ou utiliser « Mot de passe oublié »
-    \item Le système demande l'email de l'utilisateur
-    \item Le système envoie un lien de réinitialisation de mot de passe par mail
-    \item L'utilisateur suit le lien pour réinitialiser le mot de passe
+ \item Le système affiche un message d'erreur « Login ou Mot de passe incorrect »
+ \item L'utilisateur peut réessayer ou utiliser « Mot de passe oublié »
+ \item Le système demande l'email de l'utilisateur
+ \item Le système envoie un lien de réinitialisation de mot de passe par mail
+ \item L'utilisateur suit le lien pour réinitialiser le mot de passe
 \end{itemize}\\
 \hline
 \end{tabular}
 \textbf{\caption{Tableau descriptif du cas d'utilisation « S'authentifier »}}
-\label{table:Tableau descriptif du cas d'utilisation « S'authentifier »}
+\label{table:tableau descriptif du cas d'utilisation « S'authentifier »}
 \end{table}
 
 \vfill
 
-\subsubsection{Diagramme de cas d’utilisation « Gérer les commandes d'achats de matière première » :}
-Ce cas d'utilisation décrit le processus de gestion des commandes d'achats de matières premières par le Responsable Achats. Il permet de consulter, ajouter, modifier et supprimer les commandes d'achat destinées aux fournisseurs référencés. Le Responsable Achats interagit avec le système pour gérer le cycle complet des approvisionnements, .\par
-Le figure ci-dessous décrit ces relations :
+\subsubsection{Diagramme de cas d’utilisation « gérer les commandes d'achats de matière première » :}
+Ce cas d'utilisation décrit le processus de gestion des commandes d'achats de matières premières par le Responsable Achats. Il permet de consulter, ajouter, modifier et supprimer les commandes d'achat destinées aux fournisseurs référencés. Le Responsable Achats interagit avec le système pour gérer le cycle complet des approvisionnements.\par
+La figure ci-dessous décrit ces relations :
 \begin{figure}[H]%
-    \center%
-    \setlength{\fboxsep}{0pt}%
-    \setlength{\fboxrule}{0.0pt}%
-    \fbox{
-    \includegraphics[width=13 cm,height=8cm]{gerer_achat.png}%
-    }
-    \caption{Diagramme de cas d’utilisation « Gérer les commandes d'achats de matière première »}%
-    \end{figure}
-   
+ \center%
+ \setlength{\fboxsep}{0pt}%
+ \setlength{\fboxrule}{0.0pt}%
+ \fbox{
+ \includegraphics[width=13 cm,height=8cm]{gerer_achat.png}%
+ }
+ \caption{Diagramme de cas d’utilisation « gérer les commandes d'achats de matière première »}%
+ \end{figure}
+ 
 \textbf{Tableau descriptif :} Dans le tableau ci-dessous, nous allons décrire les détails du cas d’utilisation « Gérer les commandes d'achats de matière première » :
 \begin{table}[!h]
 \renewcommand{\arraystretch}{1.8}
@@ -151,7 +152,7 @@ Post-condition & La commande d'achat est créée, modifiée ou supprimée selon 
 \hline
 Scénario nominal & - Le Responsable Achats accède au module « Achats ».\par
  - Le système affiche la liste des commandes d'achat existantes.\par
- - L'utilisateur choisit une action : Consulter / Ajouter / Modifier / Supprimer une commande d'achat.\par
+ - L'utilisateur choisit une action : consulter / Ajouter / Modifier / Supprimer une commande d'achat.\par
  - Pour ajouter : l'utilisateur sélectionne la matière première, le fournisseur, saisit la quantité et la date de livraison.\par
  - Le système vérifie la disponibilité et l'état actif du fournisseur.\par
  - L'utilisateur valide la commande d'achat.\par
@@ -159,8 +160,8 @@ Scénario nominal & - Le Responsable Achats accède au module « Achats ».\par
  - Le système notifie le Responsable Production de la commande.\par
 \\
 \hline
-Scénario alternatif & - Fournisseur inactif ou supprimé : Le système affiche un avertissement et propose de choisir un fournisseur alternatif.\par
-- Quantité saisie invalide (zéro ou négative) : Le système retourne un message d'erreur de validation.\par
+Scénario alternatif & - Fournisseur inactif ou supprimé : le système affiche un avertissement et propose de choisir un fournisseur alternatif.\par
+- Quantité saisie invalide (zéro ou négative) : le système retourne un message d'erreur de validation.\par
 \\
 \hline
 \end{tabular}
@@ -168,17 +169,17 @@ Scénario alternatif & - Fournisseur inactif ou supprimé : Le système affiche 
 \label{table:cas d'utilisation « Gérer les commandes d'achats de matière première »}
 \end{table}
 \vfill
-\subsubsection{Diagramme de cas d’utilisation « Gérer les produits » : }
-Le cas d'utilisation « Gérer les produits » constitue le pivot central du contrôle des flux de marchandises pour le Magasinier au sein de l'ERP. Ce processus permet d'assurer une gestion complète des articles via les opérations CRUD : consulter, ajouter, modifier et supprimer des produits. Le Magasinier est l'acteur principal de cette fonctionnalité. Le cas d'utilisation inclut la gestion des matières premières, des produits semi-finis et des produits finis.\par
-Le figure ci-dessous décrit ces relations :
+\subsubsection{Diagramme de cas d’utilisation « gérer les produits » : }
+Le cas d'utilisation « Gérer les produits » permet au Magasinier de gérer le référentiel des articles (CRUD : consulter, ajouter, modifier et supprimer des produits). Le Magasinier est l'acteur principal de cette fonctionnalité. Le cas d'utilisation inclut la gestion des matières premières, des produits semi-finis et des produits finis.\par
+La figure ci-dessous décrit ces relations :
 \begin{figure}[H]%
-    \center%
-    \setlength{\fboxsep}{0pt}%
-    \setlength{\fboxrule}{0.0pt}%
-    \fbox{
-    \includegraphics[width=13 cm,height=8cm]{suivre_stock.png}%
-    }
-    \caption{Diagramme de cas d’utilisation « Gérer les produits »}%
+ \center%
+ \setlength{\fboxsep}{0pt}%
+ \setlength{\fboxrule}{0.0pt}%
+ \fbox{
+ \includegraphics[width=13 cm,height=8cm]{suivre_stock.png}%
+ }
+ \caption{Diagramme de cas d’utilisation « gérer les produits »}%
 \end{figure}
 \textbf{Tableau descriptif :} Dans le tableau ci-dessous, nous allons décrire les détails du cas d’utilisation « Gérer les produits » 
 \begin{table}[!htbp]
@@ -198,12 +199,12 @@ Acteur(s) & Magasinier (acteur principal) \\
 Pré-condition & L'utilisateur est authentifié avec le rôle « Magasinier ». Des données de stock existent dans le système. \\
 \hline
 Post-condition & Le référentiel des produits est mis à jour. Les mouvements de stock sont enregistrés en base de données.
-  \\
+ \\
 \hline
 Scénario nominal & \begin{itemize}
  \item Le Magasinier accède au module « Stock ».
 \item Le système affiche la liste des produits avec leurs quantités et catégories.
-\item L'utilisateur choisit une action : Consulter / Ajouter / Modifier / Supprimer un produit.
+\item L'utilisateur choisit une action : consulter / Ajouter / Modifier / Supprimer un produit.
 \item Pour ajouter : l'utilisateur saisit le nom, la catégorie, la quantité et le seuil minimal.
 \item Le système valide les données et enregistre le produit.
 \item Le système compare les quantités aux seuils minimaux définis.
@@ -213,8 +214,8 @@ Scénario nominal & \begin{itemize}
 \\
 \hline
 Scénario alternatif & \begin{itemize}
-    \item Stock inférieur au seuil minimal : Le système génère une alerte et envoie une notification au Responsable Achats pour déclencher un réapprovisionnement.
-\item Aucun article trouvé : Le système affiche un message indiquant l'absence de données pour le filtre sélectionné.
+ \item Stock inférieur au seuil minimal : le système génère une alerte et envoie une notification au Responsable Achats pour déclencher un réapprovisionnement.
+\item Aucun article trouvé : le système affiche un message indiquant l'absence de données pour le filtre sélectionné.
 \end{itemize} \\
 \hline
 \end{tabular}
@@ -222,18 +223,18 @@ Scénario alternatif & \begin{itemize}
 \label{table:cas d'utilisation « Gérer les produits »}
 \end{table}
 \vfill
-\subsubsection{Diagramme de cas d’utilisation « Gérer les ordres de production » :}
+\subsubsection{Diagramme de cas d’utilisation « gérer les ordres de production » :}
 Ce diagramme met en évidence les cas d'utilisation liés à la gestion des ordres de production. Le Responsable Production, acteur principal, peut gérer les produits, les matières premières et les nomenclatures (BOM), avec des relations d'extension entre ces fonctionnalités. Le cas d'utilisation « Gérer les ordres de production » inclut la consultation des nomenclatures via « Gérer BOM ». \par
-Le figure ci-dessous décrit ces relations :
+La figure ci-dessous décrit ces relations :
 \begin{figure}[H]%
-    \center%
-    \setlength{\fboxsep}{0pt}%
-    \setlength{\fboxrule}{0.0pt}%
-    \fbox{
-    \includegraphics[width=10 cm,height=6cm]{gerer_production.png}%
-    }
-    \caption{Diagramme de cas d’utilisation « Gérer les ordres de production » }%
-    \end{figure}
+ \center%
+ \setlength{\fboxsep}{0pt}%
+ \setlength{\fboxrule}{0.0pt}%
+ \fbox{
+ \includegraphics[width=10 cm,height=6cm]{gerer_production.png}%
+ }
+ \caption{Diagramme de cas d’utilisation « gérer les ordres de production » }%
+ \end{figure}
 \textbf{Tableau descriptif :} Dans le tableau ci-dessous, nous allons décrire les détails du cas d’utilisation « Gérer les ordres de production » :
 \begin{table}[!htbp]
 \renewcommand{\arraystretch}{1.8}
@@ -252,7 +253,7 @@ Acteur(s) & Responsable Production (acteur principal) \\
 Pré-condition & L'utilisateur est authentifié avec le rôle « Responsable Production ». Au moins un produit avec nomenclature BOM est défini. Les matières premières nécessaires sont référencées en stock. \\
 \hline
 Post-condition & L'ordre de production est enregistré et/ou démarré. Le stock de matières premières est mis à jour en conséquence. Les parties prenantes sont notifiées.
-  \\
+ \\
 \hline
 Scénario nominal &
 - Le Responsable Production accède au module « Production ».\par
@@ -268,8 +269,8 @@ Scénario nominal &
 \\
 \hline
 Scénario alternatif & \begin{itemize}
-    \item Matières premières insuffisantes : Le système affiche une alerte et envoie une notification au Responsable Achats pour un réapprovisionnement urgent. La production ne peut pas démarrer.
-    \item Annulation d'un ordre de fabrication planifié : L'utilisateur peut annuler un ordre en statut « Planifié ». Les quantités réservées sont restituées au stock.
+ \item Matières premières insuffisantes : le système affiche une alerte et envoie une notification au Responsable Achats pour un réapprovisionnement urgent. La production ne peut pas démarrer.
+ \item Annulation d'un ordre de fabrication planifié : lutilisateur peut annuler un ordre en statut « Planifié ». Les quantités réservées sont restituées au stock.
 \end{itemize}\\
 \hline
 \end{tabular}
@@ -277,20 +278,20 @@ Scénario alternatif & \begin{itemize}
 \label{table:cas d'utilisation « Gérer les ordres de production » }
 \end{table}
 \vfill
-\subsubsection{Diagramme de cas d’utilisation « Gérer les commandes clients » :}
+\subsubsection{Diagramme de cas d’utilisation « gérer les commandes clients » :}
 Ce cas d'utilisation permet au Responsable Ventes de gérer les commandes clients. Le Client peut passer une commande, laquelle est incluse dans le processus de gestion des commandes géré par le Responsable Ventes. Celui-ci peut consulter les produits et valider les commandes. \par
-Le figure ci-dessous décrit ces relations :
+La figure ci-dessous décrit ces relations :
 \begin{figure}[H]%
-    \center%
-    \setlength{\fboxsep}{0pt}%
-    \setlength{\fboxrule}{0.0pt}%
-    \fbox{
-    \includegraphics[width=12 cm,height=6cm]{creer_commande_client.png}%
-    }
-    \caption{Diagramme du cas d’utilisation « Gérer les commandes clients »}%
-    \end{figure}
+ \center%
+ \setlength{\fboxsep}{0pt}%
+ \setlength{\fboxrule}{0.0pt}%
+ \fbox{
+ \includegraphics[width=12 cm,height=6cm]{creer_commande_client.png}%
+ }
+ \caption{Diagramme du cas d’utilisation « gérer les commandes clients »}%
+ \end{figure}
 
-    \textbf{Tableau descriptif :} Dans le tableau ci-dessous, nous allons décrire les détails du cas d’utilisation « Gérer les commandes clients » :
+ \textbf{Tableau descriptif :} Dans le tableau ci-dessous, nous allons décrire les détails du cas d’utilisation « Gérer les commandes clients » :
  \begin{table}[!htbp]
  \renewcommand{\arraystretch}{1.8}
  \setlength{\tabcolsep}{16pt}
@@ -300,14 +301,14 @@ Le figure ci-dessous décrit ces relations :
  Titre & Gérer les commandes clients \\
  \hline
  Objectif & Permettre au Responsable Ventes de gérer le cycle des commandes clients : de la passation par le Client jusqu'à la validation et le suivi.
-  \\
+ \\
  \hline
  Acteur(s) & Responsable Ventes (acteur principal) \\
  \hline
  Pré-condition & L'utilisateur est authentifié avec le rôle « Responsable Ventes ». Au moins un produit est référencé dans le système. \\
  \hline
  Post-condition & La commande client est enregistrée dans la base de données avec le statut « En cours ». Une notification est envoyée au Responsable Production.
-   \\
+ \\
  \hline
  Scénario nominal & \begin{itemize}
  \item Le Client passe une commande via l'interface.
@@ -328,19 +329,19 @@ Le figure ci-dessous décrit ces relations :
  \label{table:cas d'utilisation « Gérer les commandes clients »}
  \end{table}
  \vfill
-\subsubsection{Diagramme de cas d’utilisation « Gérer les fournisseurs » :}
+\subsubsection{Diagramme de cas d’utilisation « gérer les fournisseurs » :}
 Ce cas d'utilisation offre une gestion complète (CRUD) du référentiel fournisseurs par le Responsable Achats au sein de l'ERP. Le système sécurise les données en empêchant la suppression des partenaires liés à des commandes actives et génère automatiquement des indicateurs de performance pour évaluer la fiabilité des fournisseurs. \par
-Le figure ci-dessous décrit ces relations :
+La figure ci-dessous décrit ces relations :
 \begin{figure}[H]%
-   \center%
-   \setlength{\fboxsep}{0pt}%
-   \setlength{\fboxrule}{0.0pt}%
-   \fbox{
-   \includegraphics[width=12 cm,height=6cm]{gerer_fournisseurs.png}%
-   }
-   \caption{Diagramme du cas d’utilisation « Gérer les fournisseurs »}%
-   \end{figure}
-   \vspace{3cm}
+ \center%
+ \setlength{\fboxsep}{0pt}%
+ \setlength{\fboxrule}{0.0pt}%
+ \fbox{
+ \includegraphics[width=12 cm,height=6cm]{gerer_fournisseurs.png}%
+ }
+ \caption{Diagramme du cas d’utilisation « gérer les fournisseurs »}%
+ \end{figure}
+ \vspace{3cm}
 \textbf{Tableau descriptif :} Dans le tableau ci-dessous, nous allons décrire les détails du cas d’utilisation « Gérer les fournisseurs » :
 
  \begin{table}[!htbp]
@@ -353,7 +354,7 @@ Le figure ci-dessous décrit ces relations :
  Titre & Gérer les fournisseurs \\
  \hline
  Objectif & Permettre au Responsable Achats de maintenir à jour le référentiel des fournisseurs : ajout, modification, consultation et suppression.
-  \\
+ \\
  \hline
  Acteur(s) & Responsable Achats (acteur principal) \\
  \hline
@@ -361,12 +362,12 @@ Le figure ci-dessous décrit ces relations :
  \\
  \hline
  Post-condition & Le référentiel des fournisseurs est mis à jour (ajout, modification ou suppression effectuée).
-   \\
+ \\
  \hline
  Scénario nominal & \begin{itemize}
-     \item Le Responsable Achats accède au module Fournisseurs.
+ \item Le Responsable Achats accède au module Fournisseurs.
  \item Le système affiche la liste des fournisseurs existants.
- \item L'utilisateur choisit une action : Ajouter / Modifier / Supprimer / Consulter.
+ \item L'utilisateur choisit une action : ajouter / Modifier / Supprimer / Consulter.
  \item Ajouter: l'utilisateur remplit le formulaire avec les informations du fournisseur (nom, contact, matières livrées, délai moyen).
  \item Modifier: l'utilisateur sélectionne un fournisseur et modifie ses informations.
  \item Supprimer: l'utilisateur sélectionne un fournisseur et confirme la suppression.
@@ -376,28 +377,28 @@ Le figure ci-dessous décrit ces relations :
  \end{itemize}\\
 
  \hline
- Scénario alternatif & - Suppression d'un fournisseur lié à des ordres en cours : Le système affiche un avertissement et bloque la suppression tant que les ordres sont actifs.\par
- - Informations manquantes (formulaire incomplet) : Le système affiche les champs obligatoires manquants et empêche la sauvegarde.\\
+ Scénario alternatif & - Suppression d'un fournisseur lié à des ordres en cours : le système affiche un avertissement et bloque la suppression tant que les ordres sont actifs.\par
+ - Informations manquantes (formulaire incomplet) : le système affiche les champs obligatoires manquants et empêche la sauvegarde.\\
  \hline
  \end{tabular}
  \textbf{\caption{Tableau descriptif du cas d'utilisation « Gérer les fournisseurs »}}
  \label{table:cas d'utilisation « Gérer les fournisseurs »}
  \end{table}
  \vfill
-\subsubsection{Diagramme de cas d’utilisation « Gérer les utilisateurs » :}
+\subsubsection{Diagramme de cas d’utilisation « gérer les utilisateurs » :}
 Ce cas d'utilisation décrit la gestion complète des comptes par le PDG, acteur principal. Il couvre la création, l'édition des profils et rôles, la consultation des profils utilisateurs, ainsi que la désactivation ou la suppression des accès. Les privilèges de chaque utilisateur dépendent directement du rôle qui lui est attribué.\par
-Le figure ci-dessous décrit ces relations :
+La figure ci-dessous décrit ces relations :
 \begin{figure}[H]%
-    \center%
-    \setlength{\fboxsep}{0pt}%
-    \setlength{\fboxrule}{0.0pt}%
-    \fbox{
-    \includegraphics[width=12 cm,height=6cm]{gereutilisateurs.png}%
-    }
-    \caption{Diagramme du cas d'utilisation « Gérer les utilisateurs »}%
-    \end{figure}
+ \center%
+ \setlength{\fboxsep}{0pt}%
+ \setlength{\fboxrule}{0.0pt}%
+ \fbox{
+ \includegraphics[width=12 cm,height=6cm]{gereutilisateurs.png}%
+ }
+ \caption{Diagramme du cas d'utilisation « gérer les utilisateurs »}%
+ \end{figure}
 
-    \textbf{Tableau descriptif :} Dans le tableau ci-dessous, nous allons décrire les détails du cas d'utilisation « Gérer les utilisateurs » :
+ \textbf{Tableau descriptif :} Dans le tableau ci-dessous, nous allons décrire les détails du cas d'utilisation « Gérer les utilisateurs » :
 
 \begin{table}
 \renewcommand{\arraystretch}{1.8}
@@ -419,9 +420,9 @@ Pré-condition & L'utilisateur est authentifié avec le rôle « Administrateur 
 Post-condition & Le compte utilisateur est créé, modifié, désactivé ou supprimé.\\
 \hline
 Scénario nominal &\begin{itemize}
-   \item Le PDG accède à la rubrique « Gestion des utilisateurs ».
+ \item Le PDG accède à la rubrique « Gestion des utilisateurs ».
 \item Le système affiche la liste des comptes existants avec leurs rôles et statuts.
-\item L'utilisateur choisit une action : Consulter profil / Créer / Modifier / Désactiver / Supprimer.
+\item L'utilisateur choisit une action : consulter profil / Créer / Modifier / Désactiver / Supprimer.
 \item Le système valide les données (email unique, rôle valide).
 \item Le système enregistre les modifications en base de données.
 \item Le système affiche une confirmation de l'opération.
@@ -429,10 +430,10 @@ Scénario nominal &\begin{itemize}
 \end{itemize}\\
 \hline
 Scénario alternatif & \begin{itemize}
-\item Email déjà utilisé : Le système affiche une erreur et empêche la création du doublon.
-\item Tentative de suppression d'un compte actif : Le système impose la désactivation préalable avant toute suppression.
-\item Tentative de suppression du dernier compte administrateur : Le système bloque l'opération pour éviter de perdre tout accès d'administration.
-\item Rôle incompatible avec des données existantes : Si le rôle est modifié alors que l'utilisateur a des actions en cours (ex. ordres de production en attente), le système affiche un avertissement.
+\item Email déjà utilisé : le système affiche une erreur et empêche la création du doublon.
+\item Tentative de suppression d'un compte actif : le système impose la désactivation préalable avant toute suppression.
+\item Tentative de suppression du dernier compte administrateur : le système bloque l'opération pour éviter de perdre tout accès d'administration.
+\item Rôle incompatible avec des données existantes : si le rôle est modifié alors que l'utilisateur a des actions en cours (ex. ordres de production en attente), le système affiche un avertissement.
 \end{itemize}\\
 \hline
 \end{tabular}
@@ -440,69 +441,20 @@ Scénario alternatif & \begin{itemize}
 \label{table:cas d'utilisation « Gérer les utilisateurs »}
 \end{table}
 \vfill
-
-\subsubsection{Diagramme de cas d'utilisation « Gérer les ordres de production » :}
-Ce cas d'utilisation permet au Responsable Production de gérer les ordres de production, incluant la gestion des produits, des matières premières et l'accès aux nomenclatures BOM via une relation d'inclusion. Le cas d'utilisation « Gérer BOM » est directement inclus dans la gestion des ordres de production, permettant de consulter et modifier la composition des articles fabriqués. \par
-Le figure ci-dessous décrit ces relations :
-\begin{figure}[H]%
-    \center%
-    \setlength{\fboxsep}{0pt}%
-    \setlength{\fboxrule}{0.0pt}%
-    \fbox{
-    \includegraphics[width=12 cm,height=6cm]{gererbom.png}%
-    }
-    \caption{Diagramme du cas d'utilisation « Gérer les ordres de production » }%
-    \end{figure}
-     \textbf{Tableau descriptif :} Dans le tableau ci-dessous, nous allons décrire les détails du cas d'utilisation « Gérer les ordres de production » :
-\begin{table}[!htbp]
-\renewcommand{\arraystretch}{1.8}
-\setlength{\tabcolsep}{16pt}
-\centering
-\begin{tabular}{|l|p{12cm}|}
-
-\hline
-Titre & Gérer les ordres de production \\
-\hline
-Objectif & Permettre au Responsable Production de gérer les ordres de production et d'accéder aux fonctionnalités associées (produits, matières premières, nomenclatures BOM). \\
-\hline
-Acteur(s) & Responsable Production (acteur principal) \\
-\hline
-Pré-condition & L'utilisateur est authentifié avec le rôle « Responsable Production ». Les matières premières et les produits sont référencés dans le système.\\
-\hline
-Post-condition & Les ordres de production et les données associées (BOM, produits, MP) sont mis à jour.\\
-\hline
-Scénario nominal &- Le Responsable Production accède au module « Production »\par
-- Le système affiche le tableau de bord des ordres de production.\par
-- L'utilisateur peut gérer les produits, les matières premières ou consulter la nomenclature via « Gérer BOM ».\par
-- L'utilisateur ajoute, modifie ou supprime les données selon son besoin.\par
-- Le système valide les données saisies.\par
-- Le système enregistre les modifications en base de données.\par
-- Le système affiche une confirmation de la mise à jour.\par
-\\
-\hline
-Scénario alternatif & - Données de BOM incomplètes : Le système empêche la sauvegarde et indique les lignes incomplètes.\par
-- Matière première inexistante dans le référentiel : Le système affiche une erreur et propose de créer la matière première ou d'en choisir une existante.\par
-\\
-\hline
-\end{tabular}
-\textbf{\caption{Tableau descriptif du cas d'utilisation « Gérer les ordres de production »}}
-\label{table:cas d'utilisation « Gérer les ordres de production »}
-\end{table}
-\vfill
 \subsubsection{Diagramme de cas d'utilisation « Gérer les matières premières » :}
 Ce cas d'utilisation permet au Magasinier, acteur principal, de gérer le référentiel des matières premières (MP). Il offre les opérations CRUD : ajouter, modifier et supprimer des matières premières. \par
-Le figure ci-dessous décrit ces relations :
+La figure ci-dessous décrit ces relations :
 \begin{figure}[H]%
-    \center%
-    \setlength{\fboxsep}{0pt}%
-    \setlength{\fboxrule}{0.0pt}%
-    \fbox{
-    \includegraphics[width=12 cm,height=6cm]{gerermp.png}%
-    }
-    \caption{Diagramme du cas d'utilisation « Gérer les matières premières »}%
-    \end{figure}
-     \textbf{Tableau descriptif :} Dans le tableau ci-dessous, nous allons décrire les détails du cas d'utilisation « Gérer les matières premières » :
-     \begin{table}[h!]
+ \center%
+ \setlength{\fboxsep}{0pt}%
+ \setlength{\fboxrule}{0.0pt}%
+ \fbox{
+ \includegraphics[width=12 cm,height=6cm]{gerermp.png}%
+ }
+ \caption{Diagramme du cas d'utilisation « Gérer les matières premières »}%
+ \end{figure}
+ \textbf{Tableau descriptif :} Dans le tableau ci-dessous, nous allons décrire les détails du cas d'utilisation « Gérer les matières premières » :
+ \begin{table}[h!]
 \renewcommand{\arraystretch}{1.8}
 \setlength{\tabcolsep}{16pt}
 \centering
@@ -520,17 +472,17 @@ Pré-condition & L'utilisateur est authentifié avec le rôle « Magasinier ». 
 Post-condition & La matière première est ajoutée, modifiée ou supprimée dans le référentiel.\\
 \hline
 Scénario nominal & \begin{itemize}
-  \item Le Magasinier accède au module « Stock ».
+ \item Le Magasinier accède au module « Stock ».
  \item Le système affiche la liste des matières premières existantes.
- \item L'utilisateur choisit une action : Ajouter MP / Modifier MP / Supprimer MP.
+ \item L'utilisateur choisit une action : ajouter MP / Modifier MP / Supprimer MP.
  \item Pour ajouter : l'utilisateur saisit le nom, l'unité de mesure et le seuil d'alerte.
  \item Le système valide les données et enregistre la matière première.
  \item Le système affiche une confirmation de l'opération.
 \end{itemize}
 \\
 \hline
-Scénario alternatif & - Données invalides : Le système affiche un message d'erreur et empêche la sauvegarde.\par
-- Suppression d'une MP liée à des produits ou commandes actives : Le système bloque la suppression et affiche un avertissement.\par
+Scénario alternatif & - Données invalides : le système affiche un message d'erreur et empêche la sauvegarde.\par
+- Suppression d'une MP liée à des produits ou commandes actives : le système bloque la suppression et affiche un avertissement.\par
 \\
 \hline
 \end{tabular}
@@ -541,18 +493,18 @@ Scénario alternatif & - Données invalides : Le système affiche un message d'e
 \vfill
 
 \subsubsection{Diagramme de cas d'utilisation « Consulter le Dashboard » :}
-Ce cas d'utilisation permet au PDG de piloter l'entreprise via une vue synthétique et décisionnelle de RayhanERP. Le tableau de bord centralise en temps réel les indicateurs clés des modules ventes, production, achats et stocks. Grâce à des widgets et graphiques de KPI, le dirigeant peut filtrer les données par période ou explorer les détails d'un module. Le cas d'utilisation inclut la consultation du tableau de bord et peut recevoir des suggestions prédictives basées sur l'intelligence artificielle via une extension. \par
-Le figure ci-dessous décrit ces interactions : 
+Ce cas d'utilisation permet au PDG de piloter l'entreprise via une vue synthétique et décisionnelle de \reportAppName{}. Le tableau de bord centralise en temps réel les indicateurs clés des modules ventes, production, achats et stocks. Grâce à des widgets et graphiques de KPI, le dirigeant peut filtrer les données par période ou explorer les détails d'un module. Le cas d'utilisation inclut la consultation du tableau de bord et peut recevoir des suggestions prédictives basées sur l'intelligence artificielle via une extension. \par
+La figure ci-dessous décrit ces interactions : 
 \begin{figure}[H]%
-    \center%
-    \setlength{\fboxsep}{0pt}%
-    \setlength{\fboxrule}{0.0pt}%
-    \fbox{
-    \includegraphics[width=12 cm,height=6cm]{visualiser_dashboard.png}%
-    }
-    \caption{Diagramme du cas d'utilisation « Consulter le Dashboard »}%
-    \end{figure}
-     \textbf{Tableau descriptif :} Dans le tableau ci-dessous, nous allons décrire les détails du cas d'utilisation « Consulter le Dashboard » :
+ \center%
+ \setlength{\fboxsep}{0pt}%
+ \setlength{\fboxrule}{0.0pt}%
+ \fbox{
+ \includegraphics[width=12 cm,height=6cm]{visualiser_dashboard.png}%
+ }
+ \caption{Diagramme du cas d'utilisation « consulter le Dashboard »}%
+ \end{figure}
+ \textbf{Tableau descriptif :} Dans le tableau ci-dessous, nous allons décrire les détails du cas d'utilisation « Consulter le Dashboard » :
 \begin{table}[!h]
 \renewcommand{\arraystretch}{1.8}
 \setlength{\tabcolsep}{16pt}
@@ -572,7 +524,7 @@ Pré-condition & L'utilisateur est authentifié avec le rôle « PDG ». Des don
 \hline
 Post-condition & Le PDG a consulté les indicateurs synthétisés et peut prendre des décisions stratégiques basées sur les données affichées.\\
 \hline
-Scénario nominal & - Le PDG se connecte à RayhanERP.\par
+Scénario nominal & - Le PDG se connecte à \reportAppName{}.\par
 - Le système redirige automatiquement vers le tableau de bord (Dashboard).\par
 - Le système charge et affiche les indicateurs clés : chiffre d'affaires, commandes en cours, état des stocks, avancement de la production, achats récents.\par
 - Le PDG peut filtrer les données par période (semaine, mois, trimestre).\par
@@ -583,8 +535,8 @@ Scénario nominal & - Le PDG se connecte à RayhanERP.\par
 
 \\
 \hline
-Scénario alternatif & - Aucune donnée disponible pour la période sélectionnée : Le système affiche un message indiquant l'absence de données et propose de choisir une autre période.\par
-- Indicateur en état critique : Le système met en évidence l'indicateur et affiche un résumé de l'anomalie détectée.\par
+Scénario alternatif & - Aucune donnée disponible pour la période sélectionnée : le système affiche un message indiquant l'absence de données et propose de choisir une autre période.\par
+- Indicateur en état critique : le système met en évidence l'indicateur et affiche un résumé de l'anomalie détectée.\par
 \\
 \hline
 \end{tabular}
@@ -596,41 +548,34 @@ Scénario alternatif & - Aucune donnée disponible pour la période sélectionn�
 
 \subsection{Diagramme de classe}
 \subsubsection{Présentation :}
-Le diagramme de classe est Élément central de la modélisation UML, ce diagramme offre une vision statique et conceptuelle de l’application ERP RAYHAN. En détaillant les classes (entités), leurs attributs (données) et leurs méthodes (comportements), il définit la structure logique du système. Véritable feuille de route architecturale, il assure la transition entre les besoins fonctionnels et la réalisation technique du code et de la base de données.\par
+Le diagramme de classe est élément central de la modélisation UML, ce diagramme offre une vision statique et conceptuelle de l’application \reportAppName{}. En détaillant les classes (entités), leurs attributs (données) et leurs méthodes (comportements), il définit la structure logique du système. Véritable feuille de route architecturale, il assure la transition entre les besoins fonctionnels et la réalisation technique du code et de la base de données.\par
 
 \begin{figure}[H]%
-    \center%
-    \setlength{\fboxsep}{0pt}%
-    \setlength{\fboxrule}{0.0pt}%
-    \fbox{
-    \includegraphics[width=13 cm,height=14cm]{class.png}%
-    }
-    \caption{Diagramme de classe de \reportAppName}%
-    \end{figure}
-    \vfill
+ \center%
+ \setlength{\fboxsep}{0pt}%
+ \setlength{\fboxrule}{0.0pt}%
+ \fbox{
+ \includegraphics[width=13 cm,height=14cm]{class.png}%
+ }
+ \caption{Diagramme de classe de \reportAppName{}}%
+ \end{figure}
+ \vfill
 \subsection{Diagramme de séquence}
 \subsubsection{Présentation :}
-Le diagramme de séquence s'impose comme un outil de modélisation UML incontournable, offrant une vision dynamique et chronologique des interactions au sein de l’application \reportAppName.\par
-Alors que le diagramme de classes fige la structure statique du système, le diagramme de séquence révèle la cinématique logicielle : il détaille comment les objets, les classes et les acteurs collaborent par étape pour exécuter un cas d'utilisation spécifique. Cette modélisation permet de visualiser précisément l’ordre des messages (appels synchrones ou asynchrones) échangés entre les entités clés — acteurs, interfaces, services métier et bases de données tout en précisant la durée de leurs périodes d'activité. \par
-Chaque « ligne de vie » identifie un composant du système, tandis que les flèches de messages explicitent les flux d'informations avec une rigueur technique absolue. En intégrant des structures logiques telles que les boucles (Loops) ou les alternatives (Alt), cette représentation devient indispensable pour cartographier le flux de contrôle. Elle permet non seulement de valider la logique des processus métier complexes de l'ERP, mais sert également de spécification détaillée pour les développeurs, garantissant ainsi la cohérence comportementale et la robustesse de l'implémentation finale\par
+Le diagramme de séquence UML offre une vision dynamique et chronologique des interactions entre acteurs, objets et systèmes au sein de \reportAppName{}. Il détaille l'ordre des messages échangés (appels synchrones/asynchrones) et intègre des structures logiques (boucles, alternatives) pour spécifier le comportement attendu de chaque cas d'utilisation.\par
 \subsubsection{Description :}
-Le diagramme de séquence d'authentification constitue le pilier central de la sécurité logicielle de notre solution ERP Rayhan. Il modélise avec une Rigueur Analytique les interactions dynamiques permettant à un utilisateur de déclencher le processus de contrôle d'accès.\par
-Chaque échange de messages entre les objets du système est critique : de la requête d'accès initiale à la soumission sécurisée des identifiants (Login et Password), jusqu'à la phase de validation effectuée par le serveur auprès de la base de données. Cette étape de vérification rigoureuse garantit une gestion stricte des sessions utilisateurs.\par
-Le diagramme illustre les deux scénarios de flux de contrôle possibles :
-Le succès de l'authentification, débouchant sur une redirection vers l'interface personnalisée de l'ERP.
-L'échec d'identification, déclenchant un message d'erreur explicite pour protéger le système contre les tentatives d'intrusion.
-En tant que garant de la confidentialité et de l'intégrité des données, ce mécanisme assure une traçabilité optimale et garantit que seuls les profils dûment autorisés franchissent le seuil de notre écosystème numérique.
+Le diagramme de séquence d'authentification modélise le processus de contrôle d'accès à l'application \reportAppName{}. Il détaille les échanges entre l'utilisateur, le système et la base de données, de la soumission des identifiants jusqu'à la validation. Deux scénarios sont possibles : succès (redirection vers l'interface personnalisée) ou échec (message d'erreur). La génération d'un jeton JWT garantit une session sécurisée.
 
 \subsubsection{Diagramme de séquence : « Gérer Fournisseurs » :}
-Ce diagramme de séquence détaille les interactions dynamiques entre le Responsable Achat, le Système RayhanERP et la Base de Données lors de la gestion du référentiel fournisseurs. Le processus débute par l'accès au module dédié, déclenchant la récupération et l'affichage automatique de la liste des fournisseurs existants. La structure repose ensuite sur un fragment combiné de type "alt", qui segmente la logique métier en quatre scénarios distincts : l'ajout d'un nouveau profil, la mise à jour des coordonnées, la suppression (soumise à une vérification de l'historique d'achat via un bloc "opt") et la consultation détaillée. Chaque opération est rigoureusement validée par des boucles de contrôle et finalisée par un "COMMIT" en base de données, garantissant ainsi l'intégrité et la persistance des informations au sein de l'écosystème \reportAppName \par
+Ce diagramme de séquence détaille les interactions entre le Responsable Achat, le système \reportAppName{} et la base de données lors de la gestion des fournisseurs. Le processus débute par l'affichage de la liste existante, puis un fragment "alt" segmente la logique en quatre scénarios : ajout, modification, suppression (avec vérification d'historique via un bloc "opt") et consultation. Chaque opération est finalisée par un COMMIT en base de données.\par
 \begin{figure}[H]%
-    \center%
-    \setlength{\fboxsep}{0pt}%
-    \setlength{\fboxrule}{0.0pt}%
-    \fbox{
-    \includegraphics[width=15 cm,height=12cm]{seq_gererfournisseurs.png}%
-    }
-    \caption{Diagramme de séquence : « Gérer Fournisseurs »}%
+ \center%
+ \setlength{\fboxsep}{0pt}%
+ \setlength{\fboxrule}{0.0pt}%
+ \fbox{
+ \includegraphics[width=15 cm,height=12cm]{seq_gererfournisseurs.png}%
+ }
+ \caption{Diagramme de séquence : « Gérer Fournisseurs »}%
 \end{figure}
 
 
@@ -638,142 +583,115 @@ Ce diagramme de séquence détaille les interactions dynamiques entre le Respon
 
 \subsubsection{Diagramme de séquence : « Gérer les produits » :
 }
-Ce diagramme de séquence illustre la gestion des produits et de la nomenclature (BOM - Bill of Materials) au sein de l'application \reportAppName .
-Le processus est piloté par le Responsable Production, qui accède d'abord à la liste exhaustive des produits et de leurs composants stockés en Base de Données. L'élément central du diagramme est un fragment conditionnel (alt) qui détaille quatre types d'interactions possibles :\par
+Ce diagramme de séquence illustre la gestion des produits et de la nomenclature (BOM - Bill of Materials) au sein de l'application \reportAppName{} .
+Le processus est piloté par le responsable Production, qui accède d'abord à la liste exhaustive des produits et de leurs composants stockés en base de Données. L'élément central du diagramme est un fragment conditionnel (alt) qui détaille quatre types d'interactions possibles :\par
 \begin{itemize}
-    \item Ajout et Modification : Permet l'insertion de nouveaux articles ou la mise à jour des fiches produits existantes.
-   \item Suppression : Inclut une sécurité critique qui vérifie la présence d'ordres de production actifs avant toute suppression pour garantir l'intégrité des données.
-   \item Gérer BOM : Cette action spécifique permet d'éditer les lignes de composants nécessaires à la fabrication.
+ \item Ajout et Modification : permet l'insertion de nouveaux articles ou la mise à jour des fiches produits existantes.
+ \item Suppression : inclut une sécurité critique qui vérifie la présence d'ordres de production actifs avant toute suppression pour garantir l'intégrité des données.
+ \item Gérer BOM : cette action spécifique permet d'éditer les lignes de composants nécessaires à la fabrication.
 \end{itemize}
-La procédure se termine systématiquement par une synchronisation avec le Module Production pour notifier les changements de nomenclature, suivie d'une validation finale (COMMIT) en base de données pour confirmer la persistance des modifications.\par
+La procédure se termine systématiquement par une synchronisation avec le module Production pour notifier les changements de nomenclature, suivie d'une validation finale (COMMIT) en base de données pour confirmer la persistance des modifications.\par
 
 \begin{figure}[H]%
-    \center%
-    \setlength{\fboxsep}{0pt}%
-    \setlength{\fboxrule}{0.0pt}%
-    \fbox{
-    \includegraphics[width=15 cm,height=10cm]{seq_gererproduitsetbom.png}%
-    }
-    \caption{Diagramme de séquence : « Gérer les produits »}%
+ \center%
+ \setlength{\fboxsep}{0pt}%
+ \setlength{\fboxrule}{0.0pt}%
+ \fbox{
+ \includegraphics[width=15 cm,height=10cm]{seq_gererproduitsetbom.png}%
+ }
+ \caption{Diagramme de séquence : « Gérer les produits »}%
 \end{figure}
 
 \subsubsection{Diagramme de séquence : « Gérer les utilisateurs » :
 }
-Ce diagramme de séquence expose le processus de Gestion des comptes utilisateurs par l'Administrateur au sein de la plateforme \reportAppName .
-L'interaction débute par la récupération de la liste des utilisateurs depuis la Base de Données, suivie d'un bloc de contrôle (loop) garantissant l'unicité de l'adresse email. Le diagramme s'articule autour d'un fragment de décision (alt) gérant quatre opérations fondamentales :
+Ce diagramme de séquence expose le processus de gestion des comptes utilisateurs par l'Administrateur au sein de la plateforme \reportAppName{} .
+L'interaction débute par la récupération de la liste des utilisateurs depuis la base de Données, suivie d'un bloc de contrôle (loop) garantissant l'unicité de l'adresse email. Le diagramme s'articule autour d'un fragment de décision (alt) gérant quatre opérations fondamentales :
 
 \begin{itemize}
-    \item Création : Génère un mot de passe temporaire et vérifie l'unicité avant l'insertion.
-     \item Modification : Met à jour les profils ou les rôles.
-     \item Désactivation et Suppression : La suppression est soumise à une règle de gestion stricte (autorisée uniquement pour les comptes déjà INACTIFS).
-    \end{itemize}
-Le flux se termine par deux fragments optionnels (opt) à haute valeur ajoutée : le déclenchement d'un Email de notification à l'utilisateur concerné et l'enregistrement systématique de l'action dans le module d'Audit pour assurer la traçabilité des modifications de rôles.
+ \item Création : génère un mot de passe temporaire et vérifie l'unicité avant l'insertion.
+ \item Modification : met à jour les profils ou les rôles.
+ \item Désactivation et Suppression : la suppression est soumise à une règle de gestion stricte (autorisée uniquement pour les comptes déjà INACTIFS).
+ \end{itemize}
+Le flux se termine par deux fragments optionnels (opt) à haute valeur ajoutée : le déclenchement d'un email de notification à l'utilisateur concerné et l'enregistrement systématique de l'action dans le module d'Audit pour assurer la traçabilité des modifications de rôles.
 \begin{figure}[H]%
-    \center%
-    \setlength{\fboxsep}{0pt}%
-    \setlength{\fboxrule}{0.0pt}%
-    \fbox{
-    \includegraphics[width=15 cm,height=10cm]{seq_gererutilisateurs.png}%
-    }
-    \caption{Diagramme de séquence : « Gérer les utilisateurs »}%
+ \center%
+ \setlength{\fboxsep}{0pt}%
+ \setlength{\fboxrule}{0.0pt}%
+ \fbox{
+ \includegraphics[width=15 cm,height=10cm]{seq_gererutilisateurs.png}%
+ }
+ \caption{Diagramme de séquence : « Gérer les utilisateurs »}%
 \end{figure}
 
 \subsubsection{Diagramme de séquence : « S’authentifier » :
 }
-Ce diagramme de séquence détaille le processus critique de l'authentification utilisateur, porte d'entrée sécurisée du système \reportAppName. Il illustre une chorégraphie précise entre l'Utilisateur, le cœur de l'application, la Base de Données et le gestionnaire de Session.\par
+Ce diagramme de séquence détaille le processus critique de l'authentification utilisateur, porte d'entrée sécurisée du système \reportAppName{}. Il illustre une chorégraphie précise entre l'Utilisateur, le cœur de l'application, la base de Données et le gestionnaire de session.\par
 La robustesse de ce flux repose sur une double validation : d'abord structurelle (vérification des champs vides), puis sécuritaire via le hachage des mots de passe et la vérification des droits dans la collection des utilisateurs. Le diagramme traite avec agilité les différents scénarios grâce à des blocs conditionnels (alt), gérant aussi bien les succès que les échecs (identifiants invalides ou compte bloqué). L'aboutissement de ce processus est la génération d'un jeton JWT (JSON Web Token), garantissant une session sécurisée et une redirection personnalisée vers le tableau de bord. C'est un modèle d'architecture sécurisée qui assure à la fois la protection des données et une expérience utilisateur fluide\par
 \begin{figure}[H]%
-    \center%
-    \setlength{\fboxsep}{0pt}%
-    \setlength{\fboxrule}{0.0pt}%
-    \fbox{
-    \includegraphics[width=15 cm,height=10cm]{seq_sauthentifier.png}%
-    }
-    \caption{Diagramme de séquence : « S’authentifier »}%
+ \center%
+ \setlength{\fboxsep}{0pt}%
+ \setlength{\fboxrule}{0.0pt}%
+ \fbox{
+ \includegraphics[width=15 cm,height=10cm]{seq_sauthentifier.png}%
+ }
+ \caption{Diagramme de séquence : « S’authentifier »}%
 \end{figure}
 
 \subsubsection{Diagramme de séquence : « Consulter le Dashboard » :
 }
-Ce diagramme de séquence modélise le processus de visualisation du Dashboard, un outil de pilotage stratégique destiné ici au PDG au sein de l'ERP RayhanERP. Il illustre la capacité du système à transformer des données brutes en indicateurs de performance clés (KPI) exploitables pour la prise de décision.\par
-Le flux met en lumière une interaction fluide entre le noyau du système, la Base de Données et un module d'intelligence artificielle (ModuleIA). Dès l'accès, le système agrège dynamiquement des données multisectorielles, ventes, production, achats et stocks, pour offrir une vue d'ensemble immédiate (CA, niveau de stock, avancement produit). La force de cette modélisation réside dans ses fonctionnalités avancées : le filtrage temporel interactif et l'activation optionnelle (opt) d'analyses prédictives générées par l'IA. En mettant automatiquement en évidence les anomalies critiques, ce diagramme démontre comment l'application passe d'une simple interface de consultation à un véritable système d'aide à la décision, garantissant une réactivité optimale face aux enjeux opérationnels.\par
+Ce diagramme de séquence modélise la visualisation du Dashboard par le PDG. Il montre l'interaction entre le système, la base de données et un module d'IA (ModuleIA). Le système agrège les données multisectorielles (ventes, production, achats, stocks) pour offrir une vue d'ensemble avec indicateurs clés (CA, stock, avancement). Des fonctionnalités avancées sont incluses : filtrage temporel et analyses prédictives optionnelles via l'IA, faisant du Dashboard un outil d'aide à la décision.\par
 \begin{figure}[H]%
-    \center%
-    \setlength{\fboxsep}{0pt}%
-    \setlength{\fboxrule}{0.0pt}%
-    \fbox{
-    \includegraphics[width=15 cm,height=10cm]{seq_visualiserdashboard.png}%
-    }
-    \caption{Diagramme de séquence : « Consulter le Dashboard »}%
+ \center%
+ \setlength{\fboxsep}{0pt}%
+ \setlength{\fboxrule}{0.0pt}%
+ \fbox{
+ \includegraphics[width=15 cm,height=10cm]{seq_visualiserdashboard.png}%
+ }
+ \caption{Diagramme de séquence : « Consulter le Dashboard »}%
 \end{figure}
 
 \subsection{Diagramme d'activité}
 \subsubsection{Présentation :}
-Le diagramme d’activité s’impose comme un outil UML d'une puissance rare, essentiel pour cartographier avec précision les flux de travail et les processus métiers complexes de \reportAppName. En offrant une vision dynamique et séquentielle, il décompose chaque activité en étapes logiques, tout en mettant en lumière les nœuds de décision qui dictent le parcours utilisateur.\par
-Au-delà de la simple chronologie, ce diagramme segmente les responsabilités par acteur ou composant du système, transformant ainsi des procédures denses en une logique visuelle intuitive. Il devient alors la pierre angulaire pour décrypter le fonctionnement opérationnel (« le Comment »), facilitant la détection des goulots d'étranglement et l'optimisation des flux. In fine, cette modélisation garantit que le développement technique reste rigoureusement fidèle aux besoins métier et aux réalités du terrain.\par
+Le diagramme d'activité UML modélise les flux de travail et les processus métiers de \reportAppName{} en décomposant chaque activité en étapes logiques et en nœuds de décision. Il segmente les responsabilités par acteur, facilitant la compréhension du fonctionnement opérationnel et l'optimisation des flux.\par
 
 
 \subsubsection{Diagramme d’activité : « Gérer les fournisseurs » :}
-Ce diagramme d'activité détaille le cycle de gestion opérationnelle des partenaires au sein du module « Gérer les Fournisseurs ». Il illustre la polyvalence du système, capable d'orchestrer trois parcours distincts, la consultation, l'édition et la suppression, tout en garantissant une intégrité totale des données référentielles.
-La force de ce flux réside dans ses mécanismes de contrôle intelligents :
-\begin{itemize}
-\item Côté édition : Un nœud de décision verrouille l'enregistrement tant que les données sont incomplètes, forçant ainsi une saisie de qualité via une boucle de validation.
-\item Côté suppression : Le système intègre une règle métier critique qui vérifie l'existence d'ordres actifs. Cette sécurité empêche toute suppression accidentelle d'un fournisseur lié à des commandes en cours, préservant ainsi la cohérence historique et comptable de l'ERP.
-\end{itemize}
-En transformant ces règles de gestion en un parcours visuel fluide, ce diagramme assure une maintenance rigoureuse de la base fournisseur, indispensable à la stabilité de la chaîne d'approvisionnement.
+Ce diagramme d'activité détaille la gestion des fournisseurs avec trois parcours : consultation, édition et suppression. Lors de l'édition, un nœud de décision verrouille l'enregistrement si les données sont incomplètes. Côté suppression, le système vérifie l'absence d'ordres actifs avant d'autoriser la suppression, garantissant l'intégrité des données.
 
 \begin{figure}[H]%
-    \center%
-    \setlength{\fboxsep}{0pt}%
-    \setlength{\fboxrule}{0.0pt}%
-    \fbox{
-    \includegraphics[width=10 cm,height=13cm]{workflow_gererfournisseurs.png}%
-    }
-    \caption{Diagramme d’activité : « Gérer les fournisseurs »}%
+ \center%
+ \setlength{\fboxsep}{0pt}%
+ \setlength{\fboxrule}{0.0pt}%
+ \fbox{
+ \includegraphics[width=10 cm,height=13cm]{workflow_gererfournisseurs.png}%
+ }
+ \caption{Diagramme d’activité : « Gérer les fournisseurs »}%
 \end{figure}
 \subsubsection{Diagramme d’activité : « Gérer les ordres de production » :}
-Ce diagramme d'activité cartographie le cœur de la chaîne de valeur de l'ERP : le processus de Gestion de la Production. Il illustre la transformation des ordres de fabrication en produits finis, tout en assurant une synchronisation rigoureuse avec les stocks de matières premières (MP).
-Le flux se distingue par son intelligence métier embarquée, notamment lors de la vérification automatique de la disponibilité des composants selon la BOM (Nomenclature). Ce nœud de décision agit comme un garde-fou critique : en cas de pénurie, le système interrompt immédiatement le processus et alerte le département Achats, évitant ainsi les lancements de production non réalisables.\par
-Une fois la disponibilité confirmée, le diagramme montre une orchestration fluide entre les services : la planification notifie le magasinier, tandis que le lancement de la production déclenche une mise à jour automatique des stocks (décrémentation des MP et incrémentation des produits finis). Cette modélisation garantit une visibilité en temps réel sur l'état des encours et assure une traçabilité parfaite entre les intrants et les produits sortants.\par
+Ce diagramme d'activité illustre le processus de gestion de la production : transformation des ordres de fabrication en produits finis avec synchronisation des stocks de matières premières (MP). Le système vérifie automatiquement la disponibilité des composants via la nomenclature (BOM). En cas de pénurie, le processus est interrompu et le département Achats est alerté. Si les composants sont disponibles, la production est lancée avec mise à jour automatique des stocks (décrémentation des MP, incrémentation des produits finis).\par
 
 \begin{figure}[H]%
-    \center%
-    \setlength{\fboxsep}{0pt}%
-    \setlength{\fboxrule}{0.0pt}%
-    \fbox{
-    \includegraphics[width=10 cm,height=13cm]{workflow_gererproduction.png}%
-    }
-    \caption{Diagramme d’activité : « Gérer les ordres de production »}%
+ \center%
+ \setlength{\fboxsep}{0pt}%
+ \setlength{\fboxrule}{0.0pt}%
+ \fbox{
+ \includegraphics[width=10 cm,height=13cm]{workflow_gererproduction.png}%
+ }
+ \caption{Diagramme d’activité : « Gérer les ordres de production »}%
 \end{figure}
 
 \subsubsection{Diagramme d’activité : « S’authentifier » :}
-Ce diagramme d'activité retrace le protocole de sécurisation des accès au sein de l'écosystème RayhanERP. Il illustre la rigueur des mécanismes d'authentification, conçus pour protéger l'intégrité des données tout en offrant un parcours utilisateur fluide.
-Le processus se structure autour de deux niveaux de vérification critiques :
-\begin{itemize}
-\item La validation structurelle : Le système s'assure d'abord que les champs requis ne sont pas vides, évitant ainsi des requêtes inutiles vers le serveur.
-\item La sécurité applicative : Une fois les champs validés, une interrogation de la base de données confirme l'identité de l'utilisateur. En cas d'échec répété, le diagramme prévoit un mécanisme de sécurité permettant le blocage du compte, prévenant ainsi les tentatives d'intrusion par force brute.
-\end{itemize}
-Le succès de l'opération déclenche la génération d'un jeton JWT (JSON Web Token), pilier de la gestion moderne des sessions, garantissant une communication chiffrée et sécurisée. Le flux s'achève par une redirection intelligente, où l'utilisateur est orienté vers un tableau de bord personnalisé selon son rôle (PDG, Magasinier, etc.), assurant que chaque collaborateur accède immédiatement aux outils pertinents pour sa fonction.\par
+Ce diagramme d'activité retrace le processus d'authentification avec deux niveaux de vérification : validation structurelle (champs non vides) et sécurité applicative (vérification en base de données). En cas d'échec répété, le compte est bloqué pour prévenir les intrusions. Le succès déclenche la génération d'un jeton JWT et une redirection vers le tableau de bord personnalisé selon le rôle de l'utilisateur.\par
 \begin{figure}[H]%
-    \center%
-    \setlength{\fboxsep}{0pt}%
-    \setlength{\fboxrule}{0.0pt}%
-    \fbox{
-    \includegraphics[width=10 cm,height=13cm]{workflow_sauthentifier.png}%
-    }
-    \caption{Diagramme d’activité : « S’authentifier »}%
+ \center%
+ \setlength{\fboxsep}{0pt}%
+ \setlength{\fboxrule}{0.0pt}%
+ \fbox{
+ \includegraphics[width=10 cm,height=13cm]{workflow_sauthentifier.png}%
+ }
+ \caption{Diagramme d’activité : « S’authentifier »}%
 \end{figure}
 
 
 \section{Conclusion}
-Ce chapitre consacré à l’analyse et à la conception constitue le socle technique et décisionnel du véritable projet RayhanERP . Cette phase n'a pas seulement servi à dessiner des schémas, mais à bâtir une architecture cohérente capable de soutenir les ambitions de transformation numérique de l'entreprise.\par
-Grâce à l'utilisation rigoureuse du langage UML, nous avons pu décomposer la complexité de l'écosystème ERP en modèles exploitables :
-\begin{itemize}
-    \item Structuration des flux métiers : En modélisant les interactions via les diagrammes de cas d'utilisation et d’activité, nous avons sécurisé les processus critiques. Qu'il s'agisse de la création d'une commande ou de la réception de matières premières, chaque workflow est désormais optimisé pour éliminer les goulots d'étranglement opérationnels.
-    \item Robustesse de l'architecture technique : L'élaboration des diagrammes de séquence a permis de valider la sécurité du système (gestion des sessions par jetons JWT ) et sa réactivité (système de notifications basé sur le design pattern Publisher/Subscriber ) .
-\end{itemize}
-Au-delà de l'aspect technique, cette conception préfigure les bénéfices métiers concrets de l'ERP :
-\begin{itemize}
-    \item Traçabilité totale : Le diagramme de classes assure une structure de données où chaque mouvement de stock est lié à un acteur et à une commande, garantissant une intégrité parfaite des informations .
-    \item Aide à la décision : La conception du Dashboard et l'intégration de modules d'analyse (Module IA) transformant l'ERP d'un simple outil de saisie en un véritable système de pilotage stratégique pour la direction .
-\end{itemize}
-En conclusion, ce travail de conception agit comme le plan directeur du projet. En fixant les règles de gestion et l'architecture logicielle, il assure que la phase d'implantation technique sera non seulement fluide, mais surtout parfaitement alignée avec les réalités du terrain de l'entreprise. L'ERP Rayhan dispose désormais de ses fondations ; il est prêt à être bâti.\par
+Ce chapitre a présenté la conception de \reportAppName{} à l’aide du langage UML. Les diagrammes de cas d’utilisation ont modélisé les interactions fonctionnelles, les diagrammes de classes ont défini la structure des données, et les diagrammes de séquence et d’activité ont détaillé les dynamiques des processus. Cette modélisation constitue le plan directeur pour la phase d’implémentation.\par

@@ -3,7 +3,8 @@
 ## Build
 
 ```bash
-pdflatex -shell-escape main.tex   # 2–3 runs for TOC, minitoc, refs
+latexmk -pdf -shell-escape main.tex   # automates multiple passes (TOC, minitoc, refs)
+# or manually: pdflatex -shell-escape main.tex   # 2–3 runs
 ```
 
 - `-shell-escape` is **required** (due to `minted` highlighting package).
