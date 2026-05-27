@@ -6,20 +6,17 @@
 \newpage
 
 \section{Introduction}
-Faisant suite à la définition du cadre général et à l'analyse des besoins (fonctionnels et non fonctionnels) de \reportAppName{}, puis ce chapitre aborde la phase de conception. Pour traduire ces exigences en architecture structurée, nous utiliserons le langage de modélisation standardisé UML, garantissant une représentation claire et visualisation de l'architecture du système. 
-Notre démarche inclura la méthodologie retenue, suivie de l'élaboration des diagrammes dits « clés » :
- cas d’utilisation (interactions utilisateurs), classes (structure statique), séquence (dynamique) et activité (workflows). Ces modélisations serviront de plans directeurs pour la phase d’implantation. 
+Après l’analyse des besoins, ce chapitre présente la phase de conception. Nous utilisons UML pour modéliser l’architecture du système. Notre démarche inclut : diagrammes de cas d’utilisation, de classes, de séquence et d’activité. Ces modèles guideront la phase d’implémentation.
 \section{Choix de la méthodologie d’analyse}
- Afin de structurer efficacement notre Projet « 
-\reportAppName{} », nous utilisons UML, un langage de modélisation orienté objet largement adopté. Il offre l'avantage de clarifier les différents aspects de l'application, offrant une panoplie de diagrammes (statiques et dynamiques) pour une représentation précise du système.
+ Pour structurer notre projet \reportAppName{}, nous utilisons UML, un langage de modélisation orienté objet. Il offre une panoplie de diagrammes statiques et dynamiques pour une représentation précise du système.
 \subsection{Présentation UML}
 UML (Unified Modeling Language) est un langage de modélisation visuel standardisé, essentiel en génie logiciel pour visualiser, construire et documenter les systèmes orientés objet. Il offre un ensemble de diagrammes (cas d'utilisation, classes, séquences, activités) permettant de modéliser la structure statique et le comportement dynamique d’un logiciel, facilitant la communication entre les parties prenantes du projet.
 
 \subsection{Diagrammes des cas d’utilisation spécifiques : }
- ces diagrammes détaillent les fonctionnalités du système en se manifestant du côté des utilisateurs. Ils illustrent la manière dont les acteurs interagissent avec la solution traduisant les besoins fonctionnels en scénarios concrets pour atteindre des buts précis\par
+ Ces diagrammes détaillent les fonctionnalités du système du point de vue des utilisateurs. Ils montrent comment les acteurs interagissent avec la solution.\par
 Nous allons détailler ici les principaux cas d’utilisation pour notre Application \reportAppName{}
 \subsubsection{Diagramme de cas d'utilisation « Consulter le site/app » :}
-Ce cas d'utilisation permet au Visiteur de consulter le site web ou l'application mobile de \reportAppName{} sans nécessiter d'authentification préalable. Il constitue la porte d'entrée publique du système, offrant une présentation des services et produits de l'entreprise \reportEntreprise. Le Visiteur peut naviguer librement dans les sections publiques avant de décider de s'authentifier ou de passer une commande.\par
+Ce cas permet au Visiteur de consulter le site ou l’application \reportAppName{} sans authentification. Il offre une présentation des services et produits de \reportEntreprise.\par
 La figure ci-dessous décrit ces relations :
 \begin{figure}[H]%
  \center%
@@ -65,8 +62,7 @@ Scénario alternatif & Aucun — accès public sans restriction. \\
 \end{table}
 \vfill
 \subsubsection{Diagramme de cas d'utilisation « sauthentifier » :}
-Ce diagramme de cas d'utilisation détaille le processus d'authentification, pilier central de la sécurité de l'
-\reportAppName{}. Il modélise le processus fondamental par lequel chaque utilisateur (Client, Responsable Ventes, Magasinier, Responsable Achats, Responsable Production, PDG) doit prouver son identité. Le cas d'utilisation principal « S'authentifier » est étendu par « Rediriger selon rôle » via une relation \textless{}\textless{}extend\textgreater{}\textgreater{}, permettant d'orienter chaque acteur vers son tableau de bord spécifique après validation de ses identifiants. Ce mécanisme constitue le premier rempart garantissant la confidentialité et l'intégrité des données, et le point de passage obligatoire pour une exploitation sécurisée du système.\par
+Ce diagramme détaille l’authentification, élément clé de la sécurité de \reportAppName{}. Chaque utilisateur (Client, Responsable Ventes, Magasinier, Responsable Achats, Responsable Production, PDG) prouve son identité. Le cas principal « S’authentifier » est étendu par « Rediriger selon rôle », orientant chaque acteur vers son tableau de bord. Ce mécanisme garantit la confidentialité et l’intégrité des données.\par
 La figure ci-dessous décrit ces relations :
 \begin{figure}[H]%
  \center%
@@ -330,7 +326,7 @@ La figure ci-dessous décrit ces relations :
  \end{table}
  \vfill
 \subsubsection{Diagramme de cas d’utilisation « gérer les fournisseurs » :}
-Ce cas d'utilisation offre une gestion complète (CRUD) du référentiel fournisseurs par le Responsable Achats au sein de l'ERP. Le système sécurise les données en empêchant la suppression des partenaires liés à des commandes actives et génère automatiquement des indicateurs de performance pour évaluer la fiabilité des fournisseurs. \par
+Ce cas permet au Responsable Achats de gérer les fournisseurs (CRUD). Le système empêche la suppression des fournisseurs liés à des commandes actives.\par
 La figure ci-dessous décrit ces relations :
 \begin{figure}[H]%
  \center%
@@ -493,7 +489,7 @@ Scénario alternatif & - Données invalides : le système affiche un message d'e
 \vfill
 
 \subsubsection{Diagramme de cas d'utilisation « Consulter le Dashboard » :}
-Ce cas d'utilisation permet au PDG de piloter l'entreprise via une vue synthétique et décisionnelle de \reportAppName{}. Le tableau de bord centralise en temps réel les indicateurs clés des modules ventes, production, achats et stocks. Grâce à des widgets et graphiques de KPI, le dirigeant peut filtrer les données par période ou explorer les détails d'un module. Le cas d'utilisation inclut la consultation du tableau de bord et peut recevoir des suggestions prédictives basées sur l'intelligence artificielle via une extension. \par
+Ce cas permet au PDG de piloter l’entreprise via un tableau de bord qui centralise les indicateurs des modules ventes, production, achats et stocks. Le dirigeant peut filtrer les données par période et recevoir des suggestions prédictives via l’IA.\par
 La figure ci-dessous décrit ces interactions : 
 \begin{figure}[H]%
  \center%
@@ -548,7 +544,7 @@ Scénario alternatif & - Aucune donnée disponible pour la période sélectionn�
 
 \subsection{Diagramme de classe}
 \subsubsection{Présentation :}
-Le diagramme de classe est élément central de la modélisation UML, ce diagramme offre une vision statique et conceptuelle de l’application \reportAppName{}. En détaillant les classes (entités), leurs attributs (données) et leurs méthodes (comportements), il définit la structure logique du système. Véritable feuille de route architecturale, il assure la transition entre les besoins fonctionnels et la réalisation technique du code et de la base de données.\par
+Le diagramme de classes offre une vue statique de l’application \reportAppName{}. Il définit les classes, leurs attributs et leurs méthodes, et sert de transition entre les besoins fonctionnels et le code.\par
 
 \begin{figure}[H]%
  \center%
@@ -562,12 +558,12 @@ Le diagramme de classe est élément central de la modélisation UML, ce diagram
  \vfill
 \subsection{Diagramme de séquence}
 \subsubsection{Présentation :}
-Le diagramme de séquence UML offre une vision dynamique et chronologique des interactions entre acteurs, objets et systèmes au sein de \reportAppName{}. Il détaille l'ordre des messages échangés (appels synchrones/asynchrones) et intègre des structures logiques (boucles, alternatives) pour spécifier le comportement attendu de chaque cas d'utilisation.\par
+Le diagramme de séquence montre les interactions chronologiques entre acteurs, objets et systèmes dans \reportAppName{}. Il détaille l’ordre des messages échangés et les structures logiques (boucles, alternatives).\par
 \subsubsection{Description :}
-Le diagramme de séquence d'authentification modélise le processus de contrôle d'accès à l'application \reportAppName{}. Il détaille les échanges entre l'utilisateur, le système et la base de données, de la soumission des identifiants jusqu'à la validation. Deux scénarios sont possibles : succès (redirection vers l'interface personnalisée) ou échec (message d'erreur). La génération d'un jeton JWT garantit une session sécurisée.
+Ce diagramme montre le contrôle d’accès à \reportAppName{} : échanges entre l’utilisateur, le système et la base de données. Deux scénarios : succès (redirection) ou échec (message d’erreur). Un jeton JWT garantit une session sécurisée.
 
 \subsubsection{Diagramme de séquence : « Gérer Fournisseurs » :}
-Ce diagramme de séquence détaille les interactions entre le Responsable Achat, le système \reportAppName{} et la base de données lors de la gestion des fournisseurs. Le processus débute par l'affichage de la liste existante, puis un fragment "alt" segmente la logique en quatre scénarios : ajout, modification, suppression (avec vérification d'historique via un bloc "opt") et consultation. Chaque opération est finalisée par un COMMIT en base de données.\par
+Ce diagramme montre les interactions entre le Responsable Achats, le système et la base de données pour la gestion des fournisseurs. Le processus affiche la liste, puis un fragment "alt" segmente la logique en quatre scénarios : ajout, modification, suppression et consultation. Chaque opération se termine par un COMMIT.\par
 \begin{figure}[H]%
  \center%
  \setlength{\fboxsep}{0pt}%
@@ -625,8 +621,8 @@ Le flux se termine par deux fragments optionnels (opt) à haute valeur ajoutée 
 
 \subsubsection{Diagramme de séquence : « S’authentifier » :
 }
-Ce diagramme de séquence détaille le processus critique de l'authentification utilisateur, porte d'entrée sécurisée du système \reportAppName{}. Il illustre une chorégraphie précise entre l'Utilisateur, le cœur de l'application, la base de Données et le gestionnaire de session.\par
-La robustesse de ce flux repose sur une double validation : d'abord structurelle (vérification des champs vides), puis sécuritaire via le hachage des mots de passe et la vérification des droits dans la collection des utilisateurs. Le diagramme traite avec agilité les différents scénarios grâce à des blocs conditionnels (alt), gérant aussi bien les succès que les échecs (identifiants invalides ou compte bloqué). L'aboutissement de ce processus est la génération d'un jeton JWT (JSON Web Token), garantissant une session sécurisée et une redirection personnalisée vers le tableau de bord. C'est un modèle d'architecture sécurisée qui assure à la fois la protection des données et une expérience utilisateur fluide\par
+Ce diagramme détaille l’authentification, porte d’entrée sécurisée de \reportAppName{}. Il montre les échanges entre l’Utilisateur, l’application, la base de données et le gestionnaire de session.\par
+La validation est double : vérification des champs vides, puis hachage du mot de passe et vérification des droits. Des blocs conditionnels (alt) gèrent les succès et les échecs. En cas de succès, un jeton JWT est généré pour une session sécurisée et une redirection personnalisée.\par
 \begin{figure}[H]%
  \center%
  \setlength{\fboxsep}{0pt}%
@@ -639,7 +635,7 @@ La robustesse de ce flux repose sur une double validation : d'abord structurelle
 
 \subsubsection{Diagramme de séquence : « Consulter le Dashboard » :
 }
-Ce diagramme de séquence modélise la visualisation du Dashboard par le PDG. Il montre l'interaction entre le système, la base de données et un module d'IA (ModuleIA). Le système agrège les données multisectorielles (ventes, production, achats, stocks) pour offrir une vue d'ensemble avec indicateurs clés (CA, stock, avancement). Des fonctionnalités avancées sont incluses : filtrage temporel et analyses prédictives optionnelles via l'IA, faisant du Dashboard un outil d'aide à la décision.\par
+Ce diagramme montre la visualisation du Dashboard par le PDG. Le système agrège les données (ventes, production, achats, stocks) pour offrir une vue d’ensemble avec des indicateurs clés. Le Dashboard inclut le filtrage temporel et des analyses prédictives via l’IA.\par
 \begin{figure}[H]%
  \center%
  \setlength{\fboxsep}{0pt}%
@@ -652,11 +648,11 @@ Ce diagramme de séquence modélise la visualisation du Dashboard par le PDG. Il
 
 \subsection{Diagramme d'activité}
 \subsubsection{Présentation :}
-Le diagramme d'activité UML modélise les flux de travail et les processus métiers de \reportAppName{} en décomposant chaque activité en étapes logiques et en nœuds de décision. Il segmente les responsabilités par acteur, facilitant la compréhension du fonctionnement opérationnel et l'optimisation des flux.\par
+Le diagramme d’activité modélise les flux de travail et les processus de \reportAppName{} en décomposant chaque activité en étapes logiques. Il répartit les responsabilités par acteur.\par
 
 
 \subsubsection{Diagramme d’activité : « Gérer les fournisseurs » :}
-Ce diagramme d'activité détaille la gestion des fournisseurs avec trois parcours : consultation, édition et suppression. Lors de l'édition, un nœud de décision verrouille l'enregistrement si les données sont incomplètes. Côté suppression, le système vérifie l'absence d'ordres actifs avant d'autoriser la suppression, garantissant l'intégrité des données.
+Ce diagramme montre la gestion des fournisseurs avec trois parcours : consultation, édition et suppression. Lors de l’édition, le système vérifie les données. Pour la suppression, il vérifie l’absence d’ordres actifs.
 
 \begin{figure}[H]%
  \center%
@@ -668,7 +664,7 @@ Ce diagramme d'activité détaille la gestion des fournisseurs avec trois parcou
  \caption{Diagramme d’activité : « Gérer les fournisseurs »}%
 \end{figure}
 \subsubsection{Diagramme d’activité : « Gérer les ordres de production » :}
-Ce diagramme d'activité illustre le processus de gestion de la production : transformation des ordres de fabrication en produits finis avec synchronisation des stocks de matières premières (MP). Le système vérifie automatiquement la disponibilité des composants via la nomenclature (BOM). En cas de pénurie, le processus est interrompu et le département Achats est alerté. Si les composants sont disponibles, la production est lancée avec mise à jour automatique des stocks (décrémentation des MP, incrémentation des produits finis).\par
+Ce diagramme montre le processus de production : transformation des ordres de fabrication en produits finis avec mise à jour des stocks. Le système vérifie la disponibilité des composants via la nomenclature (BOM). En cas de pénurie, le processus est interrompu et les Achats sont alertés. Si les composants sont disponibles, la production est lancée.\par
 
 \begin{figure}[H]%
  \center%
@@ -681,7 +677,7 @@ Ce diagramme d'activité illustre le processus de gestion de la production : tra
 \end{figure}
 
 \subsubsection{Diagramme d’activité : « S’authentifier » :}
-Ce diagramme d'activité retrace le processus d'authentification avec deux niveaux de vérification : validation structurelle (champs non vides) et sécurité applicative (vérification en base de données). En cas d'échec répété, le compte est bloqué pour prévenir les intrusions. Le succès déclenche la génération d'un jeton JWT et une redirection vers le tableau de bord personnalisé selon le rôle de l'utilisateur.\par
+Ce diagramme montre le processus d’authentification avec deux niveaux de vérification : champs non vides et vérification en base. Après plusieurs échecs, le compte est bloqué. En cas de succès, un jeton JWT est généré et l’utilisateur est redirigé vers son tableau de bord.\par
 \begin{figure}[H]%
  \center%
  \setlength{\fboxsep}{0pt}%
@@ -694,4 +690,4 @@ Ce diagramme d'activité retrace le processus d'authentification avec deux nivea
 
 
 \section{Conclusion}
-Ce chapitre a présenté la conception de \reportAppName{} à l’aide du langage UML. Les diagrammes de cas d’utilisation ont modélisé les interactions fonctionnelles, les diagrammes de classes ont défini la structure des données, et les diagrammes de séquence et d’activité ont détaillé les dynamiques des processus. Cette modélisation constitue le plan directeur pour la phase d’implémentation.\par
+Ce chapitre a présenté la conception de \reportAppName{} avec UML. Les diagrammes de cas d’utilisation ont modélisé les interactions, le diagramme de classes a défini la structure des données, et les diagrammes de séquence et d’activité ont détaillé les processus. Ces modèles guideront l’implémentation.\par

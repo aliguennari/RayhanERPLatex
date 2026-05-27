@@ -6,7 +6,7 @@
 \newpage
 
 \section{Introduction}
-Dans une gestion classique d’une entreprise, chaque service est doté de son propre système d’information et ses propres applications (comptabilité, gestion de paie, gestion des stocks, gestion commerciale, gestion de production...). Pour faire le lien entre ces différents systèmes, l’entreprise faisait développer des interfaces informatiques entre ses différents systèmes d'informations. Ce mode de fonctionnement coûtait très cher à l’entreprise et il est devenu inapproprié. Pour améliorer cette situation, les entreprises ont décidé d’implémenter des systèmes intégrés connus par les progiciels de gestion intégré « PGI » ou en anglais Enterprise Resource Planning « ERP ».
+Dans une entreprise classique, chaque service a ses propres applications (comptabilité, paie, stocks, ventes...). Pour relier ces systèmes, l’entreprise devait développer des interfaces, ce qui coûtait cher et n’était plus adapté. Pour y remédier, les entreprises ont adopté des progiciels de gestion intégrée (PGI), appelés ERP (Enterprise Resource Planning).
 \section{Présentation de l’organisme d’accueil : sociéte \reportEntreprise}
 Rayhan est une société tunisienne de plasturgie implantée à Tataouine, spécialisée dans la fabrication de sacs à poubelle, bretelles en plastique et autres solutions de packaging. La société assure des produits de haute qualité adaptés aux besoins industriels et domestiques 
 \\
@@ -52,7 +52,7 @@ Rayhan est une société tunisienne de plasturgie implantée à Tataouine, spéc
 
 
 \subsection{Cadre du projet}
-L’étude de l'existant révèle une gestion artisanale et fragmentée au sein de la société \reportEntreprise, caractérisée par une absence d'informatisation intégrée. Les stocks, commandes et factures sont gérés manuellement via des fichiers Excel, des documents Word et du papier, entraînant des risques d'erreurs, des ruptures de stock non détectées et une perte de temps dans le suivi client/fournisseur. Cette organisation cloisonnée, sans base de données centralisée, compromet la traçabilité de la production et la prise de décision, justifiant la nécessité d'un ERP pour automatiser et centraliser les processus. \\
+L’étude de l’existant montre une gestion artisanale chez \reportEntreprise, sans informatisation intégrée. Les stocks, commandes et factures sont gérés avec Excel, Word et papier, ce qui provoque des erreurs, des ruptures de stock et des pertes de temps. Cette organisation sans base de données centralisée nuit à la traçabilité et à la prise de décision. Un ERP est donc nécessaire pour automatiser et centraliser. \\
 Le process existant à l'entreprise actuellement est résumé comme suit :
 \begin{itemize}
 \item Ventes et Achats : utilisation de supports volatils (Word, papier). Les factures sont saisies manuellement sans lien direct avec les bons de livraison.
@@ -77,8 +77,8 @@ Le système ERP vise à centraliser les données dans une base unique pour autom
 Il standardise les opérations (ventes, RH, finance, production) pour accroître l'efficacité globale et la conformité.
 
 \textbf{Définition du système ERP:}\\
-Le concept d'ERP part d'un constat relativement simple : la somme des optima est parfois inférieure à l'optimum de la somme. En d'autres termes, l'apport d'un ERP est toujours bien supérieur à la somme des apports de chacun des modules qui le composent.
-L’ERP est un progiciel qui permet de gérer l’ensemble des processus opérationnels d’une entreprise en intégrant plusieurs fonctions de gestion dans un système : solution de gestion des commandes, solution de gestion des stocks, solution de gestion de la paie, solution de gestion de la comptabilité, solution de gestion d’e-commerce, solution de gestion de commerce B2B ou B2C. Autrement dit, l’ERP représente la « colonne vertébrale » d’une entreprise. 
+Le concept d’ERP part d’un constat simple : un ERP apporte plus que la somme de ses modules pris séparément.
+L’ERP est un progiciel qui permet de gérer l’ensemble des processus opérationnels d’une entreprise en intégrant plusieurs fonctions de gestion dans un système : solution de gestion des commandes, solution de gestion des stocks, solution de gestion de la paie, solution de gestion de la comptabilité, solution de gestion d’e-commerce, solution de gestion de commerce B2B ou B2C. L’ERP est le système central de l’entreprise. 
 \begin{figure}[H]%
  \center%
  \setlength{\fboxsep}{0pt}%
@@ -112,14 +112,14 @@ Objectifs non fonctionnels d'un ERP :
 \item Ergonomie et Utilisabilité : standardiser les interfaces pour faciliter l'adoption par les utilisateurs.
 \item Disponibilité et Fiabilité : garantir un système robuste et accessible. 
 \end{itemize}
-Ces objectifs combinés permettent d'améliorer la rentabilité et de réduire les erreurs humaines, à améliorer l'efficacité, à fournir une visibilité sur les opérations et à permettre une prise de décision en temps réel. Les systèmes ERP offrent un large éventail de fonctionnalités, mais il est essentiel, pour réussir, de savoir quelles sont les fonctionnalités à rechercher et de comprendre comment mettre en œuvre un système ERP adapté aux besoins de notre entreprise « \reportEntreprise » 
+Ces objectifs améliorent la rentabilité, réduisent les erreurs et offrent une visibilité en temps réel. Pour réussir, il faut choisir les fonctionnalités adaptées aux besoins de \reportEntreprise. 
 
 
 L'objectif de notre projet est de mettre en place une solution ERP intégrée pour gérer l’ensemble des processus de
 L’entreprise : achats, ventes, stock, production et facturation.\\
 
 \subsection{Cycle de vie de l'application}
-Le cycle de vie de l'application \reportAppName{} suit le modèle en V, une approche rigoureuse qui associe chaque phase de développement à une phase de test correspondante. Ce modèle a été choisi pour sa capacité à garantir la qualité et la fiabilité du système ERP, en permettant une validation précoce des spécifications et une détection rapide des anomalies.
+Le cycle de vie de \reportAppName{} suit le modèle en V, qui associe chaque phase de développement à une phase de test. Ce modèle garantit la qualité et la fiabilité du système en validant les spécifications tôt et en détectant rapidement les anomalies.
 
 \begin{figure}[H]%
  \center%
@@ -156,6 +156,5 @@ L'architecture physique de \reportAppName{} adopte un modèle client-serveur. Le
  \caption{Architecture physique — Modèle 3-tiers client-serveur}%
 \end{figure}
 \section{Conclusion}
- Un progiciel de gestion intégré ou ERP permet de piloter une entreprise. Il s’appuie sur une base de données commune à tous les services de l’entreprise et gère l’ensemble de ses processus. Il est donc intéressant de remplacer tous les logiciels de gestion de l’entreprise par un seul logiciel intégré offrant toutes les fonctionnalités, au lieu de le faire manuellement ou engager des corrections des programmes existants, ou encore en embauchant des personnes spécialisées pour analyser un système opérationnel.\par
- En conclusion, les systèmes ERP sont essentiels pour que notre entreprise reste compétitive.
- Il faut tout d’abord connaître les fonctionnalités dont les dirigeants de l'entreprise ont en besoin et comprendre le coût du système ERP comme des étapes clés pour sélectionner le meilleur système à intégrer.
+ Un ERP permet de piloter l’entreprise avec une base de données commune à tous les services. Il remplace plusieurs logiciels par un seul système intégré, évitant les saisies manuelles et les corrections coûteuses.\par
+ Les ERP sont essentiels pour rester compétitif. Il faut connaître les besoins de l’entreprise et comprendre le coût du système pour choisir la meilleure solution.
