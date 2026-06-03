@@ -5,19 +5,18 @@
 \end{spacing}
 \newpage
 
-\section{Introduction}
-Après l’analyse des besoins, ce chapitre présente la phase de conception. Nous utilisons UML pour modéliser l’architecture du système. Notre démarche inclut : diagrammes de cas d’utilisation, de classes, de séquence et d’activité. Ces modèles guideront la phase d’implémentation.
-\section{Choix de la méthodologie d’analyse}
- Pour structurer notre projet \reportAppName{}, nous utilisons UML, un langage de modélisation orienté objet. Il offre une panoplie de diagrammes statiques et dynamiques pour une représentation précise du système.
+{\Large\bfseries Introduction}\\
+Ce chapitre présente la conception UML de \reportAppName{}.
+\section{Choix de la méthodologie d'analyse}
+Pour structurer \reportAppName{}, nous utilisons UML.
 \subsection{Présentation UML}
-UML (Unified Modeling Language) est un langage de modélisation visuel standardisé, essentiel en génie logiciel pour visualiser, construire et documenter les systèmes orientés objet. Il offre un ensemble de diagrammes (cas d'utilisation, classes, séquences, activités) permettant de modéliser la structure statique et le comportement dynamique d’un logiciel, facilitant la communication entre les parties prenantes du projet.
+UML est un langage de modélisation orienté objet avec des diagrammes statiques et dynamiques.
 
-\subsection{Diagrammes des cas d’utilisation spécifiques : }
- Ces diagrammes détaillent les fonctionnalités du système du point de vue des utilisateurs. Ils montrent comment les acteurs interagissent avec la solution.\par
-Nous allons détailler ici les principaux cas d’utilisation pour notre Application \reportAppName{}
+\subsection{Description détaillée du diagramme de cas d'utilisation : }
+Ces diagrammes montrent les fonctionnalités du système du point de vue des acteurs.\par
 \subsubsection{Diagramme de cas d'utilisation « Consulter le site » :}
-Ce cas permet au Visiteur de consulter le site ou l’application \reportAppName{} sans authentification. Il offre une présentation des services et produits de \reportEntreprise.\par
-La figure ci-dessous décrit ces relations :
+Ce cas permet au Visiteur de consulter les informations publiques de \reportAppName{}.\par
+
 \begin{figure}[H]%
  \center%
  \setlength{\fboxsep}{0pt}%
@@ -28,7 +27,7 @@ La figure ci-dessous décrit ces relations :
  \caption{Diagramme de cas d'utilisation « Consulter le site »}%
 \end{figure}
 
-\textbf{Tableau descriptif :} Dans le tableau ci-dessous, nous allons décrire les détails du cas d'utilisation « Consulter le site » :
+\textbf{Tableau descriptif :}
 \begin{table}[h!]
 \renewcommand{\arraystretch}{1.8}
 \setlength{\tabcolsep}{16pt}
@@ -38,13 +37,13 @@ La figure ci-dessous décrit ces relations :
 \hline
 \textbf{Titre} & \textbf{Consulter le site} \\
 \hline
-Objectif & Permettre au Visiteur de parcourir les informations publiques de l'application \reportAppName{} (présentation, produits, services) sans authentification. \\
+Objectif & Permettre au Visiteur de consulter les informations publiques de \reportAppName{}. \\
 \hline
 Acteur(s) & Visiteur \\
 \hline
 Pré-condition & Aucune — accès public sans authentification. \\
 \hline
-Post-condition & Le Visiteur a consulté les informations disponibles et peut décider de s'authentifier ou de passer une commande. \\
+Post-condition & Le Visiteur a consulté les informations et peut s'authentifier. \\
 \hline
 Scénario nominal & \begin{itemize}
  \item Le Visiteur accède à l'URL de l'application \reportAppName{}
@@ -61,9 +60,9 @@ Scénario alternatif & Aucun — accès public sans restriction. \\
 \label{table:tableau descriptif du cas d'utilisation « Consulter le site »}
 \end{table}
 \vfill
-\subsubsection{Diagramme de cas d'utilisation « sauthentifier » :}
-Ce diagramme détaille l’authentification, élément clé de la sécurité de \reportAppName{}. Chaque utilisateur (Client, Responsable Ventes, Magasinier, Responsable Achats, Responsable Production, PDG) prouve son identité. Le cas principal « S’authentifier » est étendu par « Rediriger selon rôle », orientant chaque acteur vers son tableau de bord. Ce mécanisme garantit la confidentialité et l’intégrité des données.\par
-La figure ci-dessous décrit ces relations :
+\subsubsection{Diagramme de cas d'utilisation « sauthentifier » :}
+Ce diagramme détaille l'authentification des utilisateurs. Le cas « S'authentifier » est étendu par « Rediriger selon rôle » vers le tableau de bord approprié.\par
+
 \begin{figure}[H]%
  \center%
  \setlength{\fboxsep}{0pt}%
@@ -71,10 +70,10 @@ La figure ci-dessous décrit ces relations :
  \fbox{
  \includegraphics[width=\linewidth]{sauthentifier.png}
  }
- \caption{Diagramme de cas d’utilisation « sauthentifier »}%
+ \caption{Diagramme de cas d'utilisation « sauthentifier »}%
 \end{figure}
 
-\textbf{Tableau descriptif :} Dans le tableau ci-dessous, nous allons décrire les détails du cas d’utilisation « S'authentifier » :
+\textbf{Tableau descriptif :}
 \begin{table}[!htbp]
 \renewcommand{\arraystretch}{1.8}
 \setlength{\tabcolsep}{16pt}
@@ -84,7 +83,7 @@ La figure ci-dessous décrit ces relations :
 \hline
 \textbf{Titre} & \textbf{S'authentifier} \\
 \hline
-Objectif & Permettre à tout utilisateur (Client, Responsable Ventes, Magasinier, Responsable Achats, Responsable Production, PDG) d'accéder au système de manière sécurisée en vérifiant son identité, puis le rediriger vers son tableau de bord selon son rôle. \\
+Objectif & Permettre à tout utilisateur de s'authentifier et d'accéder à son tableau de bord. \\
 \hline
 Acteur(s) & Client, Responsable Ventes, Magasinier, Responsable Achats, Responsable Production, PDG \\
 \hline
@@ -115,9 +114,9 @@ Scénario alternatif & Identifiants invalides : \begin{itemize}
 
 \vfill
 
-\subsubsection{Diagramme de cas d’utilisation « gérer les commandes d'achats de matière première » :}
-Ce cas d'utilisation décrit le processus de gestion des commandes d'achats de matières premières par le Responsable Achats. Il permet de consulter, ajouter, modifier et supprimer les commandes d'achat destinées aux fournisseurs référencés. Le Responsable Achats interagit avec le système pour gérer le cycle complet des approvisionnements.\par
-La figure ci-dessous décrit ces relations :
+\subsubsection{Diagramme de cas d'utilisation « gérer les commandes d'achats de matière première » :}
+Ce cas permet au Responsable Achats de gérer les commandes d'achat de matières premières : consulter, ajouter, modifier et supprimer.\par
+
 \begin{figure}[H]%
  \center%
  \setlength{\fboxsep}{0pt}%
@@ -125,10 +124,10 @@ La figure ci-dessous décrit ces relations :
  \fbox{
  \includegraphics[width=\linewidth]{gerer_achat.png}%
  }
- \caption{Diagramme de cas d’utilisation « gérer les commandes d'achats de matière première »}%
+ \caption{Diagramme de cas d'utilisation « gérer les commandes d'achats de matière première »}%
  \end{figure}
  
-\textbf{Tableau descriptif :} Dans le tableau ci-dessous, nous allons décrire les détails du cas d’utilisation « Gérer les commandes d'achats de matière première » :
+\textbf{Tableau descriptif :}
 \begin{table}[!h]
 \renewcommand{\arraystretch}{1.8}
 \setlength{\tabcolsep}{16pt}
@@ -138,7 +137,7 @@ La figure ci-dessous décrit ces relations :
 \hline
 Titre & Gérer les commandes d'achats de matière première \\
 \hline
-Objectif & Permettre au Responsable Achats de gérer le cycle de vie des commandes d'achat de matières premières : consultation, création, modification et suppression. \\
+Objectif & Permettre au Responsable Achats de gérer les commandes d'achat de matières premières. \\
 \hline
 Acteur(s) & Responsable Achats (acteur principal) \\
 \hline
@@ -165,9 +164,9 @@ Scénario alternatif & - Fournisseur inactif ou supprimé : le système affiche 
 \label{table:cas d'utilisation « Gérer les commandes d'achats de matière première »}
 \end{table}
 \vfill
-\subsubsection{Diagramme de cas d’utilisation « gérer les produits » : }
-Le cas d'utilisation « Gérer les produits » permet au Magasinier de gérer le référentiel des articles (CRUD : consulter, ajouter, modifier et supprimer des produits). Le Magasinier est l'acteur principal de cette fonctionnalité. Le cas d'utilisation inclut la gestion des matières premières, des produits semi-finis et des produits finis.\par
-La figure ci-dessous décrit ces relations :
+\subsubsection{Diagramme de cas d'utilisation « gérer les produits » : }
+Ce cas permet au Magasinier de gérer les articles (CRUD) : matières premières, produits semi-finis et produits finis.\par
+
 \begin{figure}[H]%
  \center%
  \setlength{\fboxsep}{0pt}%
@@ -175,9 +174,9 @@ La figure ci-dessous décrit ces relations :
  \fbox{
  \includegraphics[width=\linewidth]{suivre_stock.png}%
  }
- \caption{Diagramme de cas d’utilisation « gérer les produits »}%
+ \caption{Diagramme de cas d'utilisation « gérer les produits »}%
 \end{figure}
-\textbf{Tableau descriptif :} Dans le tableau ci-dessous, nous allons décrire les détails du cas d’utilisation « Gérer les produits » 
+\textbf{Tableau descriptif :}
 \begin{table}[!htbp]
 \renewcommand{\arraystretch}{1.8}
 \setlength{\tabcolsep}{16pt}
@@ -187,7 +186,7 @@ La figure ci-dessous décrit ces relations :
 \hline
 Titre & Gérer les produits \\
 \hline
-Objectif & Permettre au Magasinier de gérer le référentiel des produits : consulter, ajouter, modifier et supprimer des articles (matières premières, semi-finis, finis).
+Objectif & Permettre au Magasinier de gérer les produits (matières premières, semi-finis, finis).
  \\
 \hline
 Acteur(s) & Magasinier (acteur principal) \\
@@ -219,9 +218,9 @@ Scénario alternatif & \begin{itemize}
 \label{table:cas d'utilisation « Gérer les produits »}
 \end{table}
 \vfill
-\subsubsection{Diagramme de cas d’utilisation « gérer les ordres de production » :}
-Ce diagramme met en évidence les cas d'utilisation liés à la gestion des ordres de production. Le Responsable Production, acteur principal, peut gérer les produits, les matières premières et les nomenclatures (BOM), avec des relations d'extension entre ces fonctionnalités. Le cas d'utilisation « Gérer les ordres de production » inclut la consultation des nomenclatures via « Gérer BOM ». \par
-La figure ci-dessous décrit ces relations :
+\subsubsection{Diagramme de cas d'utilisation « gérer les ordres de production » :}
+Ce cas permet au Responsable Production de gérer les ordres de production, les produits, les matières premières et les nomenclatures BOM.\par
+
 \begin{figure}[H]%
  \center%
  \setlength{\fboxsep}{0pt}%
@@ -229,9 +228,9 @@ La figure ci-dessous décrit ces relations :
  \fbox{
  \includegraphics[width=\linewidth]{gerer_production.png}%
  }
- \caption{Diagramme de cas d’utilisation « gérer les ordres de production » }%
+ \caption{Diagramme de cas d'utilisation « gérer les ordres de production » }%
  \end{figure}
-\textbf{Tableau descriptif :} Dans le tableau ci-dessous, nous allons décrire les détails du cas d’utilisation « Gérer les ordres de production » :
+\textbf{Tableau descriptif :}
 \begin{table}[!htbp]
 \renewcommand{\arraystretch}{1.8}
 \setlength{\tabcolsep}{16pt}
@@ -241,7 +240,7 @@ La figure ci-dessous décrit ces relations :
 \hline
 Titre & Gérer les ordres de production \\
 \hline
-Objectif & Permettre au Responsable Production de planifier, lancer et suivre les ordres de production, ainsi que de gérer les produits, les matières premières et les nomenclatures BOM.
+Objectif & Permettre au Responsable Production de planifier, lancer et suivre les ordres de production et les nomenclatures BOM.
  \\
 \hline
 Acteur(s) & Responsable Production (acteur principal) \\
@@ -271,12 +270,12 @@ Scénario alternatif & \begin{itemize}
 \hline
 \end{tabular}
 \textbf{\caption{Tableau descriptif du cas d'utilisation « Gérer les ordres de production »}}
-\label{table:cas d'utilisation « Gérer les ordres de production » }
+\label{table:cas d'utilisation « Gérer les ordres de production » }
 \end{table}
 \vfill
-\subsubsection{Diagramme de cas d’utilisation « gérer les commandes clients » :}
-Ce cas d'utilisation permet au Responsable Ventes de gérer les commandes clients. Le Client peut passer une commande, laquelle est incluse dans le processus de gestion des commandes géré par le Responsable Ventes. Celui-ci peut consulter les produits et valider les commandes. \par
-La figure ci-dessous décrit ces relations :
+\subsubsection{Diagramme de cas d'utilisation « gérer les commandes clients » :}
+Ce cas permet au Responsable Ventes de gérer les commandes clients : le Client passe commande, le Responsable Ventes consulte les produits et valide.\par
+
 \begin{figure}[H]%
  \center%
  \setlength{\fboxsep}{0pt}%
@@ -284,10 +283,10 @@ La figure ci-dessous décrit ces relations :
  \fbox{
  \includegraphics[width=\linewidth]{creer_commande_client.png}%
  }
- \caption{Diagramme du cas d’utilisation « gérer les commandes clients »}%
+ \caption{Diagramme du cas d'utilisation « gérer les commandes clients »}%
  \end{figure}
 
- \textbf{Tableau descriptif :} Dans le tableau ci-dessous, nous allons décrire les détails du cas d’utilisation « Gérer les commandes clients » :
+ \textbf{Tableau descriptif :}
  \begin{table}[!htbp]
  \renewcommand{\arraystretch}{1.8}
  \setlength{\tabcolsep}{16pt}
@@ -296,7 +295,7 @@ La figure ci-dessous décrit ces relations :
  \hline
  Titre & Gérer les commandes clients \\
  \hline
- Objectif & Permettre au Responsable Ventes de gérer le cycle des commandes clients : de la passation par le Client jusqu'à la validation et le suivi.
+ Objectif & Permettre au Responsable Ventes de gérer les commandes clients.
  \\
  \hline
  Acteur(s) & Responsable Ventes (acteur principal) \\
@@ -325,9 +324,9 @@ La figure ci-dessous décrit ces relations :
  \label{table:cas d'utilisation « Gérer les commandes clients »}
  \end{table}
  \vfill
-\subsubsection{Diagramme de cas d’utilisation « gérer les fournisseurs » :}
+\subsubsection{Diagramme de cas d'utilisation « gérer les fournisseurs » :}
 Ce cas permet au Responsable Achats de gérer les fournisseurs (CRUD). Le système empêche la suppression des fournisseurs liés à des commandes actives.\par
-La figure ci-dessous décrit ces relations :
+
 \begin{figure}[H]%
  \center%
  \setlength{\fboxsep}{0pt}%
@@ -335,10 +334,10 @@ La figure ci-dessous décrit ces relations :
  \fbox{
  \includegraphics[width=\linewidth]{gerer_fournisseurs.png}%
  }
- \caption{Diagramme du cas d’utilisation « gérer les fournisseurs »}%
+ \caption{Diagramme du cas d'utilisation « gérer les fournisseurs »}%
  \end{figure}
  \vspace{3cm}
-\textbf{Tableau descriptif :} Dans le tableau ci-dessous, nous allons décrire les détails du cas d’utilisation « Gérer les fournisseurs » :
+\textbf{Tableau descriptif :}
 
  \begin{table}[!htbp]
  \renewcommand{\arraystretch}{1.8}
@@ -349,7 +348,7 @@ La figure ci-dessous décrit ces relations :
  \hline
  Titre & Gérer les fournisseurs \\
  \hline
- Objectif & Permettre au Responsable Achats de maintenir à jour le référentiel des fournisseurs : ajout, modification, consultation et suppression.
+ Objectif & Permettre au Responsable Achats de gérer les fournisseurs.
  \\
  \hline
  Acteur(s) & Responsable Achats (acteur principal) \\
@@ -381,9 +380,9 @@ La figure ci-dessous décrit ces relations :
  \label{table:cas d'utilisation « Gérer les fournisseurs »}
  \end{table}
  \vfill
-\subsubsection{Diagramme de cas d’utilisation « gérer les utilisateurs » :}
-Ce cas d'utilisation décrit la gestion complète des comptes par le PDG, acteur principal. Il couvre la création, l'édition des profils et rôles, la consultation des profils utilisateurs, ainsi que la désactivation ou la suppression des accès. Les privilèges de chaque utilisateur dépendent directement du rôle qui lui est attribué.\par
-La figure ci-dessous décrit ces relations :
+\subsubsection{Diagramme de cas d'utilisation « gérer les utilisateurs » :}
+Ce cas permet au PDG de gérer les comptes utilisateurs : création, modification, consultation, désactivation et suppression des accès.\par
+
 \begin{figure}[H]%
  \center%
  \setlength{\fboxsep}{0pt}%
@@ -391,10 +390,10 @@ La figure ci-dessous décrit ces relations :
  \fbox{
  \includegraphics[width=\linewidth]{gereutilisateurs.png}%
  }
- \caption{Diagramme du cas d'utilisation « gérer les utilisateurs »}%
+ \caption{Diagramme du cas d'utilisation « gérer les utilisateurs »}%
  \end{figure}
 
- \textbf{Tableau descriptif :} Dans le tableau ci-dessous, nous allons décrire les détails du cas d'utilisation « Gérer les utilisateurs » :
+ \textbf{Tableau descriptif :}
 
 \begin{table}
 \renewcommand{\arraystretch}{1.8}
@@ -405,7 +404,7 @@ La figure ci-dessous décrit ces relations :
 \hline
 Titre & Gérer les utilisateurs \\
 \hline
-Objectif & Permettre au PDG de créer, modifier, consulter, désactiver et supprimer les comptes utilisateurs, et d'attribuer les rôles correspondant aux responsabilités de chaque employé.
+Objectif & Permettre au PDG de gérer les comptes utilisateurs et d'attribuer les rôles.
  \\
 \hline
 Acteur(s) & PDG (acteur principal) \\
@@ -438,8 +437,8 @@ Scénario alternatif & \begin{itemize}
 \end{table}
 \vfill
 \subsubsection{Diagramme de cas d'utilisation « Gérer les matières premières » :}
-Ce cas d'utilisation permet au Magasinier, acteur principal, de gérer le référentiel des matières premières (MP). Il offre les opérations CRUD : ajouter, modifier et supprimer des matières premières. \par
-La figure ci-dessous décrit ces relations :
+Ce cas permet au Magasinier de gérer les matières premières (CRUD) : ajouter, modifier et supprimer.\par
+
 \begin{figure}[H]%
  \center%
  \setlength{\fboxsep}{0pt}%
@@ -449,7 +448,7 @@ La figure ci-dessous décrit ces relations :
  }
  \caption{Diagramme du cas d'utilisation « Gérer les matières premières »}%
  \end{figure}
- \textbf{Tableau descriptif :} Dans le tableau ci-dessous, nous allons décrire les détails du cas d'utilisation « Gérer les matières premières » :
+ \textbf{Tableau descriptif :}
  \begin{table}[h!]
 \renewcommand{\arraystretch}{1.8}
 \setlength{\tabcolsep}{16pt}
@@ -459,7 +458,7 @@ La figure ci-dessous décrit ces relations :
 \hline
 Titre & Gérer les matières premières \\
 \hline
-Objectif & Permettre au Magasinier de gérer le référentiel des matières premières : ajout, modification et suppression. \\
+Objectif & Permettre au Magasinier de gérer les matières premières. \\
 \hline
 Acteur(s) & Magasinier (acteur principal) \\
 \hline
@@ -489,8 +488,8 @@ Scénario alternatif & - Données invalides : le système affiche un message d'e
 \vfill
 
 \subsubsection{Diagramme de cas d'utilisation « Consulter le Dashboard » :}
-Ce cas permet au PDG de piloter l’entreprise via un tableau de bord qui centralise les indicateurs des modules ventes, production, achats et stocks. Le dirigeant peut filtrer les données par période et recevoir des suggestions prédictives via l’IA.\par
-La figure ci-dessous décrit ces interactions : 
+Ce cas permet au PDG de consulter un tableau de bord avec les indicateurs des modules ventes, production, achats et stocks, avec filtrage temporel et suggestions IA.\par
+
 \begin{figure}[H]%
  \center%
  \setlength{\fboxsep}{0pt}%
@@ -498,9 +497,9 @@ La figure ci-dessous décrit ces interactions :
  \fbox{
  \includegraphics[width=\linewidth]{visualiser_dashboard.png}%
  }
- \caption{Diagramme du cas d'utilisation « consulter le Dashboard »}%
+ \caption{Diagramme du cas d'utilisation « consulter le Dashboard »}%
  \end{figure}
- \textbf{Tableau descriptif :} Dans le tableau ci-dessous, nous allons décrire les détails du cas d'utilisation « Consulter le Dashboard » :
+ \textbf{Tableau descriptif :}
 \begin{table}[!h]
 \renewcommand{\arraystretch}{1.8}
 \setlength{\tabcolsep}{16pt}
@@ -511,7 +510,7 @@ La figure ci-dessous décrit ces interactions :
 Titre & Consulter le Dashboard
  \\
 \hline
-Objectif & Permettre au PDG de consulter un tableau de bord synthétique regroupant les indicateurs clés de performance (ventes, production, achats, stocks) et de recevoir des suggestions prédictives IA pour une vision globale et décisionnelle. \\
+Objectif & Permettre au PDG de consulter les indicateurs (ventes, production, achats, stocks) et les suggestions IA. \\
 \hline
 Acteur(s) & PDG (acteur principal) \\
 \hline
@@ -544,7 +543,7 @@ Scénario alternatif & - Aucune donnée disponible pour la période sélectionn�
 
 \subsection{Diagramme de classe}
 \subsubsection{Présentation :}
-Le diagramme de classes offre une vue statique de l’application \reportAppName{}. Il définit les classes, leurs attributs et leurs méthodes, et sert de transition entre les besoins fonctionnels et le code.\par
+Le diagramme de classes montre la structure statique de \reportAppName{}.\par
 
 \begin{figure}[H]%
  \center%
@@ -558,9 +557,9 @@ Le diagramme de classes offre une vue statique de l’application \reportAppName
  \vfill
 \subsection{Diagramme de séquence}
 \subsubsection{Présentation :}
-Le diagramme de séquence montre les interactions chronologiques entre acteurs, objets et systèmes dans \reportAppName{}. Il détaille l’ordre des messages échangés et les structures logiques (boucles, alternatives).\par
-\subsubsection{Diagramme de séquence : « Gérer Fournisseurs » :}
-Ce diagramme montre les interactions entre le Responsable Achats, le système et la base de données pour la gestion des fournisseurs. Le processus affiche la liste, puis un scénario alternatif détaille la logique en quatre scénarios : ajout, modification, suppression et consultation. Chaque opération se termine par un commit à la base.\par
+Le diagramme de séquence montre les interactions chronologiques entre acteurs et système.\par
+\subsubsection{Diagramme de séquence : « Gérer Fournisseurs » :}
+Ce diagramme montre les interactions pour la gestion des fournisseurs (ajout, modification, suppression, consultation).\par
 \begin{figure}[H]%
  \center%
  \setlength{\fboxsep}{0pt}%
@@ -568,16 +567,15 @@ Ce diagramme montre les interactions entre le Responsable Achats, le système et
  \fbox{
  \includegraphics[width=\linewidth,height=18cm]{seq_gererfournisseurs.png}%
  }
- \caption{Diagramme de séquence : « Gérer Fournisseurs »}%
+ \caption{Diagramme de séquence : « Gérer Fournisseurs »}%
 \end{figure}
 
 
 
 
-\subsubsection{Diagramme de séquence : « Gérer les produits » :
+\subsubsection{Diagramme de séquence : « Gérer les produits » :
 }
-Ce diagramme de séquence illustre la gestion des produits et de la nomenclature BOM au sein de l'application \reportAppName{} .
-Le processus est piloté par le responsable Production, qui accède d'abord à la liste des produits et de leurs composants stockés en base de données.\par
+Ce diagramme montre la gestion des produits et des nomenclatures BOM par le Responsable Production.\par
 
 \begin{figure}[H]%
  \center%
@@ -586,12 +584,12 @@ Le processus est piloté par le responsable Production, qui accède d'abord à 
  \fbox{
  \includegraphics[width=\linewidth,height=18cm]{seq_gererproduitsetbom.png}%
  }
- \caption{Diagramme de séquence : « Gérer les produits »}%
+ \caption{Diagramme de séquence : « Gérer les produits »}%
 \end{figure}
 
-\subsubsection{Diagramme de séquence : « S’authentifier » :
+\subsubsection{Diagramme de séquence : « S'authentifier » :
 }
-Ce diagramme détaille l’authentification, il montre les échanges entre l’Utilisateur, l’application, la base de données et le gestionnaire de session.\par
+Ce diagramme montre les échanges lors de l'authentification.\par
 \begin{figure}[H]%
  \center%
  \setlength{\fboxsep}{0pt}%
@@ -599,12 +597,12 @@ Ce diagramme détaille l’authentification, il montre les échanges entre l’U
  \fbox{
  \includegraphics[width=\linewidth,height=18cm]{seq_sauthentifier.png}%
  }
- \caption{Diagramme de séquence : « S’authentifier »}%
+ \caption{Diagramme de séquence : « S'authentifier »}%
 \end{figure}
 
-\subsubsection{Diagramme de séquence : « Consulter le Dashboard » :
+\subsubsection{Diagramme de séquence : « Consulter le Dashboard » :
 }
-Ce diagramme montre la visualisation du Dashboard par le PDG. Le système agrège les données (ventes, production, achats, stocks) pour offrir une vue d’ensemble avec des indicateurs clés. Le Dashboard inclut le filtrage temporel et des analyses prédictives via l’IA.\par
+Ce diagramme montre la visualisation du Dashboard par le PDG avec les indicateurs des modules.\par
 \begin{figure}[H]%
  \center%
  \setlength{\fboxsep}{0pt}%
@@ -612,16 +610,16 @@ Ce diagramme montre la visualisation du Dashboard par le PDG. Le système agrèg
  \fbox{
  \includegraphics[width=\linewidth,height=18cm]{seq_visualiserdashboard.png}%
  }
- \caption{Diagramme de séquence : « Consulter le Dashboard »}%
+ \caption{Diagramme de séquence : « Consulter le Dashboard »}%
 \end{figure}
 
 \subsection{Diagramme d'activité}
 \subsubsection{Présentation :}
-Le diagramme d’activité modélise les flux de travail et les processus de \reportAppName{} en décomposant chaque activité en étapes logiques. Il répartit les responsabilités par acteur.\par
+Le diagramme d'activité montre les flux de travail et les responsabilités par acteur.\par
 
 
-\subsubsection{Diagramme d’activité : « Gérer les fournisseurs » :}
-Ce diagramme montre la gestion des fournisseurs avec trois parcours : consultation, édition et suppression. Lors de l’édition, le système vérifie les données. Pour la suppression, il vérifie l’absence d’ordres actifs.
+\subsubsection{Diagramme d'activité : « Gérer les fournisseurs » :}
+Ce diagramme montre la gestion des fournisseurs (consultation, édition, suppression).\par
 
 \begin{figure}[H]%
  \center%
@@ -630,10 +628,10 @@ Ce diagramme montre la gestion des fournisseurs avec trois parcours : consultati
  \fbox{
  \includegraphics[width=\linewidth,height=15cm]{workflow_gererfournisseurs.png}%
  }
- \caption{Diagramme d’activité : « Gérer les fournisseurs »}%
+ \caption{Diagramme d'activité : « Gérer les fournisseurs »}%
 \end{figure}
-\subsubsection{Diagramme d’activité : « Gérer les ordres de production » :}
-Ce diagramme montre le processus de production : transformation des ordres de fabrication en produits finis avec mise à jour des stocks. Le système vérifie la disponibilité des composants via la nomenclature (BOM). En cas de pénurie, le processus est interrompu et les Achats sont alertés. Si les composants sont disponibles, la production est lancée.\par
+\subsubsection{Diagramme d'activité : « Gérer les ordres de production » :}
+Ce diagramme montre le processus de production : vérification BOM, alerte en cas de pénurie, lancement si disponible.\par
 
 \begin{figure}[H]%
  \center%
@@ -642,11 +640,11 @@ Ce diagramme montre le processus de production : transformation des ordres de fa
  \fbox{
  \includegraphics[width=\linewidth,height=15cm]{workflow_gererproduction.png}%
  }
- \caption{Diagramme d’activité : « Gérer les ordres de production »}%
+ \caption{Diagramme d'activité : « Gérer les ordres de production »}%
 \end{figure}
 
-\subsubsection{Diagramme d’activité : « S’authentifier » :}
-Ce diagramme montre le processus d’authentification avec deux niveaux de vérification : champs non vides et vérification en base. Après plusieurs échecs, le compte est bloqué. En cas de succès, un jeton JWT est généré et l’utilisateur est redirigé vers son tableau de bord.\par
+\subsubsection{Diagramme d'activité : « S'authentifier » :}
+Ce diagramme montre l'authentification avec vérification des champs et en base, blocage après échecs, génération JWT.\par
 \begin{figure}[H]%
  \center%
  \setlength{\fboxsep}{0pt}%
@@ -654,9 +652,9 @@ Ce diagramme montre le processus d’authentification avec deux niveaux de véri
  \fbox{
  \includegraphics[width=\linewidth,height=15cm]{workflow_sauthentifier.png}%
  }
- \caption{Diagramme d’activité : « S’authentifier »}%
+ \caption{Diagramme d'activité : « S'authentifier »}%
 \end{figure}
 
 
-\section{Conclusion}
-Ce chapitre a présenté la conception de \reportAppName{} avec UML. Les diagrammes de cas d’utilisation ont modélisé les interactions, le diagramme de classes a défini la structure des données, et les diagrammes de séquence et d’activité ont détaillé les processus. Ces modèles guideront l’implémentation.\par
+{\Large\bfseries Conclusion}\\
+Ce chapitre a présenté la conception UML de \reportAppName{}.\par

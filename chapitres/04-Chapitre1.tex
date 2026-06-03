@@ -6,9 +6,9 @@
 \newpage
 
 {\Large\bfseries Introduction}\\
-Dans une entreprise classique, chaque service a ses propres applications (comptabilité, paie, stocks, ventes...). Pour relier ces systèmes, l’entreprise devait développer des interfaces, ce qui coûtait cher et n’était plus adapté. Pour y remédier, les entreprises ont adopté des progiciels de gestion intégrée ERP.
+Dans une entreprise classique, chaque service a ses propres applications (comptabilité, paie, stocks, ventes...). Pour les relier, l'entreprise devait développer des interfaces coûteuses et peu adaptables. Les ERP résolvent ce problème en intégrant tous les processus.
 \section{Présentation de l’organisme d’accueil : sociéte \reportEntreprise}
-Rayhan est une société tunisienne de plasturgie implantée à Tataouine, spécialisée dans la fabrication de sacs à poubelle, bretelles en plastique et autres solutions de packaging. La société assure des produits de haute qualité adaptés aux besoins industriels et domestiques 
+Rayhan est une société tunisienne de plasturgie implantée à Tataouine, spécialisée dans la fabrication de sacs à poubelle, bretelles en plastique et autres solutions de packaging. La société fabrique des produits de qualité adaptés aux besoins industriels et domestiques 
 \\
 \begin{figure}[H]%
  \center%
@@ -52,73 +52,13 @@ Rayhan est une société tunisienne de plasturgie implantée à Tataouine, spéc
 
 
 \subsection{Cadre du projet}
-L’étude de l’existant montre une gestion artisanale chez \reportEntreprise, sans informatisation intégrée. Les stocks, commandes et factures sont gérés avec Excel, Word et papier, ce qui provoque des erreurs, des ruptures de stock et des pertes de temps. Cette organisation sans base de données centralisée nuit à la traçabilité et à la prise de décision. Un ERP est donc nécessaire pour automatiser et centraliser. \\
-Le process existant à l'entreprise actuellement est résumé comme suit :
-\begin{itemize}
-\item Ventes et achats : utilisation de supports volatiles (Word, papier). Les factures sont saisies manuellement sans lien direct avec les bons de livraison.
-\item Production et stocks : suivi manuel, risque de non-conformité et inventaires complexes.
-\item Données : absence de base de données clients/fournisseurs structurée, perte de temps administratif. Les informations clients et fournisseurs sont éparpillées, rendant l'historique des échanges difficiles à tracer.
-\end{itemize}
-
-Parmi les effets de ce process sur l'entreprise et sa productivité on cite :
-\begin{itemize}
- \item Impact sur la production : inexactitude : difficulté à calculer le coût de revient réel de chaque cycle de production (perte de matière, temps machine).
- \item Impact sur le chiffre d'affaires : retards dans l'émission des devis et la confirmation des commandes, ce qui peut pousser les clients vers la concurrence.
- \item Pertes de ventes : manque de réactivité face aux demandes spécifiques par manque de visibilité sur les capacités de production.
- \item Impact sur les flux de trésorerie : les achats ne sont pas optimisés, ce qui mobilise inutilement de la trésorerie ou crée des urgences coûteuses.
- \item Erreurs de facturation : le système manuel favorise les oublis de facturation ou les erreurs de prix, impactant directement la rentrée d'argent.
- \item Impact sur les Facteurs de Succès Internes : les décisions de la direction reposent sur des données incertaines et non consolidées.
- \item Charge de travail : les équipes perdent un temps précieux en double saisies et en recherche d'informations égarées.
-
-\end{itemize}
-
-Le système ERP vise à centraliser les données dans une base unique pour automatiser les processus, améliorer la productivité et fiabiliser le pilotage stratégique en temps réel.
-Il standardise les opérations (ventes, RH, finance, production) pour accroître l'efficacité globale et la conformité.\par
-
-\textbf{Définition du système ERP:}\\
-Le concept d’ERP part d’un constat simple : "la somme des optima est parfois inférieure à l'optimum de la somme". Autrement, un ERP apporte plus que la somme de ses modules pris séparément.
-L’ERP est un progiciel qui permet de gérer l’ensemble des processus opérationnels d’une entreprise en intégrant plusieurs fonctions de gestion dans un système : solution de gestion des commandes, solution de gestion des stocks, solution de gestion de la paie, solution de gestion de la comptabilité, solution de gestion d’e-commerce, solution de gestion de commerce B2B ou B2C etc.
-\begin{figure}[H]%
- \center%
- \setlength{\fboxsep}{0pt}%
- \setlength{\fboxrule}{0.0pt}%
- \fbox{
- \includegraphics[width=8cm,height=8cm]{erp.png}%
- }
- \\
- \caption{Composition de système ERP}%
- 
-\end{figure}
+Dans le cadre de notre projet de fin d'études à l'ISET de Tataouine, nous avons effectué un stage au sein de la société Rayhan. La mission confiée était de réaliser une application web ERP pour la gestion des besoins business de l'entreprise.\par
 
 \subsection{Objectifs du projet }
-L'implantation d'un ERP dans une société industrielle comme Rayhan vise à unifier la gestion de la production, des stocks et des ventes pour optimiser les performances.
-Ce processus nécessite une analyse des besoins, la configuration des modules, la reprise des données, la formation et un déploiement, souvent progressif, pour limiter les risques opérationnels.\\
-Objectifs fonctionnels d'un ERP :
-\begin{itemize}
-\item Centralisation des données : regrouper toutes les informations dans une base unique, éliminant les silos.
-\item Automatisation des processus : automatiser les tâches répétitives (facturation, gestion des stocks, saisie de commandes).
-\item Intégration métier : lier les départements (ventes, production, comptabilité etc.) pour une collaboration fluide.
-\item Reporting et Business Intelligence : générer des tableaux de bord et des indicateurs (KPI) pour la prise de décision.
- \end{itemize}
-
-
-Objectifs non fonctionnels d'un ERP :
-
-\begin{itemize}
-\item Performance et Temps réel : mettre à jour les informations instantanément.
-\item Sécurité : renforcer la protection des données sensibles et la conformité réglementaire.
-\item Scalabilité : s'adapter à la croissance de l'entreprise et intégrer de nouvelles fonctionnalités.
-\item Ergonomie et Utilisabilité : standardiser les interfaces pour faciliter l'adoption par les utilisateurs.
-\item Disponibilité et Fiabilité : garantir un système robuste et accessible. 
-\end{itemize}
-Ces objectifs améliorent la rentabilité, réduisent les erreurs et offrent une visibilité en temps réel. Pour réussir, il faut choisir les fonctionnalités adaptées aux besoins de \reportEntreprise. 
-
-
-L'objectif de notre projet est de mettre en place une solution ERP intégrée pour gérer l’ensemble des processus de
-L’entreprise : achats, ventes, stock, production et facturation.\\
+L'objectif est d'implanter un ERP qui unifie la gestion de la production, des stocks et des ventes chez Rayhan. Le système centralise les données, automatise les tâches répétitives et relie les départements (ventes, production, comptabilité). Il doit être performant, sécurisé, évolutif et facile à utiliser, avec une mise à jour en temps réel et des tableaux de bord pour la prise de décision. En pratique, la solution couvre les achats, les ventes, le stock, la production et la facturation.\par
 
 \subsection{Cycle de vie de l'application}
-Le cycle de vie de \reportAppName{} suit le modèle en V, qui associe chaque phase de développement à une phase de test. Ce modèle garantit la qualité et la fiabilité du système en validant les spécifications tôt et en détectant rapidement les anomalies.
+Le cycle de vie suit le modèle en V, associant chaque phase de développement à une phase de test pour valider les spécifications tôt.
 
 \begin{figure}[H]%
  \center%
@@ -131,7 +71,7 @@ Le cycle de vie de \reportAppName{} suit le modèle en V, qui associe chaque pha
 \end{figure}
 \section{Architecture de l'application}
 \subsection{Architecture logicielle}
-L'architecture logicielle de \reportAppName{} repose sur le patron de conception MVVM \\ (Model-View-ViewModel). La couche View, développée avec Flutter, est chargée de l'affichage des interfaces utilisateur et de la capture des interactions. Le ViewModel agit comme un médiateur entre la Vue et le Modèle en exposant des données observables et en gérant la logique de présentation via des patrons tels que BLoC ou Provider. Enfin, la couche Model encapsule les données métier et les services d'accès via des repositories qui communiquent avec l'API REST du back-end Spring Boot. Cette séparation des responsabilités facilite la maintenabilité, la testabilité et l'évolutivité de l'application.\par
+L'architecture utilise le patron MVVM. La View (Flutter) gère l'affichage, le ViewModel (BLoC/Provider) expose les données, le Model communique avec l'API REST Spring Boot.\par
 
 \begin{figure}[H]%
  \center%
@@ -143,7 +83,7 @@ L'architecture logicielle de \reportAppName{} repose sur le patron de conception
  \caption{Architecture logicielle — Pattern MVVM}%
 \end{figure}
 \subsection{Architecture physique}
-L'architecture physique de \reportAppName{} adopte un modèle client-serveur. Le client, développé en Flutter, est déployé sur les postes des utilisateurs sous forme d'application web accessible via un navigateur. Le serveur back-end repose sur Spring Boot, conteneurisé avec Docker pour assurer la portabilité et la facilité de déploiement. Les données sont stockées dans une base de données MySQL, également conteneurisée. Les communications entre le client et le serveur s'effectuent via des API RESTful sécurisées par JWT. Cette configuration garantit une séparation claire entre la présentation, la logique métier et le stockage des données.\par
+L'architecture suit un modèle client-serveur 3-tiers : client Flutter Web, serveur Spring Boot conteneurisé (Docker), base MySQL conteneurisée. Les API REST sont sécurisées par JWT.\par
 
 \begin{figure}[H]%
  \center%
@@ -154,6 +94,5 @@ L'architecture physique de \reportAppName{} adopte un modèle client-serveur. Le
  }%
  \caption{Architecture physique — Modèle 3-tiers client-serveur}%
 \end{figure}
-\section{Conclusion}
- Un ERP permet de piloter l’entreprise avec une base de données commune à tous les services. Il remplace plusieurs logiciels par un seul système intégré, évitant les saisies manuelles et les corrections coûteuses.\par
- Les ERP sont essentiels pour rester compétitif. Il faut connaître les besoins de l’entreprise et comprendre le coût du système pour choisir la meilleure solution.
+{\Large\bfseries Conclusion}\\
+ Un ERP centralise les données et remplace plusieurs logiciels par un système intégré. Il faut connaître les besoins et le coût pour choisir la meilleure solution.

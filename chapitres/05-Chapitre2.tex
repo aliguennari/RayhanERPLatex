@@ -5,153 +5,109 @@
 \end{spacing}
 \newpage
 
-\section{Introduction}
-L’élaboration d’une solution logicielle pertinente et efficace repose fondamentalement sur une compréhension approfondie du contexte existant, des problématiques à résoudre et des attentes des utilisateurs. Ce chapitre sera consacré à cette phase cruciale d’analyse.\\
-Cette étude s’est appuyée sur des entretiens conduits avec tous les chefs de départements de la société complétés par une observation directe des processus en vigueur (Production, Stockage, Vente, …) ainsi qu’une analyse des documents existants et utilisés pour la gestion au sein de la société. Cette étude nous permettra de formuler une idée claire sur les besoins d’une telle solution au sein de la société et par suite le problématique à résoudre.
+{\Large\bfseries Introduction}\\
+Ce chapitre présente l'analyse des besoins de \reportAppName{}, menée via des entretiens et l'observation des processus.
 \section{Etude et critique de l’existant}
+La gestion actuelle chez \reportEntreprise est manuelle (Excel, Word, papier), sans base centralisée. Cela provoque erreurs, ruptures de stock et pertes de temps. Un ERP est nécessaire.\\
+Le process existant à l'entreprise actuellement est résumé comme suit :
+\begin{itemize}
+\item Ventes et achats : utilisation de supports volatiles (Word, papier). Les factures sont saisies manuellement sans lien direct avec les bons de livraison.
+\item Production et stocks : suivi manuel, risque de non-conformité et inventaires complexes.
+\item Données : absence de base de données clients/fournisseurs structurée, perte de temps administratif. Les informations clients et fournisseurs sont éparpillées, rendant l'historique des échanges difficiles à tracer.
+\end{itemize}
 
+Parmi les effets de ce process sur l'entreprise et sa productivité on cite :
+\begin{itemize}
+ \item Impact sur la production : inexactitude : difficulté à calculer le coût de revient réel de chaque cycle de production (perte de matière, temps machine).
+ \item Impact sur le chiffre d'affaires : retards dans l'émission des devis et la confirmation des commandes, ce qui peut pousser les clients vers la concurrence.
+ \item Pertes de ventes : manque de réactivité face aux demandes spécifiques par manque de visibilité sur les capacités de production.
+ \item Impact sur les flux de trésorerie : les achats ne sont pas optimisés, ce qui mobilise inutilement de la trésorerie ou crée des urgences coûteuses.
+ \item Erreurs de facturation : le système manuel favorise les oublis de facturation ou les erreurs de prix, impactant directement la rentrée d'argent.
+ \item Impact sur les décisions : les décisions de la direction reposent sur des données incertaines.
+ \item Charge de travail : les équipes perdent un temps précieux en double saisies et en recherche d'informations égarées.
 
-
+\end{itemize}
 
 \subsection{Les principaux éditeurs du marché de l'ERP}
-Représente une vraie manne pour les prestataires de services informatiques. Il est considéré aujourd'hui, le marché le plus porteur de l'informatique. On distingue deux catégories d'ERP : les ERP propriétaires et les ERP Open Source :
-\subsubsection{Les ERP Propriétaires }
-Aujourd’hui, de nombreux ERP propriétaires existent sur le marché. Nous évoquerons dans ce qui suit, quelques grands éditeurs : 
-\begin{itemize}
-\item SAP (Business One) SAP/ est le leader mondial des ERP, est une application client- serveur. Ses modules couvrent l'ensemble des fonctions de gestion de l'entreprise et chaque module couvre des besoins complets de gestion. Ce progiciel a remporté rapidement un succès important auprès des grandes entreprises en proposant un progiciel multilingue et multidevise
-\item Oracle (JD Edwards) : est un progiciel de gestion intégrée. Anciennement appelé People Enterprise One ou One World XE ou ERP 8, et vendu par J.D. Edwards puis par Peoplesoft. J.D. Edwards a été racheté par People Soft puis par Oracle. Le produit est depuis renommé "Oracle JDEdwards Enterprise One". Il est composé de plusieurs modules plus ou moins indépendants.
-\item ERP SAGE : SAGE Est un progiciel de gestion intégrée (ERP/PGI), conçu pour les structures de 20 à 500 employés, sociétés autonomes et filiales de groupes, des secteurs de l’industrie, du négoce et des services
-\end{itemize}
-\subsubsection{Les ERP Open Source }
-Ils sont relayés par des partenaires (SSII, Cabinets de Conseil) pour le support. L’implémentation d’un progiciel Open Source revient moins chère, puisqu’il n’y a pas de coût de licence. En revanche il faut inclure, dans le calcul du coût d'acquisition total, les frais de maintenance et de l'assistance technique. Voici la liste des principaux progiciels Open Source : 
-\begin{itemize}
-\item Aria : est le cœur de la gamme de produits Aria 4 XP, il couvre tous les domaines fonctionnels internes nécessaires pour gérer une entreprise. Il a été développé à base d’un ERP open source appelé Nola, et son environnement est PHPMYSQL 
-\item Compiere : est un progiciel de gestion intégré (PGI) et gestion de la relation client (GRC) à source ouverte, open source pour les Petites et moyennes entreprises (PME) dans la distribution et le service. L'application est fournie sous double licence GPL et propriétaire. Les sources peuvent être adaptées aux besoins du client. Le support technique et la documentation sont payants. Son origine est JorgJank 
-\item ERP : est un progiciel de gestion intégrée (ERP) libre, son origine est Nexedi. Son intégration avec NuxeoCPS, lui a permis d’être un système de gestion de contenu. L’environnement dans lequel il évolue est composé du Python et Zope
-\item Fisterra : est un PGI sous licence PGL, le premier client pour cet ERP était la société espagnole Auto Arte, son origine est Igalia, et son environnement est GNOME2 développement platform PostgreSQL 
-\item Odoo : anciennement OpenERP ou encore TinyERP, est un progiciel libre de gestion intégrée comprenant des modules de gestion des ventes, des relations clients, des projets, des entrepôts, de production, de comptabilité et de ressources humaines. Son environnement est constitué principalement du PostgreSQL et XML 
-
-\end{itemize}
-
-\textbf{Tableau Comparatif : ERP Propriétaire vs Open Source}
 \begin{table}[h!]
 \renewcommand{\arraystretch}{1.8}
-\setlength{\tabcolsep}{16pt}
+\setlength{\tabcolsep}{12pt}
 \centering
-\begin{tabular}{|l|>{\raggedright\arraybackslash}p{5cm}|>{\raggedright\arraybackslash}p{5cm}|}
-
+\begin{tabular}{|p{2.5cm}|p{4cm}|p{4cm}|p{4cm}|}
 \hline
-Caractéristique & Propriétaire ERP & ERP Open Source \\
+\textbf{Éditeur} & \textbf{SAP Business One} & \textbf{Oracle JD Edwards} & \textbf{SAGE} \\
 \hline
-Coût initial & Élevé (licences, mise en place) & Faible à nul (pas de licence) \\
+Type & Propriétaire & Propriétaire & Propriétaire \\
 \hline
-Coût à long terme & Élevé (entretien, permis) & Modéré (hébergement, accompagnement) \\
+Public cible & PME et grandes entreprises & Moyennes et grandes entreprises & PME (20–500 employés) \\
 \hline
-Personnalisation & Limitée, souvent par l'éditeur & Élevée, code source modifiable \\
+Modules clés & Finance, ventes, achats, production, RH, CRM, BI & Finance, supply chain, RH, projets, maintenance & Comptabilité, paie, ventes, achats, production, BI \\
 \hline
-Dépendance & Forte (fournisseur de verrouillage) & Faible (indépendance) \\
+Déploiement & On-premise, Cloud & On-premise, Cloud & On-premise, Cloud \\
 \hline
-Mises à jour & Automatiques, gérées par l'éditeur & Manuelles, obligatoires des compétences\\
-\hline
-Soutien & Professionnel (SLA) & Communautaire (ou payant via intégrateur) \\
-\hline
-Sécurité & "Sécurité par l'obscurité" (opaque) & Transparente (auditable, mais risque de failles) \\
-\hline
-Idéal pour & PME chercher du clé en main & Entreprises avec besoins spécifiques \\
+Coût & Élevé (licence + maintenance) & Élevé (licence + maintenance) & Modéré \\
 \hline
 \end{tabular}
-\textbf{\caption{Tableau comparatif des solutions ERP existantes}}
-\label{table:comparatif des ERPs}
+\caption{Comparatif des trois principaux ERP populaires sur le marché}
+\label{table:Comparatif des Solutions ERP populaires}
 \end{table}
-\vfill
-L'implémentation d'un ERP open source offre une grande flexibilité et l'absence de coûts de licence initiaux, mais elle présente des inconvénients majeurs liés à la complexité technique et aux coûts cachés.\\
- limplémentation d'un ERP propriétaire (licence fermée) entraîne des coûts élevés (licences, maintenance, formation) et une forte dépendance envers le fournisseur (verrouillage technologique). Les entreprises font face à des personnalisations coûteuses, des déploiements longs et une flexibilité limitée par rapport à l'open source.\\
-L’étude de l'existant pour une société de plastique (injection, extrusion, soufflage) vise à cartographier les processus actuels pour sélectionner un ERP capable de gérer la complexité du secteur : matières premières (granulés), gestion des moules, rebuts, et traçabilité. Elle identifie les goulots d'étranglement (stocks, planification) pour optimiser la production et la rentabilité\par
-L’implantation d’un ERP demande un investissement important en ressources et en temps. Elle peut aussi nécessiter un changement d’organisation dans l’entreprise.\par
-Pour adapter l’ERP aux besoins opérationnels de l’entreprise, nous avons analysé quatre types de processus :\par
-\begin{itemize}
-\item Les processus actuels, déjà utilisés par l’entreprise.
-\item Les processus prospectifs, que l’entreprise veut intégrer.
-\item Les processus possibles, que l’ERP peut prendre en charge.
-\item Les processus qui seront effectivement implantés, à l’intersection des deux précédents.
-\end{itemize}
-
 
 \section{Problématique}
-En vue de l’étude et de critique de l'existant, la problématique centrale de ce projet vise à répondre aux questions suivants : 
-\begin{itemize}
-\item Gestion des Stocks et Production : comment automatiser le suivi des flux de matières premières et de produits finis pour garantir une disponibilité constante sans sur-stockage ?
-\item Ventes et Relation Client : de quelle manière peut-on centraliser les données clients pour accélérer le cycle "Devis-Commande-Facture" et éliminer les erreurs de saisie manuelle ?
-\item Achats et Approvisionnements : comment structurer nos relations fournisseurs et nos processus d'achat pour optimiser les coûts et sécuriser la chaîne logistique ?
-\item FSI et Reporting : comment transformer nos données éparpillées en tableaux de bord dynamiques et fiables pour permettre une prise de décision rapide et éclairée par la direction ?
-\item Collaboration Interne : comment briser les silos informationnels entre les ateliers de production et les services administratifs grâce à une base de données unique ?
-\end{itemize}
-\section{Solution proposée}
-La plupart des solutions ERP existantes aujourd’hui cible les Moyens à grands entreprises et les entreprises multinationaux, ce qui pose des difficultés pour les PME (Petites à Moyennes Entreprises). Principalement, on cite :
-\begin{itemize}
-\item Coût élevé et ressources limitées : les coûts des licences, mis en œuvre et maintenance sont souvent importants, même en mode SaaS, la migration, la formation et le temps alloué peuvent dépasser le budget.
-\item Complexité et durée de mise en place : la plupart des PME n’ont pas d’équipe IT dédiée, ce qui rend la mise en place du système ERP longue, compliqué et demandant en temps et ressources.
-\item Adaptation difficile aux processus métiers : certains ERP imposent leur logique de fonctionnement, parfois menant à l’inadéquation avec les processus internes de l’entreprise sur tout lorsque celles-ci sont très spécifiques ou simples.
-\item Adoption utilisateurs difficile et nécessité de formation : les équipes peuvent mal utiliser l’ERP sans accompagnement suffisant conduisant à l’abandon de système et le retour aux anciens outils (Excel, mails...).
-\end{itemize}
-Pour ces raisons, nous développons une solution ERP cross-platform pour \reportEntreprise, répondant à ses besoins avec des interfaces simples, une maintenance facile et un coût raisonnable, tout en permettant une évolution future.\par
+Les ERP existants ciblent les grandes entreprises, posant des difficultés aux PME (coût, complexité). Nous allons développer une solution sur mesure pour \reportEntreprise, simple, maintenable et évolutive.\par
 
+\section{Solution proposée}
+Notre projet vise à répondre aux questions suivantes :
+\begin{itemize}
+\item Gestion des stocks et production : comment automatiser le suivi des flux de matières premières et produits finis évitant ruptures et sur-stockage.
+\item Ventes et relation client : comment centraliser les données clients pour accélérer le cycle devis-commande-facture.
+\item Achats et approvisionnements : comment structurer les relations fournisseurs et optimiser les coûts.
+\item Reporting : comment transformer les données éparpillées en tableaux de bord fiables pour la direction.
+\item Collaboration interne : comment unifier les ateliers de production et les services administratifs avec une base de données unique.
+\end{itemize}
 \section{Identification des besoins}
-\reportAppName{} vise des objectifs stratégiques et opérationnels qui dépassent la simple informatisation des tâches. Il s’agit d’une transition vers un système intégré qui fluidifie les processus, sécurise les données et assure une croissance durable.\par
+Pour bien cerner les besoins, nous avons échangé directement avec les employés de Rayhan : le responsable production, le magasinier, l'équipe commerciale et la direction. Chaque entretien nous a permis de comprendre leurs difficultés quotidiennes et d'identifier ce qu'un ERP doit leur apporter concrètement. A partir de ces échanges, nous détaillons ci-dessous les besoins fonctionnels et non fonctionnels qu'on a trouvé.\par
 
 \subsection{Analyse des besoins fonctionnels}
-\subsubsection{Gestion de la production}
 \begin{itemize}
-\item Ordres de Fabrication : création, lancement et suivi en temps réel de la fabrication.
-\item Planification de production : calendrier visuel pour optimiser l'utilisation des presses et des moules.
+\item \textbf{ Gestion de la production}:
+\begin{itemize}
+\item Ordres de Fabrication : création, lancement et suivi en temps réel de la fabrication.
+\item Planification de production : calendrier visuel pour optimiser l'utilisation des presses et des moules.
 \end{itemize}
-\subsubsection{Gestion des Stocks et entrepôts}
+\item \textbf{ Gestion des Stocks et entrepôts}:
 \begin{itemize}
-\item Alertes de Stock Minimum : notifications automatiques pour éviter les ruptures de granulés ou d'emballages.
-\item Traçabilité : suivi par lots (essentiel pour la qualité dans le plastique) et gestion des emplacements.
-\item Inventaire permanent : faciliter les comptages périodiques sans arrêter la production.
+\item Alertes de Stock Minimum : notifications automatiques pour éviter les ruptures de granulés ou d'emballages.
+\item Traçabilité : suivi par lots (essentiel pour la qualité dans le plastique) et gestion des emplacements.
+\item Inventaire permanent : faciliter les comptages périodiques sans arrêter la production.
 \end{itemize}
-\subsubsection{Gestion des ventes}
+\item \textbf{ Gestion des ventes}:
 \begin{itemize}
-\item Cycle de vente complet et automatisé : devis => Commande => Bon de Livraison => Facture.
+\item Cycle de vente complet et automatisé : devis => Commande => Bon de Livraison => Facture.
 \end{itemize}
-\subsubsection{Gestion des Achats et Fournisseurs}
+\item \textbf{ Gestion des Achats et Fournisseurs}:
 \begin{itemize}
-\item Base de données Fournisseurs : répertoire des fournisseurs de matières premières avec délais de livraison et prix.
-\item Demandes d'achat et des commandes : génération de bons de commande professionnels (plus de Word manuel).
-\item Réception de marchandises : contrôle de conformité entre la commande et la livraison pour mettre à jour le stock automatiquement.
+\item Base de données Fournisseurs : répertoire des fournisseurs de matières premières avec délais de livraison et prix.
+\item Demandes d'achat et des commandes : génération de bons de commande professionnels (plus de Word manuel).
+\item Réception de marchandises : contrôle de conformité entre la commande et la livraison pour mettre à jour le stock automatiquement.
 \end{itemize}
-\subsubsection{Pilotage et Reporting (FSI)}
+\item \textbf{ Piloitage et Reporting }:
 \begin{itemize}
-\item États de stocks : rapports sur l'état des Produits.
+\item États de stocks : rapports sur l'état des Produits.
 \end{itemize}
-\subsubsection{Administration et Sécurité}
+\item \textbf{ Administration et Sécurité}:
 \begin{itemize}
-\item Gestion des droits : définir qui peut voir/modifier quoi (ex: l'atelier ne voit pas les prix d'achat).
-\item Sauvegardes automatiques : sécuriser les données pour ne plus dépendre de fichiers Excel locaux qui peuvent être perdus.
+\item Gestion des droits : définir qui peut voir/modifier quoi (ex: l'atelier ne voit pas les prix d'achat).
+\item Sauvegardes automatiques : sécuriser les données pour ne plus dépendre de fichiers Excel locaux qui peuvent être perdus.
+\end{itemize}
 \end{itemize}
 \subsection{Analyse des besoins non fonctionnels}
 \begin{itemize}
-\item Sécurité et intégrité des données : authentification : accès sécurisé par identifiant et mot de passe robuste pour chaque collaborateur.
-\item Ergonomie et utilisabilité : apprentissage rapide le système doit être intuitif au point qu'un nouvel employé puisse effectuer une tâche de base après une demi-journée de formation.
-\item Performance et disponibilité : si la connexion internet flanche, certaines fonctions critiques (comme la saisie de production en atelier) doivent pouvoir continuer en local avant la synchronisation.
-\item Capacité : L'ERP doit pouvoir supporter l'augmentation du volume de données (historique des ventes, multiplication des références de produits plastiques) sur plusieurs années.
-\item Maintenance et Évolution : 
- \begin{itemize}
- \item Évolutivité (Scalabilité) : capacité d'ajouter de nouveaux modules (ex : module RH ou Maintenance des machines) ou de nouveaux utilisateurs sans refaire tout le système.
- \item Maintenance : le système doit permettre des mises à jour régulières sans interruption majeure de l'activité.
- \item Interopérabilité : possibilité d'exporter les données sous formats standards (Excel, PDF, CSV) pour des analyses externes ou la comptabilité.
- \end{itemize}
-\item Fiabilité :
- \begin{itemize}
- \item Zéro perte de données : mécanisme de "rollback" (si une transaction échoue à mi-chemin, le système revient à l'état précédent sans corrompre les données).
- \item Respect des standards métier : gestion précise des décimales pour les poids de matières (ex : 0,001 kg pour les colorants) et génération de documents (factures, BL) conformes à la réglementation fiscale en vigueur.
- \end{itemize}
+\item \textbf{Sécurité :} accès par identifiant et mot de passe, protection des données sensibles et conformité réglementaire.
+\item \textbf{Performance et disponibilité :} mise à jour en temps réel, mode dégradé local si la connexion est coupée, capacité à supporter la croissance des données.
+\item \textbf{Maintenabilité et fiabilité :} architecture évolutive (nouveaux modules), mises à jour sans interruption, export aux formats standards (Excel, PDF, CSV), mécanisme de rollback et respect des normes fiscales.
 \end{itemize}
 \section{Diagramme de cas d'utilisation}
-\subsection{Diagramme des cas d’utilisation}
-Ce qui permet de modéliser les interactions entre les acteurs et le système et ce en décrivant les fonctionnalités offertes. 
-\subsubsection{Identification des Acteurs :}
+\subsection{Identification des Acteurs :}
 \begin{itemize}
 \item Visiteur : tout visiteur du portail \reportAppName{} et potentiel clients.
 \item Client : visiteur inscrit à \reportAppName{}.
@@ -161,7 +117,7 @@ Ce qui permet de modéliser les interactions entre les acteurs et le système et
 \item Responsable Production : planifie, lance et suit les ordres de Production.
 \item PDG : consulte les tableaux de bord décisionnel.
 \end{itemize}
-La figure ci-dessous illustre ces acteurs :
+
 \begin{figure}[H]%
  \center%
  \setlength{\fboxsep}{0pt}%
@@ -173,27 +129,26 @@ La figure ci-dessous illustre ces acteurs :
 \end{figure}
 
 
-\subsubsection{Identification des cas d’utilisation principaux :}
-En se basant sur les besoins fonctionnels, voici les principaux cas d’utilisation :
+\subsection{Identification des cas d'utilisation principaux :}
+En se basant sur les besoins fonctionnels, voici les principaux cas d'utilisation :
 \begin{itemize}
-    \item \textbf{S’authentifier} : permet à chaque collaborateur d’accéder à l’interface selon son rôle. Fonctionnalités clés : saisie d’un identifiant et d’un mot de passe unique, gestion des profils avec redirection automatique vers le tableau de bord spécifique, option « Mot de passe oublié » et déconnexion automatique après inactivité.
+    \item \textbf{S'authentifier} : permet à chaque collaborateur d'accéder à l'interface selon son rôle. Fonctionnalités clés : saisie d'un identifiant et d'un mot de passe unique, gestion des profils avec redirection automatique vers le tableau de bord spécifique, option « Mot de passe oublié » et déconnexion automatique après inactivité.
 
-    \item \textbf{Créer des fournisseurs (Référencement)} : centraliser toutes les coordonnées des partenaires (vendeurs de granulés, moulistes, transporteurs). Fonctionnalités clés : fiche détaillée (nom, adresse, contacts, RIB, conditions de paiement), classification par type de produit (matières premières, maintenance, emballages), historique des achats passés avec ce fournisseur.
+    \item \textbf{Créer des fournisseurs} : centraliser toutes les coordonnées des partenaires (vendeurs de granulés, moulistes, transporteurs). Fonctionnalités clés : fiche détaillée (nom, adresse, contacts, RIB, conditions de paiement), classification par type de produit (matières premières, maintenance, emballages), historique des achats passés avec ce fournisseur.
 
-    \item \textbf{Créer des commandes d’achat (Passation)} : générer un document officiel pour commander des ressources. Fonctionnalités clés : sélection du fournisseur et des articles à commander, calcul automatique des prix négociés et des taxes (TVA).
+    \item \textbf{Créer des commandes d'achat} : générer un document officiel pour commander des ressources. Fonctionnalités clés : sélection du fournisseur et des articles à commander, calcul automatique des prix négociés et des taxes (TVA).
 
-    \item \textbf{Lancer des ordres d’achat (Réapprovisionnement automatique)} : système intelligent qui suggère des achats en fonction des besoins. Fonctionnalités clés : alerte stock critique pour commander si le stock tombe sous un seuil défini, liaison avec la production pour générer un ordre d’achat si une commande client nécessite une matière manquante.
+    \item \textbf{Lancer des ordres d'achat} : système intelligent qui suggère des achats en fonction des besoins. Fonctionnalités clés : alerte stock critique pour commander si le stock tombe sous un seuil défini, liaison avec la production pour générer un ordre d'achat si une commande client nécessite une matière manquante.
 
-    \item \textbf{Consulter les commandes en cours (Suivi logistique)} : suivre l’avancement des approvisionnements pour éviter les arrêts de machines. Fonctionnalités clés : états de suivi (en attente de validation, envoyée, réceptionnée partiellement, clôturée), identification rapide des commandes fournisseurs en retard de livraison.
+    \item \textbf{Consulter les commandes en cours } : suivre l'avancement des approvisionnements pour éviter les arrêts de machines. Fonctionnalités clés : états de suivi (en attente de validation, envoyée, réceptionnée partiellement, clôturée), identification rapide des commandes fournisseurs en retard de livraison.
 
-    \item \textbf{Suivi de l’état des stocks (Inventaire réel)} : remplacer le suivi Excel par une vision dynamique. Fonctionnalités clés : mise à jour automatique des stocks lors des ventes et réceptions, valorisation financière en temps réel (méthode PMP ou FIFO), historique complet des mouvements.
+    \item \textbf{Suivi de l'état des stocks} : remplacer le suivi Excel par une vision dynamique. Fonctionnalités clés : mise à jour automatique des stocks lors des ventes et réceptions, valorisation financière en temps réel (méthode PMP ou FIFO), historique complet des mouvements.
 
-    \item \textbf{Créer des ordres de production (Lancement atelier)} : transformer la matière première en produits finis selon un planning. Fonctionnalités clés : lien avec la nomenclature (BOM) pour le calcul automatique des quantités nécessaires, affectation des machines et des équipes, suivi des rebuts pour ajuster le stock réel.
+    \item \textbf{Créer des ordres de production} : transformer la matière première en produits finis selon un planning. Fonctionnalités clés : lien avec la nomenclature (BOM) pour le calcul automatique des quantités nécessaires, affectation des machines et des équipes, suivi des rebuts pour ajuster le stock réel.
 
-    \item \textbf{Visualiser le Dashboard (Pilotage FSI)} : un écran unique pour la direction avec les indicateurs clés (Reporting). Fonctionnalités clés : indicateurs ventes (évolution du CA), indicateurs production (taux d’utilisation des machines, volume produit), indicateurs stocks (valeur totale, alertes de rupture imminente).
+    \item \textbf{Visualiser le Dashboard} : un écran unique pour la direction avec les indicateurs clés (Reporting). Fonctionnalités clés : indicateurs ventes (évolution du CA), indicateurs production (taux d'utilisation des machines, volume produit), indicateurs stocks (valeur totale, alertes de rupture imminente).
 \end{itemize}
-\subsection{Diagramme de cas d’utilisation global}
-
+\subsection{Diagramme de cas d'utilisation global}
 
 \begin{figure}[H]%
  \center%
@@ -202,10 +157,9 @@ En se basant sur les besoins fonctionnels, voici les principaux cas d’utilisat
  \fbox{
  \includegraphics[width=\linewidth,height=18cm]{general_usecase.png}
  }
- \caption{Diagramme de cas d’utilisation global}%
+ \caption{Diagramme de cas d'utilisation global}%
 \end{figure}
-\section{Conclusion}
+{\Large\bfseries Conclusion}\\
 L'analyse de l'existant au sein de la société \reportEntreprise{} a révélé les limites des outils actuels : absence de base de données centralisée et fragmentation des processus.\par
 Nous avons défini un ensemble de besoins fonctionnels et non fonctionnels pour guider le développement de la solution.\par
-Une fois les besoins clairement spécifiés, il convient désormais de traduire ces exigences en une solution technique structurée. \\
-Le chapitre suivant sera consacré à la phase de conception. Nous y détaillerons le choix de la méthodologie adoptée pour structurer notre développement, avant de modéliser l'architecture logique du système. cette étape s'appuiera sur la puissance du langage UML, notamment à travers l'élaboration des diagrammes de classes pour la structure des données et des diagrammes de séquences pour la dynamique des processus, garantissant ainsi un système robuste et évolutif\par
+Le chapitre suivant présente la conception UML (diagrammes de classes et de séquences).\par

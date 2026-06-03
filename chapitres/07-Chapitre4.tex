@@ -5,22 +5,20 @@
 \end{spacing}
 \newpage
 
-\section{Introduction}
-Après la conception, ce chapitre présente la réalisation technique de \reportAppName{}. Nous décrivons l’environnement technologique (matériel, frameworks, base de données) et nous justifions nos choix. Enfin, nous présentons les interfaces graphiques de la solution.\par
+{\Large\bfseries Introduction}\\S
+Ce chapitre présente la réalisation technique de \reportAppName{} : environnement, outils et interfaces.
 \section{Environnement de développement}
-Cette partie présente l’environnement de développement de \reportAppName{} et les outils utilisés.
 \subsection{Environnement matériel :}
 Pour la réalisation de ce projet nous avons utilisé un ordinateur portable ayant les caractéristiques suivantes :
 \begin{itemize}
-    \item Type d’ordinateur : Lenovo Laptop.
-    \item Système d’exploitation : CachyOS (Archlinux Based). 
-    \item Type de système d’exploitation 64 bits.
-    \item  Processeur :  14th Gen Intel(R)Core(TM)i7. 
+    \item Type d'ordinateur : Lenovo Laptop.
+    \item Système d'exploitation : CachyOS (Archlinux Based). 
+    \item Type de système d'exploitation 64 bits.
+    \item  Processeur :  14th Gen Intel(R)Core(TM)i7. 
     \item Mémoire RAM 24 GB et Disque dur 1 TB.
 \end{itemize}
 \subsection{Environnement logiciel :}
-Nous avons choisi un environnement logiciel adapté à toutes les étapes du développement. 
-\textbf{Visual Studio Code : } Nous avons utilisé VS Code comme éditeur principal pour son support de Flutter, SpringBoot et Git.\par
+\textbf{Visual Studio Code :} VS Code : éditeur principal utilisé.\par
 
 \begin{figure}[H]%
     \center%
@@ -31,7 +29,7 @@ Nous avons choisi un environnement logiciel adapté à toutes les étapes du dé
     }
     \caption{Logo VSCode}%
 \end{figure}
-\textbf{Github :} GitHub est une plateforme de développement collaboratif basée sur Git, offrant un espace pour héberger et administrer le code source. Elle intègre un système de suivi des erreurs, la gestion des suggestions et un Wiki pour la documentation.\par
+\textbf{Github :} GitHub : plateforme de gestion de code source.\par
 
 \begin{figure}[H]%
     \center%
@@ -42,7 +40,7 @@ Nous avons choisi un environnement logiciel adapté à toutes les étapes du dé
     }
     \caption{Logo Github}%
 \end{figure}
-\textbf{Swagger :} Swagger permet de décrire, documenter et tester les API REST via la spécification OpenAPI, facilitant l'interopérabilité et la collaboration entre développeurs.\par
+\textbf{Swagger :} Swagger : documentation et test des API REST.\par
 
 \begin{figure}[H]%
     \center%
@@ -53,7 +51,7 @@ Nous avons choisi un environnement logiciel adapté à toutes les étapes du dé
     }
     \caption{Logo Swagger}%
 \end{figure}
-\textbf{GIT :} Git est un système de contrôle de version distribué (DVCS) qui permet le suivi des modifications du code source, le travail simultané de plusieurs développeurs via un système de branches, et la navigation entre les versions du projet.\par
+\textbf{GIT :} Git : contrôle de version distribué.\par
 
 \begin{figure}[H]%
     \center%
@@ -65,7 +63,7 @@ Nous avons choisi un environnement logiciel adapté à toutes les étapes du dé
     \caption{Logo Git}%
 \end{figure}
 
-\textbf{Overleaf :} Overleaf est une plateforme de rédaction LaTeX en ligne, permettant de concevoir des documents sans installation locale. Elle facilite la co-rédaction et le partage de projets entre plusieurs utilisateurs.\par
+\textbf{Overleaf :} Overleaf : plateforme de rédaction LaTeX en ligne.\par
 
 \begin{figure}[H]%
     \center%
@@ -76,7 +74,7 @@ Nous avons choisi un environnement logiciel adapté à toutes les étapes du dé
     }
     \caption{Logo Overleaf}%
 \end{figure}
-\textbf{Android Studio :} Android Studio est l'environnement de développement intégré (IDE) officiel pour les applications Android. Il est multiplateforme (Windows, macOS, Linux, Chrome OS). C'est l'IDE de référence pour le développement avec Flutter.\par
+\textbf{Android Studio :} Android Studio : IDE pour Flutter et Android.\par
 
 \begin{figure}[H]%
     \center%
@@ -87,7 +85,7 @@ Nous avons choisi un environnement logiciel adapté à toutes les étapes du dé
     }
     \caption{Logo Android Studio}%
 \end{figure}
-\textbf{Draw.io :} Draw.io est une plateforme de création de diagrammes gratuite et open-source accessible en ligne ou en tant qu'application desktop. C'est un outil polyvalent pour créer diverses formes de visualisations professionnelles, il offre des fonctionnalités complètes pour la modélisation UML.\par
+\textbf{Draw.io :} Draw.io : outil de création de diagrammes UML.\par
 
 \begin{figure}[H]%
     \center%
@@ -99,7 +97,7 @@ Nous avons choisi un environnement logiciel adapté à toutes les étapes du dé
     \caption{Logo Draw.io}%
 \end{figure}
 \subsection{Environnement Technologique :}
-\textbf{Flutter :} Flutter est un kit de développement logiciel open source pour interfaces utilisateur créé par Google. Il permet de développer des applications multiplateformes à partir d'une seule base de code pour le web, Android, iOS, Linux, macOS et Windows.\par
+\textbf{Flutter :} Flutter : framework multiplateforme (web, Android, iOS, desktop).\par
 \begin{figure}[H]%
     \center%
     \setlength{\fboxsep}{0pt}%
@@ -109,7 +107,7 @@ Nous avons choisi un environnement logiciel adapté à toutes les étapes du dé
     }
     \caption{Logo Flutter}%
 \end{figure}
-\textbf{Dart :} Dart est un langage de programmation moderne, orienté objet et à usage général, initialement développé par Google. Il est principalement conçu pour créer des interfaces utilisateur performantes sur de multiples plateformes (mobile, web, bureau) à partir d'une base de code unique.\par
+\textbf{Dart :} Dart : langage orienté objet.\par
 \begin{figure}[H]%
     \center%
     \setlength{\fboxsep}{0pt}%
@@ -119,7 +117,7 @@ Nous avons choisi un environnement logiciel adapté à toutes les étapes du dé
     }
     \caption{Logo Dart}%
 \end{figure}
-\textbf{JAVA :}Java est un langage de programmation de haut niveau, orienté objet et multiplateforme, créé par Sun Microsystems en 1995. Il est aujourd'hui l'un des langages les plus utilisés au monde pour le développement d'applications mobiles, web et d'entreprise.\par
+\textbf{JAVA :} Java : langage orienté objet.\par
 \begin{figure}[H]%
     \center%
     \setlength{\fboxsep}{0pt}%
@@ -129,7 +127,7 @@ Nous avons choisi un environnement logiciel adapté à toutes les étapes du dé
     }
     \caption{Logo Java}%
 \end{figure}
-\textbf{Spring Framework et Spring Boot :} Spring Boot est un framework Java open source utilisé pour programmer des applications Spring autonomes de qualité professionnelle, avec un ensemble de bibliothèques qui facilitent le démarrage et la gestion des projets.\par
+\textbf{Spring Framework et Spring Boot :} Spring Boot : framework Java.\par
 
 \begin{figure}[H]%
     \center%
@@ -140,7 +138,7 @@ Nous avons choisi un environnement logiciel adapté à toutes les étapes du dé
     }
     \caption{Logo Spring}%
 \end{figure}
-\textbf{Docker :} Docker est un ensemble de produits qui utilise la virtualisation au niveau du système d'exploitation pour distribuer des logiciels dans des paquets appelés conteneurs.\par
+\textbf{Docker :} Docker : conteneurisation d'applications.\par
 \begin{figure}[H]%
     \center%
     \setlength{\fboxsep}{0pt}%
@@ -150,7 +148,7 @@ Nous avons choisi un environnement logiciel adapté à toutes les étapes du dé
     }
     \caption{Logo Docker}%
 \end{figure}
-\textbf{Spring Security :} Spring Security est un Plugin pour Spring Framework qui fournit des fonctionnalités d'authentification, d'autorisation, de gestion des rôles et d'autres fonctionnalités de sécurité pour les applications d'entreprise.
+\textbf{Spring Security :} Spring Security : authentification et autorisation.\par
 \begin{figure}[H]%
     \center%
     \setlength{\fboxsep}{0pt}%
@@ -160,7 +158,7 @@ Nous avons choisi un environnement logiciel adapté à toutes les étapes du dé
     }
     \caption{Logo SpringSecurity}%
 \end{figure}
-\textbf{JWT :} JSON Web Token , c’est un conteneur JSON renvoyant un certain nombre d'affirmations de données utilisé pour prouver l'identité d'un utilisateur. Comme il est signé numériquement, le destinataire peut vérifier l'authenticité des informations JSON qu'il contient sans avoir à interroger une base de données à chaque fois. \par
+\textbf{JWT :} JWT : jeton JSON signé pour l'authentification.\par
 
 \begin{figure}[H]%
     \center%
@@ -171,7 +169,7 @@ Nous avons choisi un environnement logiciel adapté à toutes les étapes du dé
     }
     \caption{Logo JWT}%
 \end{figure}
-\textbf{RESTful API :} REST est un style d'architecture logicielle créé pour décrire la conception et guider le développement de l'architecture du World Wide Web.\par
+\textbf{RESTful API :} REST : architecture d'API web.\par
 
 \begin{figure}[H]%
     \center%
@@ -182,7 +180,7 @@ Nous avons choisi un environnement logiciel adapté à toutes les étapes du dé
     }
     \caption{Logo Restful}%
 \end{figure}
-\textbf{Apache Tomcat :} Apache Tomcat est une implémentation libre et open source des technologies Jakarta EE Servlet, Pages, Expression Language, WebSocket, Annotations et Authentication. Il fournit un environnement serveur web HTTP « purement Java » permettant l'exécution de code Java, ici, il est intégré au framework Spring.
+\textbf{Apache Tomcat :} Apache Tomcat : serveur web Java, intégré à Spring.\par
 \begin{figure}[H]%
     \center%
     \setlength{\fboxsep}{0pt}%
@@ -193,7 +191,7 @@ Nous avons choisi un environnement logiciel adapté à toutes les étapes du dé
     \caption{Logo Apache Tomcat}%
 \end{figure}
 \subsection{Gestion de base de données :}
-MySQL est utilisé comme système de gestion de base de données pour \reportAppName{}. Il permet le prototypage rapide et les tests locaux grâce à des environnements préconfigurés (XAMPP, Docker) qui simplifient le déploiement. En phase de développement, il facilite la modélisation des données, l'injection de données de test et le débogage sans risque pour la production.\par
+MySQL : SGBD utilisé, exécuté sous Docker.\par
 
 \begin{figure}[H]%
     \center%
@@ -205,10 +203,9 @@ MySQL est utilisé comme système de gestion de base de données pour \reportApp
     \caption{Logo MySQL}%
 \end{figure}
 \section{Implémentation du projet :} 
-Cette section présente les interfaces utilisateurs principales de \reportAppName{}.\par
 
-\subsection{Interface d’accueil :}
-La page d'accueil présente l'entreprise \reportEntreprise{} et ses services. Elle offre une navigation intuitive avec des informations claires sur les activités et les produits, facilitant la prise de contact.\par
+\subsection{Interface d'accueil :}
+La page d'accueil présente \reportEntreprise{} et ses services.\par
 
 \begin{figure}[H]%
 \centering
@@ -229,7 +226,7 @@ La page d'accueil présente l'entreprise \reportEntreprise{} et ses services. El
     \caption{Page d'accueil}%
 \end{figure}
 \subsection{Interface Login :}
-L’interface de connexion gère l’authentification et redirige chaque utilisateur vers son environnement selon son rôle.\par
+L'interface de connexion gère l'authentification et redirige selon le rôle.\par
 
 \begin{figure}[H]%
 \centering
@@ -250,8 +247,7 @@ L’interface de connexion gère l’authentification et redirige chaque utilisa
     }
     \caption{Interface Mot de passe oublié}%
 \end{figure}
-\subsection{Les autres Interfaces de l’application \reportAppName{} :}
-L’application propose des modules dédiés à chaque rôle (magasinier, responsable production/achat/vente, PDG).\par
+\subsection{Les autres Interfaces de l'application \reportAppName{} :}
 \subsubsection{Interface Catalogue clients :}
 
 \begin{figure}[H]%
@@ -286,7 +282,7 @@ Création/Modification de Fiches clients, devis, commandes clients, bons de livr
     \caption{Interfaces gestion des ventes}%
 \end{figure}
 \subsubsection{Interface gestion de production :}
-la Gestion de Production Nomenclatures (BOM), ordres de fabrication (OF), planification des besoins (MRP), suivi des temps de production.
+Nomenclatures (BOM), ordres de fabrication (OF), planification (MRP), suivi de production.
 \begin{figure}[H]%
 \centering
     \setlength{\fboxsep}{0pt}%
@@ -297,7 +293,7 @@ la Gestion de Production Nomenclatures (BOM), ordres de fabrication (OF), planif
     \caption{Interfaces gestion de production}%
 \end{figure}
 \subsubsection{Interface Dashboard :}
-Écriture/Validation/Administration des Tous les Modules rapports financiers (bilan, PL), tableaux de bord KPI, validation des budgets, gestion des utilisateurs.
+Tableaux de bord KPI, rapports financiers, validation des budgets, gestion des utilisateurs.
 \begin{figure}[H]%
 \centering
     \setlength{\fboxsep}{0pt}%
@@ -308,7 +304,7 @@ la Gestion de Production Nomenclatures (BOM), ordres de fabrication (OF), planif
     \caption{Interface du Dashboard}%
 \end{figure}
 \subsubsection{Suggestions IA :}
-Écriture/Validation/Administration des Tous les Modules rapports financiers (bilan, PL), tableaux de bord KPI, validation des budgets, gestion des utilisateurs.
+Suggestions IA pour le pilotage décisionnel.
 \begin{figure}[H]%
 \centering
     \setlength{\fboxsep}{0pt}%
@@ -319,7 +315,7 @@ la Gestion de Production Nomenclatures (BOM), ordres de fabrication (OF), planif
     \caption{Suggestions IA du Dashboard}%
 \end{figure}
 \subsubsection{Interface gestion du stock :}
-suivi des Mouvements de stock de MP, Semi- finis et des Marchandises destinées a la vente (entrées/sorties), suivi historique des mouvements, édition de bons de réception/livraison.
+Suivi des mouvements de stock (entrées/sorties), historique, édition de bons.
 \begin{figure}[H]%
 \centering
     \setlength{\fboxsep}{0pt}%
@@ -376,5 +372,6 @@ suivi des Mouvements de stock de MP, Semi- finis et des Marchandises destinées 
     }
     \caption{Interfaces Commander un article}%
 \end{figure}
-\subsection{Conclusion}
-Ce quatrième chapitre concrétise la transition entre la conception et la réalisation de l’application \reportAppName{}. Nous y détaillons un environnement de développement optimisé, allant du choix stratégique du matériel aux technologies logicielles modernes. Le front-end, conçu avec Flutter Web, assure une expérience moderne via un code unique. À l'instar du back-end, l'application est conteneurisée avec Docker et servie par Nginx. Enfin, l'utilisation de SQL garantit une base de données robuste, flexible et performante.\par
+
+{\Large\bfseries Conclusion}\\
+Ce chapitre a présenté la réalisation de \reportAppName{} avec Flutter Web, Spring Boot, Docker et MySQL.\par
