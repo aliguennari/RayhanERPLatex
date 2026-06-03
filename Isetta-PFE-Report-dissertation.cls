@@ -195,12 +195,12 @@
 
 \fancypagestyle{MyStyle}{
   \renewcommand{\headrulewidth}{0pt}
-  \renewcommand{\footrulewidth}{0.5pt}
-  \fancyhead[L]{}
+  % \renewcommand{\footrulewidth}{0.5pt}
+  % \fancyhead[L]{}
 
-  \fancyfoot[R]{\fontsize{12}{12}\selectfont Page \thepage}% Right footer
+  \fancyfoot[R]{\fontsize{10}{10}\selectfont Page \thepage}% Right footer
   
-  \fancyfoot[L]{\fontsize{12}{12}\selectfont ISET TATAOUINE}% Right header
+  % \fancyfoot[L]{\fontsize{12}{12}\selectfont ISET TATAOUINE}% Right header
 
 }
 
@@ -211,15 +211,15 @@
 \fancypagestyle{plain}{
   \fancyhf{}% Clear header/footer
 
-  \renewcommand{\headrulewidth}{0.5pt}
-  \renewcommand{\footrulewidth}{0.5pt}
+   \renewcommand{\headrulewidth}{0pt}
+  % \renewcommand{\footrulewidth}{0.5pt}
 
-  \fancyhead[L]{\fontsize{12}{12}\selectfont\textsc{\MakeLowercase{\leftmark}}}% Left header
+  \fancyhead[L]{\fontsize{10}{10}\selectfont\textsc{\MakeLowercase{\leftmark}}}% Left header
   %\fancyhead[R]{\fontsize{12}{12}\selectfont\reportAuthor}% Right header
 
-  \fancyfoot[R]{\fontsize{12}{12}\selectfont Page \thepage}% Right footer
+  \fancyfoot[R]{\fontsize{10}{10}\selectfont Page \thepage}% Right footer
   
-  \fancyfoot[L]{\fontsize{12}{12}\selectfont\ ISET TATAOUINE}% Right header
+  % \fancyfoot[L]{\fontsize{12}{12}\selectfont\ ISET TATAOUINE}% Right header
 
 }
 
