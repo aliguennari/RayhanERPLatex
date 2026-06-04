@@ -6,16 +6,25 @@
 \newpage
 
 {\Large\bfseries Introduction}\\
-Ce chapitre présente la conception UML de \reportAppName{}.
+Après l’analyse des besoins, ce chapitre présente la phase de conception. Nous utilisons UML
+pour modéliser l’architecture du système. Notre démarche inclut : diagrammes de cas d’utilisation,
+de classes, de séquence et d’activité. Ces modèles guideront la phase d’implémentation.
 \section{Choix de la méthodologie d'analyse}
-Pour structurer \reportAppName{}, nous utilisons UML.
+Pour structurer notre projet \reportAppName{}, nous utilisons UML, un langage de modélisation
+orienté objet. Il offre une panoplie de diagrammes statiques et dynamiques pour une représentation
+précise du système.
 \subsection{Présentation UML}
-UML est un langage de modélisation orienté objet avec des diagrammes statiques et dynamiques.
-
+UML (Unified Modeling Language) est un langage de modélisation visuel standardisé, essentiel
+en génie logiciel pour visualiser, construire et documenter les systèmes orientés objet. Il offre
+un ensemble de diagrammes (cas d’utilisation, classes, séquences, activités) permettant de
+modéliser la structure statique et le comportement dynamique d’un logiciel, facilitant la communication
+entre les parties prenantes du projet.
 \subsection{Description détaillée du diagramme de cas d'utilisation : }
-Ces diagrammes montrent les fonctionnalités du système du point de vue des acteurs.\par
+Les diagrammes suivants détaillent les fonctionnalités du système du point de vue des utilisateurs. Ils
+montrent comment les acteurs interagissent avec l'application \reportAppName{}.
 \subsubsection{Diagramme de cas d'utilisation « Consulter le site » :}
-Ce cas permet au Visiteur de consulter les informations publiques de \reportAppName{}.\par
+Ce cas permet au visiteur de consulter le site ou l’application \reportAppName sans authentification.
+Il offre une présentation des services et produits de \reportEntreprise{}.\\
 
 \begin{figure}[H]%
  \center%
@@ -41,7 +50,7 @@ Objectif & Permettre au Visiteur de consulter les informations publiques de \rep
 \hline
 Acteur(s) & Visiteur \\
 \hline
-Pré-condition & Aucune — accès public sans authentification. \\
+Pré-condition & Aucune, accès public sans authentification. \\
 \hline
 Post-condition & Le Visiteur a consulté les informations et peut s'authentifier. \\
 \hline
@@ -543,8 +552,9 @@ Scénario alternatif & - Aucune donnée disponible pour la période sélectionn�
 
 \subsection{Diagramme de classe}
 \subsubsection{Présentation :}
-Le diagramme de classes montre la structure statique de \reportAppName{}.\par
-
+Le diagramme de classes offre une vue statique de l’application \reportAppName{}. Il définit les
+classes, leurs attributs et leurs méthodes, et sert de transition entre les besoins fonctionnels
+et le code.
 \begin{figure}[H]%
  \center%
  \setlength{\fboxsep}{0pt}%
@@ -557,7 +567,9 @@ Le diagramme de classes montre la structure statique de \reportAppName{}.\par
  \vfill
 \subsection{Diagramme de séquence}
 \subsubsection{Présentation :}
-Le diagramme de séquence montre les interactions chronologiques entre acteurs et système.\par
+Le diagramme de séquence montre les interactions chronologiques entre acteurs, objets et
+systèmes dans \reportAppName{}. Il détaille l’ordre des messages échangés et les structures logiques
+(boucles, alternatives).
 \subsubsection{Diagramme de séquence : « Gérer Fournisseurs » :}
 Ce diagramme montre les interactions pour la gestion des fournisseurs (ajout, modification, suppression, consultation).\par
 \begin{figure}[H]%
@@ -602,7 +614,7 @@ Ce diagramme montre les échanges lors de l'authentification.\par
 
 \subsubsection{Diagramme de séquence : « Consulter le Dashboard » :
 }
-Ce diagramme montre la visualisation du Dashboard par le PDG avec les indicateurs des modules.\par
+Ce diagramme montre la visualisation du Dashboard par le PDG avec les indicateurs et les suggestions IA.\par
 \begin{figure}[H]%
  \center%
  \setlength{\fboxsep}{0pt}%
@@ -615,12 +627,12 @@ Ce diagramme montre la visualisation du Dashboard par le PDG avec les indicateur
 
 \subsection{Diagramme d'activité}
 \subsubsection{Présentation :}
-Le diagramme d'activité montre les flux de travail et les responsabilités par acteur.\par
-
-
+Le diagramme d’activité modélise les flux de travail et les processus de \reportAppName{} en décomposant
+chaque activité en étapes logiques. Il répartit les responsabilités par acteur.
 \subsubsection{Diagramme d'activité : « Gérer les fournisseurs » :}
-Ce diagramme montre la gestion des fournisseurs (consultation, édition, suppression).\par
-
+Ce diagramme montre la gestion des fournisseurs avec trois parcours : consultation, édition et
+suppression. Lors de l’édition, le système vérifie les données. Pour la suppression, il vérifie
+l’absence d’ordres actifs.
 \begin{figure}[H]%
  \center%
  \setlength{\fboxsep}{0pt}%
@@ -631,8 +643,10 @@ Ce diagramme montre la gestion des fournisseurs (consultation, édition, suppres
  \caption{Diagramme d'activité : « Gérer les fournisseurs »}%
 \end{figure}
 \subsubsection{Diagramme d'activité : « Gérer les ordres de production » :}
-Ce diagramme montre le processus de production : vérification BOM, alerte en cas de pénurie, lancement si disponible.\par
-
+Ce diagramme montre le processus de production : transformation des ordres de fabrication en
+produits finis avec mise à jour des stocks. Le système vérifie la disponibilité des composants
+via la nomenclature BOM. En cas de pénurie, le processus est interrompu et les Achats sont
+alertés. Si les composants sont disponibles, la production est lancée.
 \begin{figure}[H]%
  \center%
  \setlength{\fboxsep}{0pt}%
@@ -644,7 +658,9 @@ Ce diagramme montre le processus de production : vérification BOM, alerte en ca
 \end{figure}
 
 \subsubsection{Diagramme d'activité : « S'authentifier » :}
-Ce diagramme montre l'authentification avec vérification des champs et en base, blocage après échecs, génération JWT.\par
+Ce diagramme montre le processus d’authentification avec deux niveaux de vérification : champs
+non vides et vérification en base. Après plusieurs échecs, le compte est bloqué. En cas de
+succès, un jeton JWT est généré et l’utilisateur est redirigé vers son tableau de bord.
 \begin{figure}[H]%
  \center%
  \setlength{\fboxsep}{0pt}%
@@ -657,4 +673,7 @@ Ce diagramme montre l'authentification avec vérification des champs et en base,
 
 
 {\Large\bfseries Conclusion}\\
-Ce chapitre a présenté la conception UML de \reportAppName{}.\par
+Dans ce chapitre, nous avons présenté la conception de \reportAppName{} en utilisant la langage UML. Les diagrammes de cas d’utilisation
+ont modélisé les interactions, le diagramme de classes a défini la structure des données, et
+les diagrammes de séquence et d’activité ont détaillé les processus. Ces modèles nous guideront
+par la suite  à la phase d’implémentation.

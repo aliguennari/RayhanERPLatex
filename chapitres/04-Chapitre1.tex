@@ -6,9 +6,9 @@
 \newpage
 
 {\Large\bfseries Introduction}\\
-Dans une entreprise classique, chaque service a ses propres applications (comptabilité, paie, stocks, ventes...). Pour les relier, l'entreprise devait développer des interfaces coûteuses et peu adaptables. Les ERP résolvent ce problème en intégrant tous les processus.
+Dans une entreprise classique, chaque service a ses propres applications (comptabilité, paie, stocks, ventes...). Pour les relier, l'entreprise devait développer des interfaces coûteuses et peu adaptables. Les systèmes ERP résolvent ce problème en intégrant tous les processus.
 \section{Présentation de l’organisme d’accueil : sociéte \reportEntreprise}
-Rayhan est une société tunisienne de plasturgie implantée à Tataouine, spécialisée dans la fabrication de sacs à poubelle, bretelles en plastique et autres solutions de packaging. La société fabrique des produits de qualité adaptés aux besoins industriels et domestiques 
+\reportEntreprise{} est une société tunisienne de plasturgie implantée à Tataouine, spécialisée dans la fabrication de sacs à poubelle, bretelles en plastique et autres solutions de packaging. La société fabrique des produits de qualité adaptés aux besoins industriels et domestiques 
 \\
 \begin{figure}[H]%
  \center%
@@ -52,13 +52,13 @@ Rayhan est une société tunisienne de plasturgie implantée à Tataouine, spéc
 
 
 \subsection{Cadre du projet}
-Dans le cadre de notre projet de fin d'études à l'ISET de Tataouine, nous avons effectué un stage au sein de la société Rayhan. La mission confiée était de réaliser une application web ERP pour la gestion des besoins business de l'entreprise.\par
+Le présent projet est élaboré en vue de l'obtention du diplôme de Licence en Technologie de l'Informatique, spécialité Développement des Systèmes d'Information, au sein de l'Institut Supérieur des Études Technologiques de Tataouine. Conduit du 2 janvier au 4 juin 2026 et accompagné par un stage professionnel au sein de l'entreprise \reportEntreprise, notre mission était de réaliser une application web ERP que nous avons nommée "\reportAppName" couvrant la chaîne de production, les achats, les ventes et la gestion des stocks, afin d'améliorer l'efficacité opérationnelle de l'entreprise.
 
 \subsection{Objectifs du projet }
-L'objectif est d'implanter un ERP qui unifie la gestion de la production, des stocks et des ventes chez Rayhan. Le système centralise les données, automatise les tâches répétitives et relie les départements (ventes, production, comptabilité). Il doit être performant, sécurisé, évolutif et facile à utiliser, avec une mise à jour en temps réel et des tableaux de bord pour la prise de décision. En pratique, la solution couvre les achats, les ventes, le stock, la production et la facturation.\par
+Notre objectif est d'élaborer une solution ERP qui unifie la gestion de la production, des stocks et des ventes chez Rayhan. Le système centralise les données, automatise les tâches répétitives et relie les départements (ventes, production, stocks). Il doit être performant, sécurisé, évolutif et facile à utiliser, avec une mise à jour en temps réel et des tableaux de bord pour la prise de décision. En pratique, la solution couvre les achats, les ventes, le stock et la production.\par
 
 \subsection{Cycle de vie de l'application}
-Le cycle de vie suit le modèle en V, associant chaque phase de développement à une phase de test pour valider les spécifications tôt.
+Le cycle de vie de \reportAppName suit le modèle en V, associant chaque phase de développement à une phase de test pour valider les spécifications à chaque étape du développement.
 
 \begin{figure}[H]%
  \center%
@@ -71,7 +71,7 @@ Le cycle de vie suit le modèle en V, associant chaque phase de développement �
 \end{figure}
 \section{Architecture de l'application}
 \subsection{Architecture logicielle}
-L'architecture utilise le patron MVVM. La View (Flutter) gère l'affichage, le ViewModel (BLoC/Provider) expose les données, le Model communique avec l'API REST Spring Boot.\par
+L'architecture logicielle qu'on a choisi utilise le patron MVVM. La View (Flutter) gère l'affichage, le ViewModel (Flutter Provider) expose les données, le Model communique avec l'API REST Spring Boot.\par
 
 \begin{figure}[H]%
  \center%
@@ -83,7 +83,7 @@ L'architecture utilise le patron MVVM. La View (Flutter) gère l'affichage, le V
  \caption{Architecture logicielle — Pattern MVVM}%
 \end{figure}
 \subsection{Architecture physique}
-L'architecture suit un modèle client-serveur 3-tiers : client Flutter Web, serveur Spring Boot conteneurisé (Docker), base MySQL conteneurisée. Les API REST sont sécurisées par JWT.\par
+L'architecture physique que nous avons choisi suit un modèle client-serveur 3-tiers : client Flutter Web, serveur Spring Boot conteneurisé (Docker), base de données MySQL conteneurisée aussi. Les API REST sont sécurisées par JWT.\par
 
 \begin{figure}[H]%
  \center%
@@ -95,4 +95,4 @@ L'architecture suit un modèle client-serveur 3-tiers : client Flutter Web, serv
  \caption{Architecture physique — Modèle 3-tiers client-serveur}%
 \end{figure}
 {\Large\bfseries Conclusion}\\
- Un ERP centralise les données et remplace plusieurs logiciels par un système intégré. Il faut connaître les besoins et le coût pour choisir la meilleure solution.
+Un logiciel ERP centralise les données et remplace plusieurs logiciels par un système intégré. Dans le chapitre suivant, nous allons étudier les besoins et les spécifications pour développer une solution adaptée à l'entreprise \reportEntreprise.

@@ -6,36 +6,39 @@
 \newpage
 
 {\Large\bfseries Introduction}\\
-Ce chapitre présente l'analyse des besoins de \reportAppName{}, menée via des entretiens et l'observation des processus.
+Ce chapitre présente l'analyse des besoins de notre application \reportAppName{}. Cette analyse a été menée via des entretiens avec le staff de l'entreprise et l'observation des processus existants à \reportEntreprise.
 \section{Etude et critique de l’existant}
-La gestion actuelle chez \reportEntreprise est manuelle (Excel, Word, papier), sans base centralisée. Cela provoque erreurs, ruptures de stock et pertes de temps. Un ERP est nécessaire.\\
-Le process existant à l'entreprise actuellement est résumé comme suit :
+La gestion actuelle chez \reportEntreprise est manuelle (Excel, Word, papier) et sans base de données centralisée. Cela provoque des erreurs, ruptures de stock et des pertes de temps considérables.\\
+Le processus existant dans l'entreprise est résumé comme suit :
 \begin{itemize}
-\item Ventes et achats : utilisation de supports volatiles (Word, papier). Les factures sont saisies manuellement sans lien direct avec les bons de livraison.
-\item Production et stocks : suivi manuel, risque de non-conformité et inventaires complexes.
-\item Données : absence de base de données clients/fournisseurs structurée, perte de temps administratif. Les informations clients et fournisseurs sont éparpillées, rendant l'historique des échanges difficiles à tracer.
+\item Utilisation de supports volatiles, les factures sont saisies manuellement sans lien direct avec les bons de livraison.
+\item Gestion manuelle des commandes et des bons de livraison, ce qui augmente le risque d'erreurs et de pertes de documents.
+\item Absence de base de données clients/fournisseurs structurée.
+\item Les informations clients et fournisseurs sont éparpillées, rendant l'historique des échanges difficile à tracer.
+\item Perte de temps administratif liée à la gestion manuelle des informations.
 \end{itemize}
 
-Parmi les effets de ce process sur l'entreprise et sa productivité on cite :
+Parmi les effets de ce processus sur l'entreprise et sa productivité on cite :
 \begin{itemize}
- \item Impact sur la production : inexactitude : difficulté à calculer le coût de revient réel de chaque cycle de production (perte de matière, temps machine).
+ \item Impact sur la production : inexactitude, difficulté à calculer le coût de revient réel de chaque cycle de production.
  \item Impact sur le chiffre d'affaires : retards dans l'émission des devis et la confirmation des commandes, ce qui peut pousser les clients vers la concurrence.
  \item Pertes de ventes : manque de réactivité face aux demandes spécifiques par manque de visibilité sur les capacités de production.
  \item Impact sur les flux de trésorerie : les achats ne sont pas optimisés, ce qui mobilise inutilement de la trésorerie ou crée des urgences coûteuses.
- \item Erreurs de facturation : le système manuel favorise les oublis de facturation ou les erreurs de prix, impactant directement la rentrée d'argent.
  \item Impact sur les décisions : les décisions de la direction reposent sur des données incertaines.
  \item Charge de travail : les équipes perdent un temps précieux en double saisies et en recherche d'informations égarées.
-
 \end{itemize}
 
-\subsection{Les principaux éditeurs du marché de l'ERP}
+{\large\bfseries Les principaux éditeurs du marché des solutions ERP :}\\
+Le tableau suivant compare trois solutions ERP populaires sur le marché en termes de cible, modules, déploiement et coût.
 \begin{table}[h!]
-\renewcommand{\arraystretch}{1.8}
-\setlength{\tabcolsep}{12pt}
+\renewcommand{\arraystretch}{2}
+\setlength{\tabcolsep}{8pt}
 \centering
-\begin{tabular}{|p{2.5cm}|p{4cm}|p{4cm}|p{4cm}|}
+\begin{tabular}{|p{2cm}|>{\centering\arraybackslash}p{3.6cm}|>{\centering\arraybackslash}p{3.6cm}|>{\centering\arraybackslash}p{3.6cm}|}
 \hline
 \textbf{Éditeur} & \textbf{SAP Business One} & \textbf{Oracle JD Edwards} & \textbf{SAGE} \\
+\hline
+Logo & \includegraphics[height=1cm]{SAP_logo.png} & \includegraphics[height=1cm]{OracleJdEdwards_logo.png} & \includegraphics[height=1cm]{sage_logo.jpg} \\
 \hline
 Type & Propriétaire & Propriétaire & Propriétaire \\
 \hline
@@ -53,8 +56,22 @@ Coût & Élevé (licence + maintenance) & Élevé (licence + maintenance) & Mod�
 \end{table}
 
 \section{Problématique}
-Les ERP existants ciblent les grandes entreprises, posant des difficultés aux PME (coût, complexité). Nous allons développer une solution sur mesure pour \reportEntreprise, simple, maintenable et évolutive.\par
-
+La plupart des solutions ERP existantes aujourd’hui cible les moyennes à grandes entreprises et
+les entreprises multinationaux, ce qui pose des difficultés pour les petites entreprises comme \reportEntreprise. Voici les enjeux majeurs auxquels nous sommes confrontés :
+\begin{itemize}
+    \item Coût élevé et ressources limitées : les coûts des licences, mise en œuvre et maintenance
+sont souvent importants, même en mode SaaS, la migration, la formation et le temps
+alloué peuvent dépasser le budget.
+    \item Complexité et durée de mise en place : \reportEntreprise ne dispose pas d’une équipe IT dédiée,
+ce qui rend la mise en place d'un système ERP commercial longue, compliqué et demandant en temps
+et ressources.
+    \item Adaptation difficile aux processus métiers : les solutions ERP existantes imposent leur logique de fonctionnement,
+parfois menant à l’inadéquation avec les processus internes de l’entreprise \reportEntreprise surtout lorsque
+celles-ci sont très spécifiques ou simples.
+    \item Adoption des utilisateurs difficile et nécessité de formation : l'équipe de la société \reportEntreprise risque de mal utiliser
+le système sans accompagnement suffisant et formation, conduisant à l’abandon de système et le retour aux
+anciens outils.
+\end{itemize}
 \section{Solution proposée}
 Notre projet vise à répondre aux questions suivantes :
 \begin{itemize}
@@ -65,7 +82,7 @@ Notre projet vise à répondre aux questions suivantes :
 \item Collaboration interne : comment unifier les ateliers de production et les services administratifs avec une base de données unique.
 \end{itemize}
 \section{Identification des besoins}
-Pour bien cerner les besoins, nous avons échangé directement avec les employés de Rayhan : le responsable production, le magasinier, l'équipe commerciale et la direction. Chaque entretien nous a permis de comprendre leurs difficultés quotidiennes et d'identifier ce qu'un ERP doit leur apporter concrètement. A partir de ces échanges, nous détaillons ci-dessous les besoins fonctionnels et non fonctionnels qu'on a trouvé.\par
+Pour bien cerner les besoins, nous avons échangé directement avec les employés de Rayhan : le responsable production, le magasinier, l'équipe commerciale et la direction. Chaque entretien nous a permis de comprendre leurs difficultés quotidiennes et d'identifier ce qu'un système de gestion doit leur apporter concrètement. A partir de ces échanges, nous détaillons ci-dessous les besoins fonctionnels et non fonctionnels qu'on a trouvé.\par
 
 \subsection{Analyse des besoins fonctionnels}
 \begin{itemize}
@@ -76,8 +93,9 @@ Pour bien cerner les besoins, nous avons échangé directement avec les employé
 \end{itemize}
 \item \textbf{ Gestion des Stocks et entrepôts}:
 \begin{itemize}
+\item États de stocks : rapports et suivi temps réel du stock de produits.
 \item Alertes de Stock Minimum : notifications automatiques pour éviter les ruptures de granulés ou d'emballages.
-\item Traçabilité : suivi par lots (essentiel pour la qualité dans le plastique) et gestion des emplacements.
+\item Traçabilité : suivi par lots et gestion des emplacements.
 \item Inventaire permanent : faciliter les comptages périodiques sans arrêter la production.
 \end{itemize}
 \item \textbf{ Gestion des ventes}:
@@ -87,29 +105,24 @@ Pour bien cerner les besoins, nous avons échangé directement avec les employé
 \item \textbf{ Gestion des Achats et Fournisseurs}:
 \begin{itemize}
 \item Base de données Fournisseurs : répertoire des fournisseurs de matières premières avec délais de livraison et prix.
-\item Demandes d'achat et des commandes : génération de bons de commande professionnels (plus de Word manuel).
-\item Réception de marchandises : contrôle de conformité entre la commande et la livraison pour mettre à jour le stock automatiquement.
-\end{itemize}
-\item \textbf{ Piloitage et Reporting }:
-\begin{itemize}
-\item États de stocks : rapports sur l'état des Produits.
 \end{itemize}
 \item \textbf{ Administration et Sécurité}:
 \begin{itemize}
-\item Gestion des droits : définir qui peut voir/modifier quoi (ex: l'atelier ne voit pas les prix d'achat).
+\item Gestion des droits : définir les roles et les contraintes d'accès pour chaque utilisateur du système.
 \item Sauvegardes automatiques : sécuriser les données pour ne plus dépendre de fichiers Excel locaux qui peuvent être perdus.
 \end{itemize}
 \end{itemize}
 \subsection{Analyse des besoins non fonctionnels}
 \begin{itemize}
-\item \textbf{Sécurité :} accès par identifiant et mot de passe, protection des données sensibles et conformité réglementaire.
-\item \textbf{Performance et disponibilité :} mise à jour en temps réel, mode dégradé local si la connexion est coupée, capacité à supporter la croissance des données.
-\item \textbf{Maintenabilité et fiabilité :} architecture évolutive (nouveaux modules), mises à jour sans interruption, export aux formats standards (Excel, PDF, CSV), mécanisme de rollback et respect des normes fiscales.
+\item \textbf{Sécurité :} accès sécurisé par identifiant et mot de passe, protection des données sensibles et conformité réglementaire.
+\item \textbf{Performance et disponibilité :} mises à jour en temps réel, capacité à supporter la croissance des données.
+\item \textbf{Maintenabilité et fiabilité :} architecture évolutive (nouveaux modules), mises à jour sans interruption, export aux formats standards (Excel, PDF, CSV), mécanisme de rollback pour la base de données.
 \end{itemize}
 \section{Diagramme de cas d'utilisation}
+Dans cette section, nous identifions les acteurs du système \reportAppName{} et leurs principaux cas d'utilisation, synthétisés par un diagramme de cas d’utilisation global.
 \subsection{Identification des Acteurs :}
 \begin{itemize}
-\item Visiteur : tout visiteur du portail \reportAppName{} et potentiel clients.
+\item Visiteur : tout visiteur du portail \reportAppName{} et potentiels clients.
 \item Client : visiteur inscrit à \reportAppName{}.
 \item Responsable Ventes : crée et gère les commandes d'achat de produits finis.
 \item Magasinier : gère le stock des matières premières et des produits.
@@ -130,23 +143,23 @@ Pour bien cerner les besoins, nous avons échangé directement avec les employé
 
 
 \subsection{Identification des cas d'utilisation principaux :}
-En se basant sur les besoins fonctionnels, voici les principaux cas d'utilisation :
+En se basant sur les besoins fonctionnels, voici les principaux cas d'utilisation que nous avons identifié pour l'application \reportAppName{} :
 \begin{itemize}
     \item \textbf{S'authentifier} : permet à chaque collaborateur d'accéder à l'interface selon son rôle. Fonctionnalités clés : saisie d'un identifiant et d'un mot de passe unique, gestion des profils avec redirection automatique vers le tableau de bord spécifique, option « Mot de passe oublié » et déconnexion automatique après inactivité.
 
-    \item \textbf{Créer des fournisseurs} : centraliser toutes les coordonnées des partenaires (vendeurs de granulés, moulistes, transporteurs). Fonctionnalités clés : fiche détaillée (nom, adresse, contacts, RIB, conditions de paiement), classification par type de produit (matières premières, maintenance, emballages), historique des achats passés avec ce fournisseur.
+    \item \textbf{Créer des fournisseurs} : centraliser toutes les coordonnées des partenaires (vendeurs de granulés, moulistes, transporteurs).\\ Fonctionnalités clés : fiche détaillée (nom, adresse, contacts, RIB, conditions de paiement), classification par type de produit (matières premières, maintenance, emballages), historique des achats passés avec ce fournisseur.
 
-    \item \textbf{Créer des commandes d'achat} : générer un document officiel pour commander des ressources. Fonctionnalités clés : sélection du fournisseur et des articles à commander, calcul automatique des prix négociés et des taxes (TVA).
+    \item \textbf{Créer des commandes d'achat} : générer un document officiel pour commander des ressources.\\ Fonctionnalités clés : sélection du fournisseur et des articles à commander, calcul automatique des prix négociés et des taxes (TVA).
 
-    \item \textbf{Lancer des ordres d'achat} : système intelligent qui suggère des achats en fonction des besoins. Fonctionnalités clés : alerte stock critique pour commander si le stock tombe sous un seuil défini, liaison avec la production pour générer un ordre d'achat si une commande client nécessite une matière manquante.
+    \item \textbf{Lancer des ordres d'achat} : système intelligent qui suggère des achats en fonction des besoins.\\ Fonctionnalités clés : alerte stock critique pour commander si le stock tombe sous un seuil défini, liaison avec la production pour générer un ordre d'achat si une commande client nécessite une matière manquante.
 
-    \item \textbf{Consulter les commandes en cours } : suivre l'avancement des approvisionnements pour éviter les arrêts de machines. Fonctionnalités clés : états de suivi (en attente de validation, envoyée, réceptionnée partiellement, clôturée), identification rapide des commandes fournisseurs en retard de livraison.
+    \item \textbf{Consulter les commandes en cours } : suivre l'avancement des approvisionnements pour éviter les arrêts de machines.\\ Fonctionnalités clés : états de suivi (en attente de validation, envoyée, réceptionnée partiellement, clôturée), identification rapide des commandes fournisseurs en retard de livraison.
 
-    \item \textbf{Suivi de l'état des stocks} : remplacer le suivi Excel par une vision dynamique. Fonctionnalités clés : mise à jour automatique des stocks lors des ventes et réceptions, valorisation financière en temps réel (méthode PMP ou FIFO), historique complet des mouvements.
+    \item \textbf{Suivi de l'état des stocks} : mise à jour automatique des stocks lors des ventes et réceptions, historique complet des mouvements.
 
-    \item \textbf{Créer des ordres de production} : transformer la matière première en produits finis selon un planning. Fonctionnalités clés : lien avec la nomenclature (BOM) pour le calcul automatique des quantités nécessaires, affectation des machines et des équipes, suivi des rebuts pour ajuster le stock réel.
+    \item \textbf{Créer des ordres de production} : transformer la matière première en produits finis selon un planning.\\ Fonctionnalités clés : lien avec la nomenclature BOM pour le calcul automatique des quantités nécessaires, affectation des machines et des équipes, suivi des rebuts pour ajuster le stock réel.
 
-    \item \textbf{Visualiser le Dashboard} : un écran unique pour la direction avec les indicateurs clés (Reporting). Fonctionnalités clés : indicateurs ventes (évolution du CA), indicateurs production (taux d'utilisation des machines, volume produit), indicateurs stocks (valeur totale, alertes de rupture imminente).
+    \item \textbf{Visualiser le Dashboard} : un écran unique pour la direction avec les indicateurs clés.\\ Fonctionnalités clés : indicateurs ventes (évolution du chiffre d'affaires), indicateurs production (taux d'utilisation des machines, volume produit), indicateurs stocks (valeur totale, alertes de rupture du stock).
 \end{itemize}
 \subsection{Diagramme de cas d'utilisation global}
 
@@ -160,6 +173,8 @@ En se basant sur les besoins fonctionnels, voici les principaux cas d'utilisatio
  \caption{Diagramme de cas d'utilisation global}%
 \end{figure}
 {\Large\bfseries Conclusion}\\
-L'analyse de l'existant au sein de la société \reportEntreprise{} a révélé les limites des outils actuels : absence de base de données centralisée et fragmentation des processus.\par
-Nous avons défini un ensemble de besoins fonctionnels et non fonctionnels pour guider le développement de la solution.\par
-Le chapitre suivant présente la conception UML (diagrammes de classes et de séquences).\par
+Nous avons défini un ensemble de besoins fonctionnels et non fonctionnels pour guider le
+développement de notre application \reportAppName{}, une fois les besoins clairement spécifiés, il convient désormais de traduire ces exigences en
+une solution technique structurée.\\
+Le chapitre suivant sera consacré à la phase de conception. Nous y détaillerons le choix de
+la méthodologie adoptée pour structurer notre développement
