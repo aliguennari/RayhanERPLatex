@@ -2,7 +2,6 @@
 \WarningsOff*
 \LoadClassWithOptions{report}
 \usepackage{booktabs}
-\usepackage{longtable}
 \usepackage{float}
 \usepackage{capt-of}
 \AddToHook{cmd/TABULAR@eval/before}{\let\par\endgraf}
@@ -10,18 +9,13 @@
 % Packages to use
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[a4paper,left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry}
-\usepackage{environ}
 %\usepackage[no-math]{fontspec}
-\usepackage{verse}
 \usepackage[table]{xcolor}
 \usepackage[explicit]{titlesec}
 \usepackage{chngcntr}
 \usepackage{fancyhdr}
 \usepackage{caption}
-\usepackage{subcaption}
 \usepackage[hidelinks]{hyperref}
-\usepackage{needspace}% http://ctan.org/pkg/needspace
-\usepackage{pdfpages}
 \usepackage{enumitem}
 \usepackage[bottom]{footmisc}
 \usepackage{babel}
@@ -35,29 +29,21 @@
 %\usepackage{showframe}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage{amsmath}
 \usepackage[export]{adjustbox}
 \usepackage{setspace}
-\usepackage{color}
 \usepackage{tabularx}
-\usepackage{ctable}
 \usepackage{graphicx}
 \usepackage{multirow}
-\usepackage{seqsplit}
-\usepackage{wrapfig}
 \usepackage[all]{nowidow}
 \usepackage{array,ragged2e}
-\usepackage{xcolor}
 \definecolor{Gris1}{RGB}{116,134,170}
 \definecolor{Gris2}{RGB}{249,249,249}
-\usepackage[titletoc,title]{appendix}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Include probable needed packages
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\usepackage{siunitx} \sisetup{mode=math, range-phrase=--, range-units=single}
-\DeclareSIUnit{\rms}{\ped{RMS}}
-\DeclareSIUnit[quantity-product = ]\percent{\char`\%}
 \DeclareUnicodeCharacter{2212}{\textendash}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -270,16 +256,3 @@
 % \renewcommand{\topfraction}{0.85}
 % \renewcommand{\textfraction}{0.1}
 % \renewcommand{\floatpagefraction}{0.85}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% New Environments
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  % all of the pfe redaction goes here
-  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    \NewEnviron{pfe-isetta} {%
-      \begingroup%
-      \BODY%
-      \endgroup%
-    }%
