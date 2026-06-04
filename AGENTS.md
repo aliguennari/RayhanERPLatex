@@ -3,11 +3,10 @@
 ## Build
 
 ```bash
-latexmk -pdf -shell-escape main.tex   # automates multiple passes (TOC, minitoc, refs)
-# or manually: pdflatex -shell-escape main.tex   # 2–3 runs
+latexmk -pdf main.tex   # automates multiple passes (TOC, minitoc, refs)
+# or manually: pdflatex main.tex   # 2–3 runs
 ```
 
-- `-shell-escape` is **required** (due to `minted` highlighting package).
 - After changing `Commands.tex` (title, author, etc.) or adding cross-references, recompile.
 - `.gitignore` excludes all build artifacts (`*.aux`, `*.log`, `*.pdf`, `*.toc`, `*.mtc*`, `*.fdb*`, etc.).
 
@@ -35,4 +34,4 @@ latexmk -pdf -shell-escape main.tex   # automates multiple passes (TOC, minitoc,
 
 ## Prerequisites
 
-LaTeX distribution with `pygments` (for `minted`), `minitoc`, `tikz`, and the other packages loaded in the `.cls` file.
+LaTeX distribution with the packages loaded in the `.cls` file (standard TeXLive distribution covers all).

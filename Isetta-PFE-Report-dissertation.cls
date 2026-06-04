@@ -22,7 +22,6 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage{needspace}% http://ctan.org/pkg/needspace
 \usepackage{pdfpages}
-\usepackage{chngcntr}
 \usepackage{enumitem}
 \usepackage[bottom]{footmisc}
 \usepackage{babel}
@@ -36,30 +35,17 @@
 %\usepackage{showframe}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[skins]{tcolorbox}
-\usepackage{babel}
-\usepackage{varioref}
 \usepackage[export]{adjustbox}
 \usepackage{setspace}
-\usepackage{minted}
 \usepackage{color}
 \usepackage{tabularx}
 \usepackage{ctable}
 \usepackage{graphicx}
 \usepackage{multirow}
-\usepackage{tikz}
 \usepackage{seqsplit}
-\usepackage{fontenc}
-%\usepackage{lipsum}
-%\usepackage{todonotes}
 \usepackage{wrapfig}
-\usepackage{setspace}
 \usepackage[all]{nowidow}
-\usepackage{acronym}
-%\usepackage[sorting=none, backend=bibtex]{biblatex}
 \usepackage{array,ragged2e}
-%\addbibresource{001-report}
-\usepackage{enumitem}
 \usepackage{xcolor}
 \definecolor{Gris1}{RGB}{116,134,170}
 \definecolor{Gris2}{RGB}{249,249,249}
